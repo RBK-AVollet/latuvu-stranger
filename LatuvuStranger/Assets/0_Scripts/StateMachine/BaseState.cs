@@ -1,4 +1,4 @@
-﻿namespace Latuvu
+namespace Latuvu
 {
     public abstract class BaseState : IState
     {
