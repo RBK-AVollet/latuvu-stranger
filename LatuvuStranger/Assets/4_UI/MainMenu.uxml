@@ -1,0 +1,19 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/4_UI/MainMenu.uss?fileID=7433441132597879392&amp;guid=168bfa56a5f9e2c4d9b9c33bafc9894f&amp;type=3#MainMenu" />
+    <ui:VisualElement name="root" style="flex-grow: 1; background-color: rgb(0, 0, 0); flex-direction: row;">
+        <ui:VisualElement name="Buttons" style="flex-grow: 1; flex-direction: column; align-items: auto; justify-content: center; width: 50%;">
+            <ui:Button name="StartGame" class="white Button" style="-unity-text-align: upper-right; width: 100%;">
+                <ui:Label text="Start Game" name="title" enable-rich-text="true" style="flex-direction: column; -unity-text-align: upper-right;" />
+            </ui:Button>
+            <ui:Button name="Settings" class="white Button" style="-unity-text-align: upper-right; width: 100%;">
+                <ui:Label text="Settings" name="title" style="flex-direction: column; -unity-text-align: upper-right;" />
+            </ui:Button>
+            <ui:Button name="Quit" class="white Button" style="-unity-text-align: upper-right; width: 100%;">
+                <ui:Label text="Quit" name="title" style="flex-direction: column; -unity-text-align: upper-right;" />
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement name="Image" style="flex-grow: 1; width: 50%;">
+            <ui:VisualElement name="ImageMenu" style="flex-grow: 1; width: 50%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
