@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 74285c6612f643e4887cb3268c0d73df
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2245265125600200933
+    second: spr_textbox_extral_4_0
+  - first:
+      213: 8525304318335217225
+    second: spr_textbox_extral_4_1
+  - first:
+      213: -7859745963543119198
+    second: spr_textbox_extral_4_2
+  - first:
+      213: -5103557271252640014
+    second: spr_textbox_extral_4_3
+  - first:
+      213: 3515588535220437734
+    second: spr_textbox_extral_4_4
+  - first:
+      213: 201982145718530951
+    second: spr_textbox_extral_4_5
+  - first:
+      213: 3461699234752396178
+    second: spr_textbox_extral_4_6
+  - first:
+      213: 1090104991935699070
+    second: spr_textbox_extral_4_7
+  - first:
+      213: 2230027850735031107
+    second: spr_textbox_extral_4_8
+  - first:
+      213: -2413653159730308716
+    second: spr_textbox_extral_4_9
+  - first:
+      213: -5057310069088291914
+    second: spr_textbox_extral_4_10
+  - first:
+      213: -4020831295440977114
+    second: spr_textbox_extral_4_11
+  - first:
+      213: -5746951331469159241
+    second: spr_textbox_extral_4_12
+  - first:
+      213: -1097875376765529293
+    second: spr_textbox_extral_4_13
+  - first:
+      213: -7968608369546364030
+    second: spr_textbox_extral_4_14
+  - first:
+      213: 1790950439447433746
+    second: spr_textbox_extral_4_15
+  - first:
+      213: 2504057831138430445
+    second: spr_textbox_extral_4_16
+  - first:
+      213: -4358745953134525389
+    second: spr_textbox_extral_4_17
+  - first:
+      213: -6358297009862214910
+    second: spr_textbox_extral_4_18
+  - first:
+      213: 5229518146346210668
+    second: spr_textbox_extral_4_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 38
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b17f602a34737d0e0800000000000000
+      internalID: -2245265125600200933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 43
+        width: 23
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e6978cb17ff4670800000000000000
+      internalID: 8525304318335217225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_2
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 43
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aab33a50b29ce290800000000000000
+      internalID: -7859745963543119198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 43
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fedf1c93b58c29b0800000000000000
+      internalID: -5103557271252640014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_4
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 43
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2004a7521e9c030800000000000000
+      internalID: 3515588535220437734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_5
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 43
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783368ef0b59dc200800000000000000
+      internalID: 201982145718530951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_6
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 43
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b78a6fc1d6a0030800000000000000
+      internalID: 3461699234752396178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_7
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 43
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e78153ce6b4d02f00800000000000000
+      internalID: 1090104991935699070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_8
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 43
+        width: 40
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3431a4ad386a2fe10800000000000000
+      internalID: 2230027850735031107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 43
+        width: 19
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49996434d3bf08ed0800000000000000
+      internalID: -2413653159730308716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b37cf47943d0d9b0800000000000000
+      internalID: -5057310069088291914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62387757d332338c0800000000000000
+      internalID: -4020831295440977114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_12
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 19
+        width: 5
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b49252763abe30b0800000000000000
+      internalID: -5746951331469159241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_13
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3331e30692093c0f0800000000000000
+      internalID: -1097875376765529293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_14
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 40
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28bfbfa48e0d96190800000000000000
+      internalID: -7968608369546364030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_15
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 20
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21218919febbad810800000000000000
+      internalID: 1790950439447433746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_16
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 50
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded8a02945330c220800000000000000
+      internalID: 2504057831138430445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_17
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334ce3536af9283c0800000000000000
+      internalID: -4358745953134525389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_18
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 0
+        width: 50
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20bfbb6ae8ac2c7a0800000000000000
+      internalID: -6358297009862214910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_textbox_extral_4_19
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 0
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65dc630c0bf29840800000000000000
+      internalID: 5229518146346210668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spr_textbox_extral_4_0: -2245265125600200933
+      spr_textbox_extral_4_1: 8525304318335217225
+      spr_textbox_extral_4_10: -5057310069088291914
+      spr_textbox_extral_4_11: -4020831295440977114
+      spr_textbox_extral_4_12: -5746951331469159241
+      spr_textbox_extral_4_13: -1097875376765529293
+      spr_textbox_extral_4_14: -7968608369546364030
+      spr_textbox_extral_4_15: 1790950439447433746
+      spr_textbox_extral_4_16: 2504057831138430445
+      spr_textbox_extral_4_17: -4358745953134525389
+      spr_textbox_extral_4_18: -6358297009862214910
+      spr_textbox_extral_4_19: 5229518146346210668
+      spr_textbox_extral_4_2: -7859745963543119198
+      spr_textbox_extral_4_3: -5103557271252640014
+      spr_textbox_extral_4_4: 3515588535220437734
+      spr_textbox_extral_4_5: 201982145718530951
+      spr_textbox_extral_4_6: 3461699234752396178
+      spr_textbox_extral_4_7: 1090104991935699070
+      spr_textbox_extral_4_8: 2230027850735031107
+      spr_textbox_extral_4_9: -2413653159730308716
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,2405 @@
+fileFormatVersion: 2
+guid: 2f5ea0b41d85c5647b4a925db8925a62
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7241886372236155311
+    second: fnt_planetary_0
+  - first:
+      213: -2232999634104505972
+    second: fnt_planetary_1
+  - first:
+      213: -3258144976858700615
+    second: fnt_planetary_2
+  - first:
+      213: 5262964908493441048
+    second: fnt_planetary_3
+  - first:
+      213: 4325431144412036383
+    second: fnt_planetary_4
+  - first:
+      213: 7395716988145236750
+    second: fnt_planetary_5
+  - first:
+      213: -7700613983166959529
+    second: fnt_planetary_6
+  - first:
+      213: -2448555479289013875
+    second: fnt_planetary_7
+  - first:
+      213: -359190732108364344
+    second: fnt_planetary_8
+  - first:
+      213: -3534239570678965975
+    second: fnt_planetary_9
+  - first:
+      213: 7408128977079735694
+    second: fnt_planetary_10
+  - first:
+      213: 5506354010783618141
+    second: fnt_planetary_11
+  - first:
+      213: -111449956728778431
+    second: fnt_planetary_12
+  - first:
+      213: 2469312343013572601
+    second: fnt_planetary_13
+  - first:
+      213: 1867004026820300114
+    second: fnt_planetary_14
+  - first:
+      213: 7510166585039365533
+    second: fnt_planetary_15
+  - first:
+      213: 4569552361207186614
+    second: fnt_planetary_16
+  - first:
+      213: 1161328322909922698
+    second: fnt_planetary_17
+  - first:
+      213: 2334599312174887844
+    second: fnt_planetary_18
+  - first:
+      213: -1295539132248333438
+    second: fnt_planetary_19
+  - first:
+      213: 9036001318956306592
+    second: fnt_planetary_20
+  - first:
+      213: 8650356494561563594
+    second: fnt_planetary_21
+  - first:
+      213: 8755581942968827771
+    second: fnt_planetary_22
+  - first:
+      213: -3724605611127728835
+    second: fnt_planetary_23
+  - first:
+      213: 1148923324845522022
+    second: fnt_planetary_24
+  - first:
+      213: -158850244517577773
+    second: fnt_planetary_25
+  - first:
+      213: 4042473779828854921
+    second: fnt_planetary_26
+  - first:
+      213: -77263891172097392
+    second: fnt_planetary_27
+  - first:
+      213: 8117423769965526752
+    second: fnt_planetary_28
+  - first:
+      213: -9000917100955098489
+    second: fnt_planetary_29
+  - first:
+      213: 1788115061789637129
+    second: fnt_planetary_30
+  - first:
+      213: 1485996708669238773
+    second: fnt_planetary_31
+  - first:
+      213: 6340752412056966010
+    second: fnt_planetary_32
+  - first:
+      213: -4383754198271159435
+    second: fnt_planetary_33
+  - first:
+      213: 3579536419397377503
+    second: fnt_planetary_34
+  - first:
+      213: -805170439957339476
+    second: fnt_planetary_35
+  - first:
+      213: -7113959556323950991
+    second: fnt_planetary_36
+  - first:
+      213: 55305492361872102
+    second: fnt_planetary_37
+  - first:
+      213: -8533143381850682558
+    second: fnt_planetary_38
+  - first:
+      213: -7236380620333229225
+    second: fnt_planetary_39
+  - first:
+      213: -258985632267782027
+    second: fnt_planetary_40
+  - first:
+      213: -3933752157279774812
+    second: fnt_planetary_41
+  - first:
+      213: 9113057664434753554
+    second: fnt_planetary_42
+  - first:
+      213: 6468917043426786890
+    second: fnt_planetary_43
+  - first:
+      213: 8893254233993202605
+    second: fnt_planetary_44
+  - first:
+      213: 7821079314838860598
+    second: fnt_planetary_45
+  - first:
+      213: 390327719136748397
+    second: fnt_planetary_46
+  - first:
+      213: -4466872784391608378
+    second: fnt_planetary_47
+  - first:
+      213: 4543068703127927190
+    second: fnt_planetary_48
+  - first:
+      213: -2781175134504839515
+    second: fnt_planetary_49
+  - first:
+      213: 4378173480105521806
+    second: fnt_planetary_50
+  - first:
+      213: 4711148623670786745
+    second: fnt_planetary_51
+  - first:
+      213: 5990064850666088896
+    second: fnt_planetary_52
+  - first:
+      213: -831585608072579159
+    second: fnt_planetary_53
+  - first:
+      213: 5152656669053217779
+    second: fnt_planetary_54
+  - first:
+      213: -6444467920516829956
+    second: fnt_planetary_55
+  - first:
+      213: -9107569801516881715
+    second: fnt_planetary_56
+  - first:
+      213: -3740054499726123918
+    second: fnt_planetary_57
+  - first:
+      213: -5737683614576900666
+    second: fnt_planetary_58
+  - first:
+      213: -4312766586698613517
+    second: fnt_planetary_59
+  - first:
+      213: 5711029114463240700
+    second: fnt_planetary_60
+  - first:
+      213: 5298684905561704416
+    second: fnt_planetary_61
+  - first:
+      213: 6225986536160063437
+    second: fnt_planetary_62
+  - first:
+      213: -702869316444638070
+    second: fnt_planetary_63
+  - first:
+      213: 4823792780269557958
+    second: fnt_planetary_64
+  - first:
+      213: 7585878126110505463
+    second: fnt_planetary_65
+  - first:
+      213: 8327881934222211026
+    second: fnt_planetary_66
+  - first:
+      213: -4747976250783839183
+    second: fnt_planetary_67
+  - first:
+      213: -8445284067805172931
+    second: fnt_planetary_68
+  - first:
+      213: 6460746441610578673
+    second: fnt_planetary_69
+  - first:
+      213: -8975260644784101334
+    second: fnt_planetary_70
+  - first:
+      213: -8015541748489947440
+    second: fnt_planetary_71
+  - first:
+      213: -2418709750575457217
+    second: fnt_planetary_72
+  - first:
+      213: 1332599440957026274
+    second: fnt_planetary_73
+  - first:
+      213: 2524296085654584225
+    second: fnt_planetary_74
+  - first:
+      213: 8588758072468525569
+    second: fnt_planetary_75
+  - first:
+      213: -4807636205416288262
+    second: fnt_planetary_76
+  - first:
+      213: -7894326735518435899
+    second: fnt_planetary_77
+  - first:
+      213: 3326002080213090602
+    second: fnt_planetary_78
+  - first:
+      213: 4264044639254891936
+    second: fnt_planetary_79
+  - first:
+      213: 8290016347032398978
+    second: fnt_planetary_80
+  - first:
+      213: -1053554275303182303
+    second: fnt_planetary_81
+  - first:
+      213: 7023248905245686179
+    second: fnt_planetary_82
+  - first:
+      213: -3208806087755237804
+    second: fnt_planetary_83
+  - first:
+      213: 3472369390841409169
+    second: fnt_planetary_84
+  - first:
+      213: 2078695963146451163
+    second: fnt_planetary_85
+  - first:
+      213: 8464787837414800379
+    second: fnt_planetary_86
+  - first:
+      213: 5872743258129012145
+    second: fnt_planetary_87
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fnt_planetary_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 107
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9d0e05949508460800000000000000
+      internalID: 7241886372236155311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 107
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c89af99e9aac201e0800000000000000
+      internalID: -2232999634104505972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 107
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b42d9be76eb8c2d0800000000000000
+      internalID: -3258144976858700615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_3
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 107
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818091c23bec90940800000000000000
+      internalID: 5262964908493441048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_4
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 103
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d371f65b4070c30800000000000000
+      internalID: 4325431144412036383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_5
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 113
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0bf7b1aa6dd2a660800000000000000
+      internalID: 7395716988145236750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_6
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 113
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7507de4c16ce12590800000000000000
+      internalID: -7700613983166959529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_7
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 105
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d89542cb3cbf40ed0800000000000000
+      internalID: -2448555479289013875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_8
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 107
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c58116aee5e30bf0800000000000000
+      internalID: -359190732108364344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_9
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 105
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9291d8ee5dbd3fec0800000000000000
+      internalID: -3534239570678965975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_10
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 107
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e859d110e06fec660800000000000000
+      internalID: 7408128977079735694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_11
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 107
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d541e448ccf7a6c40800000000000000
+      internalID: 5506354010783618141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_12
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 107
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 141d2f6dadc047ef0800000000000000
+      internalID: -111449956728778431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_13
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 107
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ffbfc43e72c44220800000000000000
+      internalID: 2469312343013572601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_14
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 107
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d09d4454ee8e910800000000000000
+      internalID: 1867004026820300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_15
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 107
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d95a741f7b8793860800000000000000
+      internalID: 7510166585039365533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_16
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 107
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b44d4879af4a6f30800000000000000
+      internalID: 4569552361207186614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_17
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 107
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8565aae4fddd1010800000000000000
+      internalID: 1161328322909922698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a33e0784b9266020800000000000000
+      internalID: 2334599312174887844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_19
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 81
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28368b5f502550ee0800000000000000
+      internalID: -1295539132248333438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_20
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 81
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a01a562353566d70800000000000000
+      internalID: 9036001318956306592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_21
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 79
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3d5d6766d3c0870800000000000000
+      internalID: 8650356494561563594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_22
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 83
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f3b785363128970800000000000000
+      internalID: 8755581942968827771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_23
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 81
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d351e443eea8f4cc0800000000000000
+      internalID: -3724605611127728835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_24
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 81
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66cf39b3dabc1ff00800000000000000
+      internalID: 1148923324845522022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_25
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 83
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbbb035b86abcdf0800000000000000
+      internalID: -158850244517577773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_26
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 81
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980978c1c70c91830800000000000000
+      internalID: 4042473779828854921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_27
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 83
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09209bc76e08deef0800000000000000
+      internalID: -77263891172097392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_28
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 83
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee7b1c29e1e6a070800000000000000
+      internalID: 8117423769965526752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_29
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 83
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78225d8e591561380800000000000000
+      internalID: -9000917100955098489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_30
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 83
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a3f73cc29a0d810800000000000000
+      internalID: 1788115061789637129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_31
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd21a522225f9410800000000000000
+      internalID: 1485996708669238773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_32
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 83
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a735b5959b0eef750800000000000000
+      internalID: 6340752412056966010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_33
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 83
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5739b6568c6c923c0800000000000000
+      internalID: -4383754198271159435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_34
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 81
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd11c288611da130800000000000000
+      internalID: 3579536419397377503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_35
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 81
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2a2b630c573d4f0800000000000000
+      internalID: -805170439957339476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_36
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 83
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17eb0d29973264d90800000000000000
+      internalID: -7113959556323950991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_37
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 59
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e28b526d0c74c000800000000000000
+      internalID: 55305492361872102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_38
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 59
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b80530e4f249980800000000000000
+      internalID: -8533143381850682558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_39
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 59
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b54817a26339b90800000000000000
+      internalID: -7236380620333229225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_40
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 59
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578bfba80f5e76cf0800000000000000
+      internalID: -258985632267782027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_41
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 57
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a799ee31418869c0800000000000000
+      internalID: -3933752157279774812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_42
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 59
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 210d84aa9a5187e70800000000000000
+      internalID: 9113057664434753554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_43
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 59
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e7ce6f6c536c950800000000000000
+      internalID: 6468917043426786890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_44
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 59
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dab476a7b9f2b6b70800000000000000
+      internalID: 8893254233993202605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_45
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 59
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6333021f23e0a8c60800000000000000
+      internalID: 7821079314838860598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_46
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 59
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6362251ef8ba6500800000000000000
+      internalID: 390327719136748397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_47
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 59
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c76a7d7eda7202c0800000000000000
+      internalID: -4466872784391608378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_48
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 59
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69972205ae83c0f30800000000000000
+      internalID: 4543068703127927190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_49
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 59
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a690b153f74769d0800000000000000
+      internalID: -2781175134504839515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_50
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 59
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82b9b6659562cc30800000000000000
+      internalID: 4378173480105521806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_51
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 57
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bab7f566bc516140800000000000000
+      internalID: 4711148623670786745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_52
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 57
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c96185be3cf02350800000000000000
+      internalID: 5990064850666088896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_53
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 59
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7b18e9b4d9574f0800000000000000
+      internalID: -831585608072579159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_54
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 59
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fbe678c0f9e18740800000000000000
+      internalID: 5152656669053217779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_55
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 57
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfca13f0296a096a0800000000000000
+      internalID: -6444467920516829956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_56
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 57
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8e28df4896b9180800000000000000
+      internalID: -9107569801516881715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_57
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 41
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c19378f38a81cc0800000000000000
+      internalID: -3740054499726123918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_58
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 35
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c5809fe627af50b0800000000000000
+      internalID: -5737683614576900666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_59
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 35
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fcb7a0b3a9f524c0800000000000000
+      internalID: -4312766586698613517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_60
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 33
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1ce75a8b6a14f40800000000000000
+      internalID: 5711029114463240700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_61
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 35
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7cab419d5b88940800000000000000
+      internalID: 5298684905561704416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_62
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 39
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf6f2894c5276650800000000000000
+      internalID: 6225986536160063437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_63
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 35
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a84bbc5a418ee36f0800000000000000
+      internalID: -702869316444638070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_64
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 35
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c89f02e9fd81f240800000000000000
+      internalID: 4823792780269557958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_65
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 35
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9f838c6f3764960800000000000000
+      internalID: 7585878126110505463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_66
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 35
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d735b40f74929370800000000000000
+      internalID: 8327881934222211026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_67
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 35
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13cc90a71cccb1eb0800000000000000
+      internalID: -4747976250783839183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_68
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 35
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3be437a2e25cca80800000000000000
+      internalID: -8445284067805172931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_69
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 35
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa411c78ae29a950800000000000000
+      internalID: 6460746441610578673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_70
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 35
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a28a91d1ff7717380800000000000000
+      internalID: -8975260644784101334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_71
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 35
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d671f67f3313c090800000000000000
+      internalID: -8015541748489947440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_72
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 35
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c1d26fb440f6ed0800000000000000
+      internalID: -2418709750575457217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_73
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 35
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efa02291285e7210800000000000000
+      internalID: 1332599440957026274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_74
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 35
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1abb9556ae9180320800000000000000
+      internalID: 2524296085654584225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_75
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 35
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102514336f5613770800000000000000
+      internalID: 8588758072468525569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_76
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 11
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affead6d758d74db0800000000000000
+      internalID: -4807636205416288262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_77
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 11
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5fd84f8a7b17290800000000000000
+      internalID: -7894326735518435899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_78
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 11
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21cf412545582e20800000000000000
+      internalID: 3326002080213090602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_79
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 11
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad423de10eec2b30800000000000000
+      internalID: 4264044639254891936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_80
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 9
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c2c0bf1fd0c0370800000000000000
+      internalID: 8290016347032398978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_81
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 15
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 120b5f4f7f50161f0800000000000000
+      internalID: -1053554275303182303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_82
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 11
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a9f1562ba7977160800000000000000
+      internalID: 7023248905245686179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_83
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 11
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 456fc3a3dd70873d0800000000000000
+      internalID: -3208806087755237804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_84
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 9
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19eaa064095503030800000000000000
+      internalID: 3472369390841409169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_85
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 11
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd8f16f07f209dc10800000000000000
+      internalID: 2078695963146451163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_86
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 15
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfbf72490b7f87570800000000000000
+      internalID: 8464787837414800379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_planetary_87
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 9
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b599ddc0ec208150800000000000000
+      internalID: 5872743258129012145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fnt_planetary_0: 7241886372236155311
+      fnt_planetary_1: -2232999634104505972
+      fnt_planetary_10: 7408128977079735694
+      fnt_planetary_11: 5506354010783618141
+      fnt_planetary_12: -111449956728778431
+      fnt_planetary_13: 2469312343013572601
+      fnt_planetary_14: 1867004026820300114
+      fnt_planetary_15: 7510166585039365533
+      fnt_planetary_16: 4569552361207186614
+      fnt_planetary_17: 1161328322909922698
+      fnt_planetary_18: 2334599312174887844
+      fnt_planetary_19: -1295539132248333438
+      fnt_planetary_2: -3258144976858700615
+      fnt_planetary_20: 9036001318956306592
+      fnt_planetary_21: 8650356494561563594
+      fnt_planetary_22: 8755581942968827771
+      fnt_planetary_23: -3724605611127728835
+      fnt_planetary_24: 1148923324845522022
+      fnt_planetary_25: -158850244517577773
+      fnt_planetary_26: 4042473779828854921
+      fnt_planetary_27: -77263891172097392
+      fnt_planetary_28: 8117423769965526752
+      fnt_planetary_29: -9000917100955098489
+      fnt_planetary_3: 5262964908493441048
+      fnt_planetary_30: 1788115061789637129
+      fnt_planetary_31: 1485996708669238773
+      fnt_planetary_32: 6340752412056966010
+      fnt_planetary_33: -4383754198271159435
+      fnt_planetary_34: 3579536419397377503
+      fnt_planetary_35: -805170439957339476
+      fnt_planetary_36: -7113959556323950991
+      fnt_planetary_37: 55305492361872102
+      fnt_planetary_38: -8533143381850682558
+      fnt_planetary_39: -7236380620333229225
+      fnt_planetary_4: 4325431144412036383
+      fnt_planetary_40: -258985632267782027
+      fnt_planetary_41: -3933752157279774812
+      fnt_planetary_42: 9113057664434753554
+      fnt_planetary_43: 6468917043426786890
+      fnt_planetary_44: 8893254233993202605
+      fnt_planetary_45: 7821079314838860598
+      fnt_planetary_46: 390327719136748397
+      fnt_planetary_47: -4466872784391608378
+      fnt_planetary_48: 4543068703127927190
+      fnt_planetary_49: -2781175134504839515
+      fnt_planetary_5: 7395716988145236750
+      fnt_planetary_50: 4378173480105521806
+      fnt_planetary_51: 4711148623670786745
+      fnt_planetary_52: 5990064850666088896
+      fnt_planetary_53: -831585608072579159
+      fnt_planetary_54: 5152656669053217779
+      fnt_planetary_55: -6444467920516829956
+      fnt_planetary_56: -9107569801516881715
+      fnt_planetary_57: -3740054499726123918
+      fnt_planetary_58: -5737683614576900666
+      fnt_planetary_59: -4312766586698613517
+      fnt_planetary_6: -7700613983166959529
+      fnt_planetary_60: 5711029114463240700
+      fnt_planetary_61: 5298684905561704416
+      fnt_planetary_62: 6225986536160063437
+      fnt_planetary_63: -702869316444638070
+      fnt_planetary_64: 4823792780269557958
+      fnt_planetary_65: 7585878126110505463
+      fnt_planetary_66: 8327881934222211026
+      fnt_planetary_67: -4747976250783839183
+      fnt_planetary_68: -8445284067805172931
+      fnt_planetary_69: 6460746441610578673
+      fnt_planetary_7: -2448555479289013875
+      fnt_planetary_70: -8975260644784101334
+      fnt_planetary_71: -8015541748489947440
+      fnt_planetary_72: -2418709750575457217
+      fnt_planetary_73: 1332599440957026274
+      fnt_planetary_74: 2524296085654584225
+      fnt_planetary_75: 8588758072468525569
+      fnt_planetary_76: -4807636205416288262
+      fnt_planetary_77: -7894326735518435899
+      fnt_planetary_78: 3326002080213090602
+      fnt_planetary_79: 4264044639254891936
+      fnt_planetary_8: -359190732108364344
+      fnt_planetary_80: 8290016347032398978
+      fnt_planetary_81: -1053554275303182303
+      fnt_planetary_82: 7023248905245686179
+      fnt_planetary_83: -3208806087755237804
+      fnt_planetary_84: 3472369390841409169
+      fnt_planetary_85: 2078695963146451163
+      fnt_planetary_86: 8464787837414800379
+      fnt_planetary_87: 5872743258129012145
+      fnt_planetary_9: -3534239570678965975
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

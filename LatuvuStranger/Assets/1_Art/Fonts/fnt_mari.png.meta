@@ -1,0 +1,2509 @@
+fileFormatVersion: 2
+guid: e3206c52e64c91f4faf6d76c7e8d8453
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 238717038415386111
+    second: fnt_mari_0
+  - first:
+      213: -1079205445655114719
+    second: fnt_mari_1
+  - first:
+      213: -2059027351099582367
+    second: fnt_mari_2
+  - first:
+      213: -8480306651438668008
+    second: fnt_mari_3
+  - first:
+      213: -167110266806055569
+    second: fnt_mari_4
+  - first:
+      213: -8866899391006147401
+    second: fnt_mari_5
+  - first:
+      213: 2281949567785749054
+    second: fnt_mari_6
+  - first:
+      213: 3772076380735561441
+    second: fnt_mari_7
+  - first:
+      213: -515498999518563845
+    second: fnt_mari_8
+  - first:
+      213: 6502612933549024704
+    second: fnt_mari_9
+  - first:
+      213: -4001883356933225223
+    second: fnt_mari_10
+  - first:
+      213: 5680855730073651412
+    second: fnt_mari_11
+  - first:
+      213: -2344413481148460295
+    second: fnt_mari_12
+  - first:
+      213: -1626389970047039030
+    second: fnt_mari_13
+  - first:
+      213: -5754505360491550282
+    second: fnt_mari_14
+  - first:
+      213: 742713938491200926
+    second: fnt_mari_15
+  - first:
+      213: -7912583065232156052
+    second: fnt_mari_16
+  - first:
+      213: -318975702681466371
+    second: fnt_mari_17
+  - first:
+      213: 1257609139038805281
+    second: fnt_mari_18
+  - first:
+      213: -6362678373962618894
+    second: fnt_mari_19
+  - first:
+      213: 8754420508057311562
+    second: fnt_mari_20
+  - first:
+      213: -4701995771793774879
+    second: fnt_mari_21
+  - first:
+      213: 8935493310685061135
+    second: fnt_mari_22
+  - first:
+      213: -5021739815884203236
+    second: fnt_mari_23
+  - first:
+      213: -6307529877825223199
+    second: fnt_mari_24
+  - first:
+      213: 6376487910331092254
+    second: fnt_mari_25
+  - first:
+      213: 8497602496418905802
+    second: fnt_mari_26
+  - first:
+      213: -8314718744647371201
+    second: fnt_mari_27
+  - first:
+      213: 6038566384395395446
+    second: fnt_mari_28
+  - first:
+      213: 1884078512101307214
+    second: fnt_mari_29
+  - first:
+      213: 8439489370500360632
+    second: fnt_mari_30
+  - first:
+      213: -5962955706805194544
+    second: fnt_mari_31
+  - first:
+      213: 6083520026236937551
+    second: fnt_mari_32
+  - first:
+      213: -2709603995074173645
+    second: fnt_mari_33
+  - first:
+      213: 536663049053699715
+    second: fnt_mari_34
+  - first:
+      213: -6569923691851812305
+    second: fnt_mari_35
+  - first:
+      213: 8701638881815633538
+    second: fnt_mari_36
+  - first:
+      213: -4572831826825671693
+    second: fnt_mari_37
+  - first:
+      213: 1669147330256063326
+    second: fnt_mari_38
+  - first:
+      213: -8606492511912805474
+    second: fnt_mari_39
+  - first:
+      213: -855183276967944314
+    second: fnt_mari_40
+  - first:
+      213: -7489201030046606516
+    second: fnt_mari_41
+  - first:
+      213: 2078586065317139102
+    second: fnt_mari_42
+  - first:
+      213: 2589193333521558630
+    second: fnt_mari_43
+  - first:
+      213: 6282247372586408364
+    second: fnt_mari_44
+  - first:
+      213: -2205575788027988720
+    second: fnt_mari_45
+  - first:
+      213: -5283310495774758787
+    second: fnt_mari_46
+  - first:
+      213: 4747457180739624667
+    second: fnt_mari_47
+  - first:
+      213: 8851558438639036333
+    second: fnt_mari_48
+  - first:
+      213: -7891135827065357752
+    second: fnt_mari_49
+  - first:
+      213: 6019196608303384933
+    second: fnt_mari_50
+  - first:
+      213: -8189187716271457030
+    second: fnt_mari_51
+  - first:
+      213: -8839588415243574071
+    second: fnt_mari_52
+  - first:
+      213: 5693034804145042169
+    second: fnt_mari_53
+  - first:
+      213: -2570853128073037131
+    second: fnt_mari_54
+  - first:
+      213: -8587284298077398742
+    second: fnt_mari_55
+  - first:
+      213: 570197191476100794
+    second: fnt_mari_56
+  - first:
+      213: -3651758329901717256
+    second: fnt_mari_57
+  - first:
+      213: -988821612975658440
+    second: fnt_mari_58
+  - first:
+      213: -4475951855809750036
+    second: fnt_mari_59
+  - first:
+      213: -1320012701120235031
+    second: fnt_mari_60
+  - first:
+      213: -7158625755245721848
+    second: fnt_mari_61
+  - first:
+      213: -5341955346870344000
+    second: fnt_mari_62
+  - first:
+      213: 4181203411250323330
+    second: fnt_mari_63
+  - first:
+      213: -2226880393967263249
+    second: fnt_mari_64
+  - first:
+      213: -3387885662701062446
+    second: fnt_mari_65
+  - first:
+      213: 8688787957970243488
+    second: fnt_mari_66
+  - first:
+      213: 8867189640669198528
+    second: fnt_mari_67
+  - first:
+      213: 3052129098756708818
+    second: fnt_mari_68
+  - first:
+      213: -5397551392287816145
+    second: fnt_mari_69
+  - first:
+      213: -7203959463173653288
+    second: fnt_mari_70
+  - first:
+      213: -1012239719244564865
+    second: fnt_mari_71
+  - first:
+      213: 263743546878945244
+    second: fnt_mari_72
+  - first:
+      213: 3566731403927586814
+    second: fnt_mari_73
+  - first:
+      213: 4755516585239591866
+    second: fnt_mari_74
+  - first:
+      213: -6211348306447047381
+    second: fnt_mari_75
+  - first:
+      213: -5478779759404297153
+    second: fnt_mari_76
+  - first:
+      213: -7699145430820483088
+    second: fnt_mari_77
+  - first:
+      213: -3057134234823567929
+    second: fnt_mari_78
+  - first:
+      213: -8156692906065296844
+    second: fnt_mari_79
+  - first:
+      213: 5047055471904948898
+    second: fnt_mari_80
+  - first:
+      213: -2636566055256046568
+    second: fnt_mari_81
+  - first:
+      213: 5037501959135564288
+    second: fnt_mari_82
+  - first:
+      213: -9010221636448188207
+    second: fnt_mari_83
+  - first:
+      213: -2150791965579391978
+    second: fnt_mari_84
+  - first:
+      213: 2725249308399610749
+    second: fnt_mari_85
+  - first:
+      213: -4039852218552416567
+    second: fnt_mari_86
+  - first:
+      213: 9103293175060056878
+    second: fnt_mari_87
+  - first:
+      213: -5017979956955660500
+    second: fnt_mari_88
+  - first:
+      213: -228224775714464573
+    second: fnt_mari_89
+  - first:
+      213: 7028588849227334165
+    second: fnt_mari_90
+  - first:
+      213: 9038463853160752940
+    second: fnt_mari_91
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fnt_mari_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 239
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff51594b1e7105300800000000000000
+      internalID: 238717038415386111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 239
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c4f047d54e501f0800000000000000
+      internalID: -1079205445655114719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_2
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 239
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16855ea888ddc63e0800000000000000
+      internalID: -2059027351099582367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 239
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817ad96f706ef4a80800000000000000
+      internalID: -8480306651438668008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_4
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 239
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d44b4091e4eadf0800000000000000
+      internalID: -167110266806055569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_5
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 247
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc73f39bf172f480800000000000000
+      internalID: -8866899391006147401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_6
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 245
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ac937aa0d1baf10800000000000000
+      internalID: 2281949567785749054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_7
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 237
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee5263ab7b195430800000000000000
+      internalID: 3772076380735561441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_8
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 239
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf170a3246498d8f0800000000000000
+      internalID: -515498999518563845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_9
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 237
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c5ec00c20ced3a50800000000000000
+      internalID: 6502612933549024704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_10
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 239
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4827d2a447678c0800000000000000
+      internalID: -4001883356933225223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 221
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d84843203476de40800000000000000
+      internalID: 5680855730073651412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_12
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 221
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f252813c58f67fd0800000000000000
+      internalID: -2344413481148460295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_13
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 221
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9861170f6ed69e0800000000000000
+      internalID: -1626389970047039030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_14
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 221
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b9e1d10dd3e320b0800000000000000
+      internalID: -5754505360491550282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 221
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e95df795466ae4a00800000000000000
+      internalID: 742713938491200926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_16
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 221
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ad015ff9bd03290800000000000000
+      internalID: -7912583065232156052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_17
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 221
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9c0b5d945c29bf0800000000000000
+      internalID: -318975702681466371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_18
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 221
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12d51be49dce37110800000000000000
+      internalID: 1257609139038805281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_19
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 219
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f7e5e3dab933b7a0800000000000000
+      internalID: -6362678373962618894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_20
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 219
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a499625b113fd7970800000000000000
+      internalID: 8754420508057311562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_21
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 221
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6e7def1c72fbeb0800000000000000
+      internalID: -4701995771793774879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 203
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f002344e2df310c70800000000000000
+      internalID: 8935493310685061135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_23
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 201
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b59c76e323f4ab0800000000000000
+      internalID: -5021739815884203236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_24
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 201
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5801eaef62778a0800000000000000
+      internalID: -6307529877825223199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_25
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 201
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d8bd968f5dd7850800000000000000
+      internalID: 6376487910331092254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_26
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 203
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace7581c27c8de570800000000000000
+      internalID: 8497602496418905802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_27
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 203
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f36f202ea5f2c9c80800000000000000
+      internalID: -8314718744647371201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_28
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 203
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 671a086022c4dc350800000000000000
+      internalID: 6038566384395395446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_29
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 203
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43bebaac67952a10800000000000000
+      internalID: 1884078512101307214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_30
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 203
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b9eb5e3ed61f1570800000000000000
+      internalID: 8439489370500360632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_31
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 203
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d0fc74b0635f3da0800000000000000
+      internalID: -5962955706805194544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_32
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 203
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45e3d36b310d6450800000000000000
+      internalID: 6083520026236937551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_33
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 203
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335ef97c58d856ad0800000000000000
+      internalID: -2709603995074173645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_34
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 203
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38e7ce2233c927700800000000000000
+      internalID: 536663049053699715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_35
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 183
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22ffb11631f2d4a0800000000000000
+      internalID: -6569923691851812305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_36
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 185
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e1952b57e62c870800000000000000
+      internalID: 8701638881815633538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_37
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 185
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb84707ea90a80c0800000000000000
+      internalID: -4572831826825671693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_38
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 185
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b44b147a00a2710800000000000000
+      internalID: 1669147330256063326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_39
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 185
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9bb069d8a89f8880800000000000000
+      internalID: -8606492511912805474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_40
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 185
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f987e2757c124f0800000000000000
+      internalID: -855183276967944314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_41
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 185
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b1598b753011890800000000000000
+      internalID: -7489201030046606516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_42
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 185
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e921e4a730f98dc10800000000000000
+      internalID: 2078586065317139102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_43
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 185
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66cac536e99aee320800000000000000
+      internalID: 2589193333521558630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_44
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 185
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9d42a53b60f2750800000000000000
+      internalID: 6282247372586408364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_45
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 185
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 015b365a1883461e0800000000000000
+      internalID: -2205575788027988720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_46
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 167
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d78a045a819eda6b0800000000000000
+      internalID: -5283310495774758787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_47
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 167
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdedc5c172b52e140800000000000000
+      internalID: 4747457180739624667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_48
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 167
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7e0bb908d07da70800000000000000
+      internalID: 8851558438639036333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_49
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 167
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a396936cd0d7290800000000000000
+      internalID: -7891135827065357752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_50
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 167
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569c8279c6b788350800000000000000
+      internalID: 6019196608303384933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_51
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 167
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcb5a409292a5e80800000000000000
+      internalID: -8189187716271457030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_52
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 165
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4afb4ab29735580800000000000000
+      internalID: -8839588415243574071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_53
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 167
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2300bcdf8b10f40800000000000000
+      internalID: 5693034804145042169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_54
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 165
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba318373be725cd0800000000000000
+      internalID: -2570853128073037131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_55
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 167
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a299ec3ad66d3d880800000000000000
+      internalID: -8587284298077398742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_56
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 169
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abebbd9135fb9e700800000000000000
+      internalID: 570197191476100794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_57
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 165
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f862a49529525dc0800000000000000
+      internalID: -3651758329901717256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_58
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 165
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a6b546bfff642f0800000000000000
+      internalID: -988821612975658440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_59
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 167
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceb95b2708932e1c0800000000000000
+      internalID: -4475951855809750036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_60
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 149
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e979ba217f5eade0800000000000000
+      internalID: -1320012701120235031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_61
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 149
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807cd9abdc377ac90800000000000000
+      internalID: -7158625755245721848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_62
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 151
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c66bc73aef8dd5b0800000000000000
+      internalID: -5341955346870344000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_63
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 149
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f1a3d795e960a30800000000000000
+      internalID: 4181203411250323330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_64
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 149
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe1ac4884188811e0800000000000000
+      internalID: -2226880393967263249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_65
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 149
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6701780ffcbf0d0800000000000000
+      internalID: -3387885662701062446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_66
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 149
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af0283dc96c49870800000000000000
+      internalID: 8688787957970243488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_67
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 149
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c87c107ff59e0b70800000000000000
+      internalID: 8867189640669198528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_68
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 149
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d9d6049e375b5a20800000000000000
+      internalID: 3052129098756708818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_69
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 149
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2605cd2b9b0815b0800000000000000
+      internalID: -5397551392287816145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_70
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 149
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc78355905660c90800000000000000
+      internalID: -7203959463173653288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_71
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 149
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76f2e2a65dc3f1f0800000000000000
+      internalID: -1012239719244564865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_72
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 149
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd76587cb5109a300800000000000000
+      internalID: 263743546878945244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_73
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 131
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef7855480539f7130800000000000000
+      internalID: 3566731403927586814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_74
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 131
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb3fa2732dfef140800000000000000
+      internalID: 4755516585239591866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_75
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 131
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25eff9df9bdcc9a0800000000000000
+      internalID: -6211348306447047381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_76
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 131
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f345b1e26d677f3b0800000000000000
+      internalID: -5478779759404297153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_77
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 131
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff8fd1c504272590800000000000000
+      internalID: -7699145430820483088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_78
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 131
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5d7ae5c90e295d0800000000000000
+      internalID: -3057134234823567929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_79
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 131
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4328708940b9dce80800000000000000
+      internalID: -8156692906065296844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_80
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 131
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a20694163eba0640800000000000000
+      internalID: 5047055471904948898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_81
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 129
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8144c915429096bd0800000000000000
+      internalID: -2636566055256046568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_82
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 131
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0021c9d875dc8e540800000000000000
+      internalID: 5037501959135564288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_83
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 131
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d887fbe82345f280800000000000000
+      internalID: -9010221636448188207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_84
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 131
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c40e94a1ad622e0800000000000000
+      internalID: -2150791965579391978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_85
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 119
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ba9879ec702d520800000000000000
+      internalID: 2725249308399610749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_86
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 111
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c60c10bfcf8fe7c0800000000000000
+      internalID: -4039852218552416567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_87
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 119
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b41b159e4655e70800000000000000
+      internalID: 9103293175060056878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_88
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 113
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2fb0a7c0dd8c5ab0800000000000000
+      internalID: -5017979956955660500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_89
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 113
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc989296ce25dcf0800000000000000
+      internalID: -228224775714464573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_90
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 117
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512877eb1509a8160800000000000000
+      internalID: 7028588849227334165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_mari_91
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 111
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27ead29cf21f6d70800000000000000
+      internalID: 9038463853160752940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fnt_mari_0: 238717038415386111
+      fnt_mari_1: -1079205445655114719
+      fnt_mari_10: -4001883356933225223
+      fnt_mari_11: 5680855730073651412
+      fnt_mari_12: -2344413481148460295
+      fnt_mari_13: -1626389970047039030
+      fnt_mari_14: -5754505360491550282
+      fnt_mari_15: 742713938491200926
+      fnt_mari_16: -7912583065232156052
+      fnt_mari_17: -318975702681466371
+      fnt_mari_18: 1257609139038805281
+      fnt_mari_19: -6362678373962618894
+      fnt_mari_2: -2059027351099582367
+      fnt_mari_20: 8754420508057311562
+      fnt_mari_21: -4701995771793774879
+      fnt_mari_22: 8935493310685061135
+      fnt_mari_23: -5021739815884203236
+      fnt_mari_24: -6307529877825223199
+      fnt_mari_25: 6376487910331092254
+      fnt_mari_26: 8497602496418905802
+      fnt_mari_27: -8314718744647371201
+      fnt_mari_28: 6038566384395395446
+      fnt_mari_29: 1884078512101307214
+      fnt_mari_3: -8480306651438668008
+      fnt_mari_30: 8439489370500360632
+      fnt_mari_31: -5962955706805194544
+      fnt_mari_32: 6083520026236937551
+      fnt_mari_33: -2709603995074173645
+      fnt_mari_34: 536663049053699715
+      fnt_mari_35: -6569923691851812305
+      fnt_mari_36: 8701638881815633538
+      fnt_mari_37: -4572831826825671693
+      fnt_mari_38: 1669147330256063326
+      fnt_mari_39: -8606492511912805474
+      fnt_mari_4: -167110266806055569
+      fnt_mari_40: -855183276967944314
+      fnt_mari_41: -7489201030046606516
+      fnt_mari_42: 2078586065317139102
+      fnt_mari_43: 2589193333521558630
+      fnt_mari_44: 6282247372586408364
+      fnt_mari_45: -2205575788027988720
+      fnt_mari_46: -5283310495774758787
+      fnt_mari_47: 4747457180739624667
+      fnt_mari_48: 8851558438639036333
+      fnt_mari_49: -7891135827065357752
+      fnt_mari_5: -8866899391006147401
+      fnt_mari_50: 6019196608303384933
+      fnt_mari_51: -8189187716271457030
+      fnt_mari_52: -8839588415243574071
+      fnt_mari_53: 5693034804145042169
+      fnt_mari_54: -2570853128073037131
+      fnt_mari_55: -8587284298077398742
+      fnt_mari_56: 570197191476100794
+      fnt_mari_57: -3651758329901717256
+      fnt_mari_58: -988821612975658440
+      fnt_mari_59: -4475951855809750036
+      fnt_mari_6: 2281949567785749054
+      fnt_mari_60: -1320012701120235031
+      fnt_mari_61: -7158625755245721848
+      fnt_mari_62: -5341955346870344000
+      fnt_mari_63: 4181203411250323330
+      fnt_mari_64: -2226880393967263249
+      fnt_mari_65: -3387885662701062446
+      fnt_mari_66: 8688787957970243488
+      fnt_mari_67: 8867189640669198528
+      fnt_mari_68: 3052129098756708818
+      fnt_mari_69: -5397551392287816145
+      fnt_mari_7: 3772076380735561441
+      fnt_mari_70: -7203959463173653288
+      fnt_mari_71: -1012239719244564865
+      fnt_mari_72: 263743546878945244
+      fnt_mari_73: 3566731403927586814
+      fnt_mari_74: 4755516585239591866
+      fnt_mari_75: -6211348306447047381
+      fnt_mari_76: -5478779759404297153
+      fnt_mari_77: -7699145430820483088
+      fnt_mari_78: -3057134234823567929
+      fnt_mari_79: -8156692906065296844
+      fnt_mari_8: -515498999518563845
+      fnt_mari_80: 5047055471904948898
+      fnt_mari_81: -2636566055256046568
+      fnt_mari_82: 5037501959135564288
+      fnt_mari_83: -9010221636448188207
+      fnt_mari_84: -2150791965579391978
+      fnt_mari_85: 2725249308399610749
+      fnt_mari_86: -4039852218552416567
+      fnt_mari_87: 9103293175060056878
+      fnt_mari_88: -5017979956955660500
+      fnt_mari_89: -228224775714464573
+      fnt_mari_9: 6502612933549024704
+      fnt_mari_90: 7028588849227334165
+      fnt_mari_91: 9038463853160752940
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
