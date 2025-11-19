@@ -13,9 +13,6 @@ namespace Latuvu
             { 
                 Debug.Log("OnEnter GridLocomotionState");
             }
-            _animator.CrossFade(GridLocomotionHash, _crossFadeDuration);
-            
-            
             _player.ResetVelocity();
         }
 

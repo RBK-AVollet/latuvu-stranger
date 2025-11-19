@@ -12,7 +12,7 @@ namespace Latuvu
         [SerializeField] private Rigidbody2D _rb;
         
         [SerializeField] private float _speed = 5f;
-        [SerializeField] private float _gridMoveTime = 0.08f;
+        [SerializeField] private float _gridMoveTime = 0.2f;
         
         [SerializeField] private Animator _animator;
         
@@ -52,7 +52,7 @@ namespace Latuvu
             
             Any(deathState, new FuncPredicate(() => !_isAlive));
             
-            _stateMachine.SetState(freeLocomotionState);
+            _stateMachine.SetState(gridLocomotionState);
         }
         
         void At(IState from, IState to, IPredicate condition) => _stateMachine.AddTransition(from, to, condition);
@@ -72,16 +72,19 @@ namespace Latuvu
         public void HandleFreeMovement()
         {
             var moveInput = _moveAction.ReadValue<Vector2>();
+            PlayDirectionAnimation(moveInput);
             
             _rb.linearVelocity = moveInput * _speed;
         }
         
         public void HandleGridMovement()
         {
+            var moveInput = _moveAction.ReadValue<Vector2>();
+            
+            PlayDirectionAnimation(moveInput);
+            
             if (_isMovingGrid) return;
             
-            var moveInput = _moveAction.ReadValue<Vector2>();
-
             if (moveInput.sqrMagnitude < 0.5f) return;
 
             Vector2 direction = Vector2.zero;
@@ -117,6 +120,26 @@ namespace Latuvu
         public void ResetVelocity()
         {
             _rb.linearVelocity = Vector2.zero;
+        }
+        
+        private void PlayDirectionAnimation(Vector2 direction)
+        {
+            if (direction == Vector2.zero) return;
+
+            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+            {
+                if (direction.x > 0)
+                    _animator.SetTrigger("Right");
+                else
+                    _animator.SetTrigger("Left");
+            }
+            else
+            {
+                if (direction.y > 0)
+                    _animator.SetTrigger("Top");
+                else
+                    _animator.SetTrigger("Down");
+            }
         }
     }
 }

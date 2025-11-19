@@ -13,9 +13,6 @@ namespace Latuvu
             { 
                 Debug.Log("OnEnter FreeLocomotionState");
             }
-            
-            _animator.CrossFade(FreeLocomotionHash, _crossFadeDuration);
-            
             _player.ResetVelocity();
         }
 
