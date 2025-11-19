@@ -18,7 +18,6 @@ namespace Latuvu
 
         public override void FixedUpdate()
         {
-            _player.HandleFreeMovement();
         }
 
         public override void OnExit()

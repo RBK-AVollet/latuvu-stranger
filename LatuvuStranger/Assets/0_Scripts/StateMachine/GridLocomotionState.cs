@@ -16,10 +16,6 @@ namespace Latuvu
             _player.ResetVelocity();
         }
 
-        public override void FixedUpdate()
-        {
-            _player.HandleGridMovement();
-        }
 
         public override void OnExit()
         {

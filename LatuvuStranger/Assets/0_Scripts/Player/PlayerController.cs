@@ -12,16 +12,18 @@ namespace Latuvu
         [SerializeField] private Rigidbody2D _rb;
         
         [SerializeField] private float _speed = 5f;
-        [SerializeField] private float _gridMoveTime = 0.2f;
+        [SerializeField] private float _tileStep = 1f;
         
         [SerializeField] private Animator _animator;
         
         private InputAction _moveAction;
+        private InputAction _wandInteractionAction;
         
         private StateMachine _stateMachine;
         
+        private PlayerInventory _playerInventory;
+        
         private bool _isMovingGrid = false; 
-        private bool _useGridMovement = true; // TEMP
         
         private bool _isAlive = true;
 
@@ -38,6 +40,8 @@ namespace Latuvu
                 _playerInput = GetComponent<PlayerInput>();
             }
             
+            _playerInventory = new PlayerInventory();
+            
             // State Machine
             _stateMachine = new StateMachine();
             
@@ -47,8 +51,8 @@ namespace Latuvu
             var deathState = new DeathState(this, _animator);
             
             // Define Transitions
-            At(freeLocomotionState, gridLocomotionState, new FuncPredicate(() => _useGridMovement)); // Placeholder condition, modifier pour que lorsqu'on récupère le baton on passe en mode grille
-            At(gridLocomotionState, freeLocomotionState, new FuncPredicate(() => !_useGridMovement)); 
+            At(freeLocomotionState, gridLocomotionState, new FuncPredicate(() => _playerInventory.HasWand)); // Placeholder condition, modifier pour que lorsqu'on récupère le baton on passe en mode grille
+            At(gridLocomotionState, freeLocomotionState, new FuncPredicate(() => _playerInventory.HasWand)); 
             
             Any(deathState, new FuncPredicate(() => !_isAlive));
             
@@ -62,6 +66,13 @@ namespace Latuvu
         {
             // Input Actions
             _moveAction = _playerInput.actions.FindAction("Move");
+            _wandInteractionAction = _playerInput.actions.FindAction("WandInteraction");
+            
+            _wandInteractionAction.started += Interact;
+            _wandInteractionAction.canceled -= Interact;
+            
+            _moveAction.started += GridMoveStep;
+            _wandInteractionAction.canceled -= GridMoveStep;
         }
 
         public void FixedUpdate()
@@ -77,44 +88,38 @@ namespace Latuvu
             _rb.linearVelocity = moveInput * _speed;
         }
         
-        public void HandleGridMovement()
+        private void Interact(InputAction.CallbackContext context)
         {
-            var moveInput = _moveAction.ReadValue<Vector2>();
+            if (!_playerInventory.HasWand) return; 
             
-            PlayDirectionAnimation(moveInput);
-            
-            if (_isMovingGrid) return;
-            
-            if (moveInput.sqrMagnitude < 0.5f) return;
+            RaycastHit2D hit = Physics2D.Raycast(_rb.position, transform.forward);
 
-            Vector2 direction = Vector2.zero;
-            if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
-                direction = new Vector2(Mathf.Sign(moveInput.x), 0);
-            else
-                direction = new Vector2(0, Mathf.Sign(moveInput.y));
-
-            StartCoroutine(GridMoveStep(direction));
+            if (hit.collider.TryGetComponent(out LivingTileEntity tileEntity))
+            {
+                return;
+            }
+            
+            if(hit.collider.TryGetComponent(out StaticTileEntity staticTileEntity) && !_playerInventory.HasCube)
+            {
+                _playerInventory.ObtainCube();
+                return;
+            } 
+            
+            _playerInventory.RemoveCube();
+            // Placer une tile
         }
         
-        private IEnumerator GridMoveStep(Vector2 direction)
+        private void GridMoveStep(InputAction.CallbackContext context)
         {
-            _isMovingGrid = true;
             ResetVelocity();
 
-            Vector3 start = transform.position;
-            Vector3 end = start + (Vector3)direction;
-
-            float elapsed = 0f;
-
-            while (elapsed < _gridMoveTime)
-            {
-                transform.position = Vector3.Lerp(start, end, elapsed / _gridMoveTime);
-                elapsed += Time.deltaTime;
-                yield return null;
-            }
-
+            var moveDirection = context.ReadValue<Vector2>();
+            
+            Vector2 start = transform.position;
+            Vector2 end = start + _tileStep * moveDirection;
+            
+            PlayDirectionAnimation(moveDirection);
             transform.position = end;
-            _isMovingGrid = false;
         }
         
         public void ResetVelocity()
