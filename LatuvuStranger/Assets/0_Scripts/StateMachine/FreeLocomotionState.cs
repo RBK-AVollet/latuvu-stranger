@@ -9,7 +9,12 @@ namespace Latuvu
 
         public override void OnEnter()
         {
-            Debug.Log("OnEnter FreeLocomotionState");
+            if (_debugMode)
+            { 
+                Debug.Log("OnEnter FreeLocomotionState");
+            }
+            
+            _player.ResetVelocity();
         }
 
         public override void FixedUpdate()
@@ -19,7 +24,10 @@ namespace Latuvu
 
         public override void OnExit()
         {
-            Debug.Log("OnExit FreeLocomotionState");
+            if (_debugMode)
+            { 
+                Debug.Log("OnExit FreeLocomotionState");
+            }
         }
     }
 }
