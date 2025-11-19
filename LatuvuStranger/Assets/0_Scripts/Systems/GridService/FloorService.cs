@@ -7,11 +7,10 @@ namespace Latuvu
     public class FloorService : Singleton<FloorService>
     {
         [SerializeField] private FloorPrefab[] _floors;
+        [SerializeField] private TileBase[] _hud;
         private FloorPrefab _currentFloor;
         
         public Tilemap Tilemap => _currentFloor.Tilemap;
-        
-        public T GetTile<T>(Vector3Int position) where T : TileBase => Tilemap.GetTile<T>(position);
         
         public void LoadFloor(string floorId)
         {
@@ -28,7 +27,15 @@ namespace Latuvu
             }
 
             _currentFloor = Instantiate(floor, transform);
-            Debug.Log($"[FloorService]: Loaded floor {floorId}");
+            ApplyHUD();
+        }
+        
+        private void ApplyHUD()
+        {
+            for (int i = 0; i < _hud.Length; i++)
+            {
+                Tilemap.SetTile(new Vector3Int(i, 0, 0), _hud[i]);
+            }
         }
 
         public FloorPrefab GetFloorById(string floorId)

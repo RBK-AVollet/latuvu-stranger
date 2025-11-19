@@ -7,6 +7,13 @@ namespace Latuvu
         public string FloorId = "B00";
         public Tilemap Tilemap;
         public Transform EntitiesParent;
-        public Transform PlayerSpawn;
+        [SerializeField] private Vector3Int _playerSpawn;
+
+        public Vector3 GetPlayerSpawnWorld() => Tilemap.GetCellCenterWorld(_playerSpawn);
+        
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawIcon(GetPlayerSpawnWorld(), "T_PlayerSpawn.png");
+        }
     }
 }
