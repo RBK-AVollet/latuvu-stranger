@@ -22,14 +22,14 @@ namespace Latuvu
             _pauseMenu = new PauseMenu(root.Q<VisualElement>("pause-menu"));
             
             _currentView = _pauseMenu;
+            
+            _buttons = _pauseMenu.Buttons;
 
             foreach (var b in _buttons)
             {
                 if (b != null)
                     b.focusable = true;
             }
-
-            _buttons = _pauseMenu.Buttons;
             
             _buttons[0]?.Focus();
             
@@ -41,9 +41,7 @@ namespace Latuvu
             _settings.BackButton.clicked += () => BackMenu();
             
             _memories = new Memories(root.Q<VisualElement>("memories-menu"));
-            _memories.BackButton.clicked += () => BackMenu();
-            
-            root.RegisterCallback<KeyDownEvent>(OnKeyDown);
+            //_memories.BackButton.clicked += () => BackMenu();
         }
 
         private void ChangeFocus(List<Button> buttons)
@@ -75,28 +73,6 @@ namespace Latuvu
         {
             Time.timeScale = 1;
             _uiDoc.rootVisualElement.RemoveFromClassList("visible");
-        }
-        
-        private void OnKeyDown(KeyDownEvent ev)
-        {
-            if (ev.keyCode == KeyCode.UpArrow || ev.keyCode == KeyCode.DownArrow)
-            {
-                var focused = _uiDoc.rootVisualElement.panel?.focusController?.focusedElement as Button;
-                int current = _buttons.IndexOf(focused);
-
-                int dir = 0;
-                if (ev.keyCode == KeyCode.DownArrow) dir = -1;
-                if (ev.keyCode == KeyCode.UpArrow) dir = 1;
-
-                int next;
-                if (current >= 0)
-                    next = (current + dir + _buttons.Count) % _buttons.Count;
-                else
-                    next = dir == 1 ? 0 : _buttons.Count - 1;
-
-                _buttons[next]?.Focus();
-                ev.StopPropagation();
-            }
         }
     }
 }

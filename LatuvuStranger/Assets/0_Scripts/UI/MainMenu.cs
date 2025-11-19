@@ -40,7 +40,6 @@ namespace Latuvu._0_Scripts.UI
             
             _menuButtons[0]?.Focus();
             
-            root.RegisterCallback<KeyDownEvent>(OnKeyDown);
             _menuButtons[0].clicked += StartGame;
             _menuButtons[1].clicked += OpenSettings;
             _menuButtons[2].clicked += QuitGame;
@@ -74,44 +73,9 @@ namespace Latuvu._0_Scripts.UI
 
         void OnDisable()
         {
-            if (_uiDoc != null)
-                _uiDoc.rootVisualElement.UnregisterCallback<KeyDownEvent>(OnKeyDown);
-            
             _menuButtons[0].clicked -= StartGame;
             _menuButtons[1].clicked -= OpenSettings;
             _menuButtons[2].clicked -= QuitGame;
-        }
-
-        private void OnKeyDown(KeyDownEvent ev)
-        {
-            if (ev.keyCode == KeyCode.UpArrow || ev.keyCode == KeyCode.DownArrow)
-            {
-                var focused = _uiDoc.rootVisualElement.panel?.focusController?.focusedElement as Button;
-                int current = _menuButtons.IndexOf(focused);
-
-                int dir = 0;
-                if (ev.keyCode == KeyCode.DownArrow) dir = -1;
-                if (ev.keyCode == KeyCode.UpArrow) dir = 1;
-
-                int next;
-                if (current >= 0)
-                    next = (current + dir + _menuButtons.Count) % _menuButtons.Count;
-                else
-                    next = dir == 1 ? 0 : _menuButtons.Count - 1;
-
-                _menuButtons[next]?.Focus();
-                ev.StopPropagation();
-                return;
-            }
-            
-            if (ev.keyCode == KeyCode.W || ev.keyCode == KeyCode.KeypadEnter)
-            {
-                var focusedButton = _uiDoc.rootVisualElement.panel?.focusController?.focusedElement as Button;
-                if (focusedButton != null)
-                {
-                    ev.StopPropagation();
-                }
-            }
         }
     }
 }

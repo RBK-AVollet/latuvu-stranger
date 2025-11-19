@@ -4,8 +4,8 @@
 .visible {
 }
 
-Label:focus {
-    color: rgb(255, 255, 255);
+.hidden {
+    display: none;
 }
 
 .Button.white:focus Label#title {
@@ -51,6 +51,33 @@ Label {
     margin-left: 0;
 }
 
-.hidden {
+#resolution-dropdown VisualElement {
+    background-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-left-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    width: 50%;
+}
+
+#resolution-dropdown Label {
+    width: 50%;
+    font-size: 100px;
+    -unity-font-definition: url("project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&guid=90aecb5949e6d7a47a8d89b5c0e257bd&type=3#Alkhemikal");
+    -unity-text-align: upper-right;
+}
+
+#resolution-dropdown:focus Label {
+}
+
+#resolution-dropdown PopupTextElement {
+    display: flex;
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&guid=90aecb5949e6d7a47a8d89b5c0e257bd&type=3#Alkhemikal");
+    font-size: 75px;
+    width: 50%;
+}
+
+#root > #Container > #resolution-dropdown > .unity-popup-field__input > .unity-base-popup-field__arrow {
     display: none;
 }
