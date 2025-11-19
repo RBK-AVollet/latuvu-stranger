@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 0b2ebf36de776ef43b41b808276ac335
 =======
 guid: af24bf7e212bd964aa31cbfb09628f9e
 >>>>>>> 5442844 ([UPDATE] idk)
+=======
+guid: af24bf7e212bd964aa31cbfb09628f9e
+>>>>>>> origin/feature/UI
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
