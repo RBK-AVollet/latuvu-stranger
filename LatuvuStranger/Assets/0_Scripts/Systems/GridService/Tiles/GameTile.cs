@@ -1,6 +1,9 @@
+using UnityEngine;
+
 namespace Latuvu
 {
-    public class GameTile : UnityEngine.Tilemaps.TileBase
+    [CreateAssetMenu(menuName = "Latuvu/Tiles/Game Tile")]
+    public class GameTile : UnityEngine.Tilemaps.Tile
     {
         public bool IsWalkable = true;
         public bool IsPickable = true;
