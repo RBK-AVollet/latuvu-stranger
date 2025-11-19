@@ -5,7 +5,7 @@ namespace Latuvu
 {
 
     [CreateAssetMenu(menuName = "Latuvu/Tiles/Game Tile")]
-    public class GameTile : Tile
+    public class GameTile : RuleTile
     {
         public bool IsWalkable = true;
         public bool IsPickable = true;
