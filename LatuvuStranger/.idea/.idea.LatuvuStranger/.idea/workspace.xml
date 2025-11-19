@@ -16,7 +16,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Systems/GridService/Tiles/TileBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Systems/Services/GridService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
@@ -99,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763547142602</updated>
-      <workItem from="1763547145237" duration="2570000" />
+      <workItem from="1763547145237" duration="1638000" />
     </task>
     <servers />
   </component>
