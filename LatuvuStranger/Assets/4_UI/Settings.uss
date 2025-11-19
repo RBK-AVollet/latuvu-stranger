@@ -1,0 +1,56 @@
+:root {
+}
+
+.visible {
+}
+
+Label:focus {
+    color: rgb(255, 255, 255);
+}
+
+.Button.white:focus Label#title {
+    -unity-font-definition: url("project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&guid=90aecb5949e6d7a47a8d89b5c0e257bd&type=3#Alkhemikal");
+    color: rgb(255, 255, 255);
+}
+
+Label {
+    -unity-font-definition: url("project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&guid=90aecb5949e6d7a47a8d89b5c0e257bd&type=3#Alkhemikal");
+    font-size: 75px;
+    color: rgb(164, 164, 164);
+}
+
+#fullscreen-toggle VisualElement {
+    margin-left: 0;
+}
+
+#fullscreen-toggle Label {
+    width: 50%;
+    -unity-text-align: upper-right;
+    font-size: 100px;
+}
+
+#fullscreen-toggle:focus Label {
+    width: 50%;
+    -unity-text-align: upper-right;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+}
+
+#volume-slider Label {
+    width: 50%;
+    -unity-text-align: upper-right;
+    font-size: 100px;
+    -unity-font-definition: url("project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&guid=90aecb5949e6d7a47a8d89b5c0e257bd&type=3#Alkhemikal");
+}
+
+#volume-slider:focus Label {
+    color: rgb(255, 255, 255);
+}
+
+#volume-slider VisualElement {
+    margin-left: 0;
+}
+
+.hidden {
+    display: none;
+}
