@@ -1,5 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="Settings" src="project://database/Assets/4_UI/Settings.uxml?fileID=9197481963319205126&amp;guid=d0234a0d467c69d49b39801fa49a2dd9&amp;type=3#Settings" />
+    <ui:Template name="Memories" src="project://database/Assets/4_UI/Memories.uxml?fileID=9197481963319205126&amp;guid=a508c11ec548b8e45b98268a82b63542&amp;type=3#Memories" />
     <Style src="project://database/Assets/4_UI/MainMenu.uss?fileID=7433441132597879392&amp;guid=168bfa56a5f9e2c4d9b9c33bafc9894f&amp;type=3#MainMenu" />
     <Style src="project://database/Assets/4_UI/Settings.uss?fileID=7433441132597879392&amp;guid=d27e797e634035e42af406f498e2e635&amp;type=3#Settings" />
     <ui:VisualElement name="root" class="visible" style="flex-grow: 1; background-color: rgb(0, 0, 0); flex-direction: row;">
@@ -23,5 +24,6 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:Instance template="Settings" name="settings-menu" class="hidden" style="width: 100%;" />
+        <ui:Instance template="Memories" name="memories-menu" style="display: none;" />
     </ui:VisualElement>
 </ui:UXML>
