@@ -1,0 +1,3731 @@
+fileFormatVersion: 2
+guid: 3bb0190fff42a514b8a5f8642976a9ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4182624455159580199
+    second: fnt_suomi_12_0
+  - first:
+      213: -5488290938044013222
+    second: fnt_suomi_12_1
+  - first:
+      213: 4156638208264889794
+    second: fnt_suomi_12_2
+  - first:
+      213: 5797049621913643985
+    second: fnt_suomi_12_3
+  - first:
+      213: -8031746011972189094
+    second: fnt_suomi_12_4
+  - first:
+      213: 3183828400039924049
+    second: fnt_suomi_12_5
+  - first:
+      213: 4031449427121160255
+    second: fnt_suomi_12_6
+  - first:
+      213: -4118956925975090135
+    second: fnt_suomi_12_7
+  - first:
+      213: 5831450581445797088
+    second: fnt_suomi_12_8
+  - first:
+      213: 8307684871847793315
+    second: fnt_suomi_12_9
+  - first:
+      213: -1877249193097444692
+    second: fnt_suomi_12_10
+  - first:
+      213: -5204217578937723027
+    second: fnt_suomi_12_11
+  - first:
+      213: -7510298917163541143
+    second: fnt_suomi_12_12
+  - first:
+      213: 1821889135931541069
+    second: fnt_suomi_12_13
+  - first:
+      213: -6626126130828099562
+    second: fnt_suomi_12_14
+  - first:
+      213: 1950599042962090032
+    second: fnt_suomi_12_15
+  - first:
+      213: -6921584086465887175
+    second: fnt_suomi_12_16
+  - first:
+      213: -344362838661456752
+    second: fnt_suomi_12_17
+  - first:
+      213: -5312104718424703123
+    second: fnt_suomi_12_18
+  - first:
+      213: 2731013382613103140
+    second: fnt_suomi_12_19
+  - first:
+      213: 1966559250607511701
+    second: fnt_suomi_12_20
+  - first:
+      213: 1983608129289451038
+    second: fnt_suomi_12_21
+  - first:
+      213: 8023254417948544622
+    second: fnt_suomi_12_22
+  - first:
+      213: 1953606582489130284
+    second: fnt_suomi_12_23
+  - first:
+      213: 6447056703733614249
+    second: fnt_suomi_12_24
+  - first:
+      213: -128657239483686001
+    second: fnt_suomi_12_25
+  - first:
+      213: 1936025706149404128
+    second: fnt_suomi_12_26
+  - first:
+      213: 3321380839655059116
+    second: fnt_suomi_12_27
+  - first:
+      213: 7348928984948305305
+    second: fnt_suomi_12_28
+  - first:
+      213: -7636811531846724129
+    second: fnt_suomi_12_29
+  - first:
+      213: -6207704375821766990
+    second: fnt_suomi_12_30
+  - first:
+      213: -1981038275262374205
+    second: fnt_suomi_12_31
+  - first:
+      213: -1171206830566063554
+    second: fnt_suomi_12_32
+  - first:
+      213: 3368979628067841511
+    second: fnt_suomi_12_33
+  - first:
+      213: 5090872808682901874
+    second: fnt_suomi_12_34
+  - first:
+      213: 2794170418724559031
+    second: fnt_suomi_12_35
+  - first:
+      213: -8883455002641890779
+    second: fnt_suomi_12_36
+  - first:
+      213: -5732444336785848975
+    second: fnt_suomi_12_37
+  - first:
+      213: -6342014120758622231
+    second: fnt_suomi_12_38
+  - first:
+      213: -68050535721645701
+    second: fnt_suomi_12_39
+  - first:
+      213: 657559021173487363
+    second: fnt_suomi_12_40
+  - first:
+      213: -5514944842857728830
+    second: fnt_suomi_12_41
+  - first:
+      213: -4375159873032662899
+    second: fnt_suomi_12_42
+  - first:
+      213: -3010438051961556073
+    second: fnt_suomi_12_43
+  - first:
+      213: 3696476566622887458
+    second: fnt_suomi_12_44
+  - first:
+      213: 3867504950127761961
+    second: fnt_suomi_12_45
+  - first:
+      213: -7794295117782606750
+    second: fnt_suomi_12_46
+  - first:
+      213: -6121121635375288279
+    second: fnt_suomi_12_47
+  - first:
+      213: -7655613913693845408
+    second: fnt_suomi_12_48
+  - first:
+      213: 1953113382309375375
+    second: fnt_suomi_12_49
+  - first:
+      213: -1872472997470565483
+    second: fnt_suomi_12_50
+  - first:
+      213: -1661544035583620792
+    second: fnt_suomi_12_51
+  - first:
+      213: -5317074349421367468
+    second: fnt_suomi_12_52
+  - first:
+      213: 6916834747712440439
+    second: fnt_suomi_12_53
+  - first:
+      213: 9026427172362100639
+    second: fnt_suomi_12_54
+  - first:
+      213: 9080669505203698317
+    second: fnt_suomi_12_55
+  - first:
+      213: -2447949589219337012
+    second: fnt_suomi_12_56
+  - first:
+      213: -1153776596743594397
+    second: fnt_suomi_12_57
+  - first:
+      213: 3030404297934228072
+    second: fnt_suomi_12_58
+  - first:
+      213: -2157097494921709789
+    second: fnt_suomi_12_59
+  - first:
+      213: 2019615107801293686
+    second: fnt_suomi_12_60
+  - first:
+      213: 4079091293924023657
+    second: fnt_suomi_12_61
+  - first:
+      213: -2252850695398585449
+    second: fnt_suomi_12_62
+  - first:
+      213: -318977707953177228
+    second: fnt_suomi_12_63
+  - first:
+      213: 721585265307234937
+    second: fnt_suomi_12_64
+  - first:
+      213: -4667687059075040372
+    second: fnt_suomi_12_65
+  - first:
+      213: 8744107619454641831
+    second: fnt_suomi_12_66
+  - first:
+      213: 5799289574597405196
+    second: fnt_suomi_12_67
+  - first:
+      213: 3133722660122520774
+    second: fnt_suomi_12_68
+  - first:
+      213: -2637495253207006226
+    second: fnt_suomi_12_69
+  - first:
+      213: 7414360580529460634
+    second: fnt_suomi_12_70
+  - first:
+      213: 4667818097452943790
+    second: fnt_suomi_12_71
+  - first:
+      213: 7150678364817731196
+    second: fnt_suomi_12_72
+  - first:
+      213: -2390811937291051242
+    second: fnt_suomi_12_73
+  - first:
+      213: 575284491346382399
+    second: fnt_suomi_12_74
+  - first:
+      213: 9009051807241314215
+    second: fnt_suomi_12_75
+  - first:
+      213: -8741226232642529504
+    second: fnt_suomi_12_76
+  - first:
+      213: -7532097970030518965
+    second: fnt_suomi_12_77
+  - first:
+      213: 2066481452341363304
+    second: fnt_suomi_12_78
+  - first:
+      213: -3822623116112161296
+    second: fnt_suomi_12_79
+  - first:
+      213: 7036375931424514867
+    second: fnt_suomi_12_80
+  - first:
+      213: -5424285331865123032
+    second: fnt_suomi_12_81
+  - first:
+      213: 5269263110308221551
+    second: fnt_suomi_12_82
+  - first:
+      213: 5998123950502549132
+    second: fnt_suomi_12_83
+  - first:
+      213: 3431204124125654229
+    second: fnt_suomi_12_84
+  - first:
+      213: 4889695578909184302
+    second: fnt_suomi_12_85
+  - first:
+      213: -5153659593270955658
+    second: fnt_suomi_12_86
+  - first:
+      213: -4050212431390294023
+    second: fnt_suomi_12_87
+  - first:
+      213: -775782090144076119
+    second: fnt_suomi_12_88
+  - first:
+      213: 3303785715177622188
+    second: fnt_suomi_12_89
+  - first:
+      213: 6740513671263135504
+    second: fnt_suomi_12_90
+  - first:
+      213: -3145628836380218977
+    second: fnt_suomi_12_91
+  - first:
+      213: 4713478084988187723
+    second: fnt_suomi_12_92
+  - first:
+      213: -8490571896713599474
+    second: fnt_suomi_12_93
+  - first:
+      213: -8549851218232665264
+    second: fnt_suomi_12_94
+  - first:
+      213: 5868636625419992724
+    second: fnt_suomi_12_95
+  - first:
+      213: -2046981036573880286
+    second: fnt_suomi_12_96
+  - first:
+      213: -7689364121670354331
+    second: fnt_suomi_12_97
+  - first:
+      213: -523560537639488961
+    second: fnt_suomi_12_98
+  - first:
+      213: -2173417987209627432
+    second: fnt_suomi_12_99
+  - first:
+      213: 2933232686795904173
+    second: fnt_suomi_12_100
+  - first:
+      213: -6682879713856946087
+    second: fnt_suomi_12_101
+  - first:
+      213: -4876636899340881553
+    second: fnt_suomi_12_102
+  - first:
+      213: -4251565330181911474
+    second: fnt_suomi_12_103
+  - first:
+      213: -8436751062887248401
+    second: fnt_suomi_12_104
+  - first:
+      213: 2283665297899197968
+    second: fnt_suomi_12_105
+  - first:
+      213: -7089708849144990704
+    second: fnt_suomi_12_106
+  - first:
+      213: 5600613928733121456
+    second: fnt_suomi_12_107
+  - first:
+      213: -7039231033753476980
+    second: fnt_suomi_12_108
+  - first:
+      213: -1301679447560061261
+    second: fnt_suomi_12_109
+  - first:
+      213: -5938938061384757622
+    second: fnt_suomi_12_110
+  - first:
+      213: -7600385075205544341
+    second: fnt_suomi_12_111
+  - first:
+      213: -6716106348445926842
+    second: fnt_suomi_12_112
+  - first:
+      213: 4569545275149069071
+    second: fnt_suomi_12_113
+  - first:
+      213: -1463355458270019213
+    second: fnt_suomi_12_114
+  - first:
+      213: 3363503123612152354
+    second: fnt_suomi_12_115
+  - first:
+      213: 14473596146066661
+    second: fnt_suomi_12_116
+  - first:
+      213: -7274778133844595589
+    second: fnt_suomi_12_117
+  - first:
+      213: 6431870399943862362
+    second: fnt_suomi_12_118
+  - first:
+      213: 1407765032759436055
+    second: fnt_suomi_12_119
+  - first:
+      213: -1941033714622011011
+    second: fnt_suomi_12_120
+  - first:
+      213: -6408138772101476540
+    second: fnt_suomi_12_121
+  - first:
+      213: -2741336504056105051
+    second: fnt_suomi_12_122
+  - first:
+      213: -7354886255777924706
+    second: fnt_suomi_12_123
+  - first:
+      213: 665598918444356049
+    second: fnt_suomi_12_124
+  - first:
+      213: 5120562445581240862
+    second: fnt_suomi_12_125
+  - first:
+      213: -7858243401564148578
+    second: fnt_suomi_12_126
+  - first:
+      213: -8880640489056047409
+    second: fnt_suomi_12_127
+  - first:
+      213: -4274059772129296315
+    second: fnt_suomi_12_128
+  - first:
+      213: -2027136609799786651
+    second: fnt_suomi_12_129
+  - first:
+      213: 6777955166732849570
+    second: fnt_suomi_12_130
+  - first:
+      213: 303883875433542799
+    second: fnt_suomi_12_131
+  - first:
+      213: -5320203659451254437
+    second: fnt_suomi_12_132
+  - first:
+      213: 6747699275797787219
+    second: fnt_suomi_12_133
+  - first:
+      213: 6422954656292131703
+    second: fnt_suomi_12_134
+  - first:
+      213: -6206495013570240464
+    second: fnt_suomi_12_135
+  - first:
+      213: -1470447442630649147
+    second: fnt_suomi_12_136
+  - first:
+      213: -5778939499743559564
+    second: fnt_suomi_12_137
+  - first:
+      213: 7516889325719419617
+    second: fnt_suomi_12_138
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fnt_suomi_12_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 242
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9f951f73554f5c0800000000000000
+      internalID: -4182624455159580199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 242
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5524e5587ca5d3b0800000000000000
+      internalID: -5488290938044013222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 242
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c5e1777d685fa930800000000000000
+      internalID: 4156638208264889794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 242
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dba973cae1437050800000000000000
+      internalID: 5797049621913643985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 242
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54cc3e5e81898090800000000000000
+      internalID: -8031746011972189094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 239
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1511e2aaf0b3f2c20800000000000000
+      internalID: 3183828400039924049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_6
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 242
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f304289f4e592f730800000000000000
+      internalID: 4031449427121160255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_7
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 242
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92cae1ebf7686d6c0800000000000000
+      internalID: -4118956925975090135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_8
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 242
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e4625058697de050800000000000000
+      internalID: 5831450581445797088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_9
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 242
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2df5cff53da4370800000000000000
+      internalID: 8307684871847793315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_10
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 242
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2c9821ecba2f5e0800000000000000
+      internalID: -1877249193097444692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_11
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 239
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67d2916fa7e6c7b0800000000000000
+      internalID: -5204217578937723027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_12
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 242
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d57751dee06c790800000000000000
+      internalID: -7510298917163541143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_13
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 242
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46c75f2486a84910800000000000000
+      internalID: 1821889135931541069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_14
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 242
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610ce0704654b04a0800000000000000
+      internalID: -6626126130828099562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_15
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 242
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 038e8feae7be11b10800000000000000
+      internalID: 1950599042962090032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_16
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 242
+        width: 38
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934443b02f791ff90800000000000000
+      internalID: -6921584086465887175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_17
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 242
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c1dbf92d3983bf0800000000000000
+      internalID: -344362838661456752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_18
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 243
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f7e9047ec9746b0800000000000000
+      internalID: -5312104718424703123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_19
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 239
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422fd73b33286e520800000000000000
+      internalID: 2731013382613103140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_20
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 239
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 598183a183f9a4b10800000000000000
+      internalID: 1966559250607511701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_21
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 242
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16ffdf7511378b10800000000000000
+      internalID: 1983608129289451038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 218
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e08645263585f60800000000000000
+      internalID: 8023254417948544622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_23
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 225
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c25212c06da9c1b10800000000000000
+      internalID: 1953606582489130284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_24
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 221
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a6c7d00aeb887950800000000000000
+      internalID: 6447056703733614249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_25
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 224
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83eace1ceae63ef0800000000000000
+      internalID: -128657239483686001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_26
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 218
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed5f0b4f152eda10800000000000000
+      internalID: 1936025706149404128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_27
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 218
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caead67b64ae71e20800000000000000
+      internalID: 3321380839655059116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_28
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 221
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d6a6bb9f3acf560800000000000000
+      internalID: 7348928984948305305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_29
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 221
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd55ba39f58940690800000000000000
+      internalID: -7636811531846724129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_30
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 221
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be618092cdc9d9a0800000000000000
+      internalID: -6207704375821766990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_31
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 221
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce98844f20f184e0800000000000000
+      internalID: -1981038275262374205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_32
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 221
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e324999c7990fbfe0800000000000000
+      internalID: -1171206830566063554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_33
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 221
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5e2824f1501ce20800000000000000
+      internalID: 3368979628067841511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_34
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 221
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2715d3ec8d966a640800000000000000
+      internalID: 5090872808682901874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_35
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 221
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b85bf11133e6c620800000000000000
+      internalID: 2794170418724559031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_36
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 221
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5220d5dddb0a7b480800000000000000
+      internalID: -8883455002641890779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_37
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 221
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1750e2b5f344270b0800000000000000
+      internalID: -5732444336785848975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_38
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 221
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7cba332c3acf7a0800000000000000
+      internalID: -6342014120758622231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_39
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 221
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b794987f56c3e0ff0800000000000000
+      internalID: -68050535721645701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_40
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 221
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30736e3227e102900800000000000000
+      internalID: 657559021173487363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_41
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 221
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c4b79582eaf673b0800000000000000
+      internalID: -5514944842857728830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_42
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 221
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80585ca64f4843c0800000000000000
+      internalID: -4375159873032662899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_43
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 221
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 793338eaa86c836d0800000000000000
+      internalID: -3010438051961556073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_44
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 218
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22edc124ad58c4330800000000000000
+      internalID: 3696476566622887458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_45
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 218
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92a1e6fd2432ca530800000000000000
+      internalID: 3867504950127761961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_46
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 221
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c9106e2e915d390800000000000000
+      internalID: -7794295117782606750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_47
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 221
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9207f70cd486d0ba0800000000000000
+      internalID: -6121121635375288279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 200
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0688db8e4bbc1c590800000000000000
+      internalID: -7655613913693845408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_49
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 198
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8dac9ee54ada1b10800000000000000
+      internalID: 1953113382309375375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_50
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 200
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b8146cab3a306e0800000000000000
+      internalID: -1872472997470565483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_51
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 200
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8498e5cb08201f8e0800000000000000
+      internalID: -1661544035583620792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_52
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 200
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45fe56edc05f536b0800000000000000
+      internalID: -5317074349421367468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_53
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 200
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7788a7b5e888dff50800000000000000
+      internalID: 6916834747712440439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_54
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 200
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f939f60bf444d70800000000000000
+      internalID: 9026427172362100639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_55
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 200
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a7364bdc4050e70800000000000000
+      internalID: 9080669505203698317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_56
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 200
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc948281d2270ed0800000000000000
+      internalID: -2447949589219337012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_57
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 200
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e50f85c46fcffe0800000000000000
+      internalID: -1153776596743594397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_58
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 200
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86acf2837a82e0a20800000000000000
+      internalID: 3030404297934228072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_59
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 200
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3277e45d1437012e0800000000000000
+      internalID: -2157097494921709789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_60
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 673228b7d3d170c10800000000000000
+      internalID: 2019615107801293686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_61
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 200
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ddabc7be7db9830800000000000000
+      internalID: 4079091293924023657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_62
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 200
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b86c88a344cb0e0800000000000000
+      internalID: -2252850695398585449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_63
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 200
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47dbe22f673c29bf0800000000000000
+      internalID: -318977707953177228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_64
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 200
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9723bc5c9f5930a00800000000000000
+      internalID: 721585265307234937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_65
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 200
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8bf429a95b093fb0800000000000000
+      internalID: -4667687059075040372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_66
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 200
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a661673d8f495970800000000000000
+      internalID: 8744107619454641831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_67
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 200
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a218364273b7050800000000000000
+      internalID: 5799289574597405196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_68
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 200
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cce13df7283d7b20800000000000000
+      internalID: 3133722660122520774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_69
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 200
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee341df8a0cb56bd0800000000000000
+      internalID: -2637495253207006226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_70
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 197
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a951e1f3aa915e660800000000000000
+      internalID: 7414360580529460634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_71
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 199
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea982d614db67c040800000000000000
+      internalID: 4667818097452943790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_72
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 198
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e280e36105c3360800000000000000
+      internalID: 7150678364817731196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_73
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 200
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61fd009c53122ded0800000000000000
+      internalID: -2390811937291051242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_74
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 197
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e0e776232dbf700800000000000000
+      internalID: 575284491346382399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_75
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 179
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af95bdf2e4960d70800000000000000
+      internalID: 9009051807241314215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_76
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 179
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027140eed0de0b680800000000000000
+      internalID: -8741226232642529504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_77
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 179
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4dd3e29dcc987790800000000000000
+      internalID: -7532097970030518965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_78
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 179
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8628db5aeed9dac10800000000000000
+      internalID: 2066481452341363304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_79
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 179
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f510fd678053fac0800000000000000
+      internalID: -3822623116112161296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_80
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 179
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333aaaa11aa36a160800000000000000
+      internalID: 7036375931424514867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_81
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 179
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82741d1da3119b4b0800000000000000
+      internalID: -5424285331865123032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_82
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 179
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62ddfd81ee202940800000000000000
+      internalID: 5269263110308221551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_83
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 176
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86977c14fd9d3350800000000000000
+      internalID: 5998123950502549132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_84
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 179
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc6d5ab8f51e9f20800000000000000
+      internalID: 3431204124125654229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_85
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 179
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e211ea8e830bbd340800000000000000
+      internalID: 4889695578909184302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_86
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 179
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 671fcc9b7e58a78b0800000000000000
+      internalID: -5153659593270955658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_87
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 179
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff3c1aa041cac7c0800000000000000
+      internalID: -4050212431390294023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_88
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 179
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae2add9c4edb35f0800000000000000
+      internalID: -775782090144076119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_89
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 178
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caa0c2f8a9769dd20800000000000000
+      internalID: 3303785715177622188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_90
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 179
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 017ad43a87d1b8d50800000000000000
+      internalID: 6740513671263135504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_91
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 178
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f99e4545d3b7854d0800000000000000
+      internalID: -3145628836380218977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_92
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 179
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b443f406853a96140800000000000000
+      internalID: 4713478084988187723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_93
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 176
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e06a87c48dd6b2a80800000000000000
+      internalID: -8490571896713599474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_94
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 176
+        width: 33
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b1dc6bd93d85980800000000000000
+      internalID: -8549851218232665264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_95
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 179
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49e710edae5917150800000000000000
+      internalID: 5868636625419992724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_96
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 179
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2209d05b799a793e0800000000000000
+      internalID: -2046981036573880286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_97
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 179
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a74334214e94590800000000000000
+      internalID: -7689364121670354331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_98
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 178
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f32f5970770fbb8f0800000000000000
+      internalID: -523560537639488961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_99
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 179
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8fceb1bd776d1e0800000000000000
+      internalID: -2173417987209627432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_100
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 158
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4d804769fe4b820800000000000000
+      internalID: 2933232686795904173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_101
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 158
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95084e2ce44a143a0800000000000000
+      internalID: -6682879713856946087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_102
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 158
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61793cd394b25cb0800000000000000
+      internalID: -4876636899340881553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_103
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 158
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4c0423abd76ff4c0800000000000000
+      internalID: -4251565330181911474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_104
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 155
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fedc43eab93aaea80800000000000000
+      internalID: -8436751062887248401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_105
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 158
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0161b233d7531bf10800000000000000
+      internalID: 2283665297899197968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_106
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 158
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014f4c55d5b4c9d90800000000000000
+      internalID: -7089708849144990704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_107
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 158
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb1e32e1b069bd40800000000000000
+      internalID: 5600613928733121456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_108
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 155
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c80e7359ba0af4e90800000000000000
+      internalID: -7039231033753476980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_109
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 155
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be71c460718fede0800000000000000
+      internalID: -1301679447560061261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_110
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 158
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e4d1c8c47a49da0800000000000000
+      internalID: -5938938061384757622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_111
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 158
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b66613cea02068690800000000000000
+      internalID: -7600385075205544341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_112
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 158
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a722b0cd89bc2a0800000000000000
+      internalID: -6716106348445926842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_113
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 158
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b235e97394a6f30800000000000000
+      internalID: 4569545275149069071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_114
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 158
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371cfa1c6fd11bbe0800000000000000
+      internalID: -1463355458270019213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_115
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 158
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222b1d335409dae20800000000000000
+      internalID: 3363503123612152354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_116
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 155
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e4a8e4b8ab633000800000000000000
+      internalID: 14473596146066661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_117
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 158
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ce968a4dbca0b90800000000000000
+      internalID: -7274778133844595589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_118
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 155
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58e00e1d08924950800000000000000
+      internalID: 6431870399943862362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_119
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 155
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 713a7d0b6d2698310800000000000000
+      internalID: 1407765032759436055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_120
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 158
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79e5eede101015e0800000000000000
+      internalID: -1941033714622011011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_121
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 155
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44fcb711db7b117a0800000000000000
+      internalID: -6408138772101476540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_122
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 158
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a7bce949f0d4f9d0800000000000000
+      internalID: -2741336504056105051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_123
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 158
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9934f01be13ee990800000000000000
+      internalID: -7354886255777924706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_124
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 158
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d192c890beac3900800000000000000
+      internalID: 665598918444356049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_125
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 158
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a43131a64ef0740800000000000000
+      internalID: 5120562445581240862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_126
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 158
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c2633d249e1f290800000000000000
+      internalID: -7858243401564148578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_127
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 137
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fceecdfd680a1c480800000000000000
+      internalID: -8880640489056047409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_128
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 137
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540427d384d7fa4c0800000000000000
+      internalID: -4274059772129296315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_129
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 137
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56fa1bd5ef92ed3e0800000000000000
+      internalID: -2027136609799786651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_130
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 134
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a192a02052201e50800000000000000
+      internalID: 6777955166732849570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_131
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 141
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f847f2056cc973400800000000000000
+      internalID: 303883875433542799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_132
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 135
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b59bca995f6da26b0800000000000000
+      internalID: -5320203659451254437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_133
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 137
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35276119db4a4ad50800000000000000
+      internalID: 6747699275797787219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_134
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 137
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773dbb8ca3be22950800000000000000
+      internalID: 6422954656292131703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_135
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 137
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030a9e72ba91ed9a0800000000000000
+      internalID: -6206495013570240464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_136
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 137
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca5e1977dbe79be0800000000000000
+      internalID: -1470447442630649147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_137
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 134
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470cf43a4251dcfa0800000000000000
+      internalID: -5778939499743559564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_suomi_12_138
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 139
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea7e6bf30b515860800000000000000
+      internalID: 7516889325719419617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fnt_suomi_12_0: -4182624455159580199
+      fnt_suomi_12_1: -5488290938044013222
+      fnt_suomi_12_10: -1877249193097444692
+      fnt_suomi_12_100: 2933232686795904173
+      fnt_suomi_12_101: -6682879713856946087
+      fnt_suomi_12_102: -4876636899340881553
+      fnt_suomi_12_103: -4251565330181911474
+      fnt_suomi_12_104: -8436751062887248401
+      fnt_suomi_12_105: 2283665297899197968
+      fnt_suomi_12_106: -7089708849144990704
+      fnt_suomi_12_107: 5600613928733121456
+      fnt_suomi_12_108: -7039231033753476980
+      fnt_suomi_12_109: -1301679447560061261
+      fnt_suomi_12_11: -5204217578937723027
+      fnt_suomi_12_110: -5938938061384757622
+      fnt_suomi_12_111: -7600385075205544341
+      fnt_suomi_12_112: -6716106348445926842
+      fnt_suomi_12_113: 4569545275149069071
+      fnt_suomi_12_114: -1463355458270019213
+      fnt_suomi_12_115: 3363503123612152354
+      fnt_suomi_12_116: 14473596146066661
+      fnt_suomi_12_117: -7274778133844595589
+      fnt_suomi_12_118: 6431870399943862362
+      fnt_suomi_12_119: 1407765032759436055
+      fnt_suomi_12_12: -7510298917163541143
+      fnt_suomi_12_120: -1941033714622011011
+      fnt_suomi_12_121: -6408138772101476540
+      fnt_suomi_12_122: -2741336504056105051
+      fnt_suomi_12_123: -7354886255777924706
+      fnt_suomi_12_124: 665598918444356049
+      fnt_suomi_12_125: 5120562445581240862
+      fnt_suomi_12_126: -7858243401564148578
+      fnt_suomi_12_127: -8880640489056047409
+      fnt_suomi_12_128: -4274059772129296315
+      fnt_suomi_12_129: -2027136609799786651
+      fnt_suomi_12_13: 1821889135931541069
+      fnt_suomi_12_130: 6777955166732849570
+      fnt_suomi_12_131: 303883875433542799
+      fnt_suomi_12_132: -5320203659451254437
+      fnt_suomi_12_133: 6747699275797787219
+      fnt_suomi_12_134: 6422954656292131703
+      fnt_suomi_12_135: -6206495013570240464
+      fnt_suomi_12_136: -1470447442630649147
+      fnt_suomi_12_137: -5778939499743559564
+      fnt_suomi_12_138: 7516889325719419617
+      fnt_suomi_12_14: -6626126130828099562
+      fnt_suomi_12_15: 1950599042962090032
+      fnt_suomi_12_16: -6921584086465887175
+      fnt_suomi_12_17: -344362838661456752
+      fnt_suomi_12_18: -5312104718424703123
+      fnt_suomi_12_19: 2731013382613103140
+      fnt_suomi_12_2: 4156638208264889794
+      fnt_suomi_12_20: 1966559250607511701
+      fnt_suomi_12_21: 1983608129289451038
+      fnt_suomi_12_22: 8023254417948544622
+      fnt_suomi_12_23: 1953606582489130284
+      fnt_suomi_12_24: 6447056703733614249
+      fnt_suomi_12_25: -128657239483686001
+      fnt_suomi_12_26: 1936025706149404128
+      fnt_suomi_12_27: 3321380839655059116
+      fnt_suomi_12_28: 7348928984948305305
+      fnt_suomi_12_29: -7636811531846724129
+      fnt_suomi_12_3: 5797049621913643985
+      fnt_suomi_12_30: -6207704375821766990
+      fnt_suomi_12_31: -1981038275262374205
+      fnt_suomi_12_32: -1171206830566063554
+      fnt_suomi_12_33: 3368979628067841511
+      fnt_suomi_12_34: 5090872808682901874
+      fnt_suomi_12_35: 2794170418724559031
+      fnt_suomi_12_36: -8883455002641890779
+      fnt_suomi_12_37: -5732444336785848975
+      fnt_suomi_12_38: -6342014120758622231
+      fnt_suomi_12_39: -68050535721645701
+      fnt_suomi_12_4: -8031746011972189094
+      fnt_suomi_12_40: 657559021173487363
+      fnt_suomi_12_41: -5514944842857728830
+      fnt_suomi_12_42: -4375159873032662899
+      fnt_suomi_12_43: -3010438051961556073
+      fnt_suomi_12_44: 3696476566622887458
+      fnt_suomi_12_45: 3867504950127761961
+      fnt_suomi_12_46: -7794295117782606750
+      fnt_suomi_12_47: -6121121635375288279
+      fnt_suomi_12_48: -7655613913693845408
+      fnt_suomi_12_49: 1953113382309375375
+      fnt_suomi_12_5: 3183828400039924049
+      fnt_suomi_12_50: -1872472997470565483
+      fnt_suomi_12_51: -1661544035583620792
+      fnt_suomi_12_52: -5317074349421367468
+      fnt_suomi_12_53: 6916834747712440439
+      fnt_suomi_12_54: 9026427172362100639
+      fnt_suomi_12_55: 9080669505203698317
+      fnt_suomi_12_56: -2447949589219337012
+      fnt_suomi_12_57: -1153776596743594397
+      fnt_suomi_12_58: 3030404297934228072
+      fnt_suomi_12_59: -2157097494921709789
+      fnt_suomi_12_6: 4031449427121160255
+      fnt_suomi_12_60: 2019615107801293686
+      fnt_suomi_12_61: 4079091293924023657
+      fnt_suomi_12_62: -2252850695398585449
+      fnt_suomi_12_63: -318977707953177228
+      fnt_suomi_12_64: 721585265307234937
+      fnt_suomi_12_65: -4667687059075040372
+      fnt_suomi_12_66: 8744107619454641831
+      fnt_suomi_12_67: 5799289574597405196
+      fnt_suomi_12_68: 3133722660122520774
+      fnt_suomi_12_69: -2637495253207006226
+      fnt_suomi_12_7: -4118956925975090135
+      fnt_suomi_12_70: 7414360580529460634
+      fnt_suomi_12_71: 4667818097452943790
+      fnt_suomi_12_72: 7150678364817731196
+      fnt_suomi_12_73: -2390811937291051242
+      fnt_suomi_12_74: 575284491346382399
+      fnt_suomi_12_75: 9009051807241314215
+      fnt_suomi_12_76: -8741226232642529504
+      fnt_suomi_12_77: -7532097970030518965
+      fnt_suomi_12_78: 2066481452341363304
+      fnt_suomi_12_79: -3822623116112161296
+      fnt_suomi_12_8: 5831450581445797088
+      fnt_suomi_12_80: 7036375931424514867
+      fnt_suomi_12_81: -5424285331865123032
+      fnt_suomi_12_82: 5269263110308221551
+      fnt_suomi_12_83: 5998123950502549132
+      fnt_suomi_12_84: 3431204124125654229
+      fnt_suomi_12_85: 4889695578909184302
+      fnt_suomi_12_86: -5153659593270955658
+      fnt_suomi_12_87: -4050212431390294023
+      fnt_suomi_12_88: -775782090144076119
+      fnt_suomi_12_89: 3303785715177622188
+      fnt_suomi_12_9: 8307684871847793315
+      fnt_suomi_12_90: 6740513671263135504
+      fnt_suomi_12_91: -3145628836380218977
+      fnt_suomi_12_92: 4713478084988187723
+      fnt_suomi_12_93: -8490571896713599474
+      fnt_suomi_12_94: -8549851218232665264
+      fnt_suomi_12_95: 5868636625419992724
+      fnt_suomi_12_96: -2046981036573880286
+      fnt_suomi_12_97: -7689364121670354331
+      fnt_suomi_12_98: -523560537639488961
+      fnt_suomi_12_99: -2173417987209627432
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
