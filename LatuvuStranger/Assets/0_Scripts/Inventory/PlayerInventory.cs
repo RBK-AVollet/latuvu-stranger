@@ -5,11 +5,11 @@ namespace Latuvu
     public class PlayerInventory
     {
         // Key Items
-        public bool HasRod { get; private set; }
+        public bool HasWand { get; private set; }
         public bool HasCube { get; private set; }
         public bool HasSword { get; private set; }
         
-        public void ObtainRod() { HasRod = true; }
+        public void ObtainWand() { HasWand = true; }
         public void ObtainCube() { HasCube = true; }
         public void ObtainSword() { HasSword = true; }
         
