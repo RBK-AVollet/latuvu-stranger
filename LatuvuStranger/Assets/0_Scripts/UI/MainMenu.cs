@@ -8,34 +8,42 @@ namespace Latuvu._0_Scripts.UI
     [RequireComponent(typeof(UIDocument))]
     public class MainMenu : MonoBehaviour
     {
-        private List<Button> menuButtons;
-        [SerializeField] private UIDocument uiDoc;
+        private List<Button> _menuButtons;
+        private UIDocument _uiDoc;
+        private VisualElement _mainMenu;
+        private Settings _settings;
+        [SerializeField] private List<Texture> _menuImages;
 
         void OnEnable()
         {
-            uiDoc = GetComponent<UIDocument>();
-            var root = uiDoc.rootVisualElement;
+            _uiDoc = GetComponent<UIDocument>();
+            var root = _uiDoc.rootVisualElement;
+            
+            _mainMenu = root.Q<VisualElement>("MainMenu");
 
-            menuButtons = new List<Button>
+            _menuButtons = new List<Button>
             {
                 root.Q<Button>("StartGame"),
                 root.Q<Button>("Settings"),
                 root.Q<Button>("Quit")
             };
 
-            foreach (var b in menuButtons)
+            foreach (var b in _menuButtons)
             {
                 if (b != null)
                     b.focusable = true;
             }
             
-            menuButtons[0]?.Focus();
+            _settings = new Settings(root.Q<VisualElement>("SettingsMenu"));
             
-
+            _settings.BackButton.clicked += () => BackMenu();
+            
+            _menuButtons[0]?.Focus();
+            
             root.RegisterCallback<KeyDownEvent>(OnKeyDown);
-            menuButtons[0]?.RegisterCallback<ClickEvent>(ev => StartGame());
-            menuButtons[1]?.RegisterCallback<ClickEvent>(ev => OpenSettings());
-            menuButtons[2]?.RegisterCallback<ClickEvent>(ev => QuitGame());
+            _menuButtons[0].clicked += StartGame;
+            _menuButtons[1].clicked += OpenSettings;
+            _menuButtons[2].clicked += QuitGame;
         }
 
         void StartGame()
@@ -47,42 +55,63 @@ namespace Latuvu._0_Scripts.UI
         void OpenSettings()
         {
             // Open settings menu
-            Debug.Log("Opening settings");
+            _settings.Show();
+            _mainMenu.RemoveFromClassList("visible");
+            _mainMenu.AddToClassList("hidden");
         }
         
         void QuitGame()
         {
             Application.Quit();
-            Debug.Log("Quitting game");
+        }
+
+        private void BackMenu()
+        {
+            _settings.Hide();
+            _mainMenu.RemoveFromClassList("hidden");
+            _mainMenu.AddToClassList("visible");
         }
 
         void OnDisable()
         {
-            if (uiDoc != null)
-                uiDoc.rootVisualElement.UnregisterCallback<KeyDownEvent>(OnKeyDown);
+            if (_uiDoc != null)
+                _uiDoc.rootVisualElement.UnregisterCallback<KeyDownEvent>(OnKeyDown);
+            
+            _menuButtons[0].clicked -= StartGame;
+            _menuButtons[1].clicked -= OpenSettings;
+            _menuButtons[2].clicked -= QuitGame;
         }
 
         private void OnKeyDown(KeyDownEvent ev)
         {
-            if (ev.keyCode != KeyCode.UpArrow && ev.keyCode != KeyCode.DownArrow)
+            if (ev.keyCode == KeyCode.UpArrow || ev.keyCode == KeyCode.DownArrow)
+            {
+                var focused = _uiDoc.rootVisualElement.panel?.focusController?.focusedElement as Button;
+                int current = _menuButtons.IndexOf(focused);
+
+                int dir = 0;
+                if (ev.keyCode == KeyCode.DownArrow) dir = -1;
+                if (ev.keyCode == KeyCode.UpArrow) dir = 1;
+
+                int next;
+                if (current >= 0)
+                    next = (current + dir + _menuButtons.Count) % _menuButtons.Count;
+                else
+                    next = dir == 1 ? 0 : _menuButtons.Count - 1;
+
+                _menuButtons[next]?.Focus();
+                ev.StopPropagation();
                 return;
-
-            var focused = uiDoc.rootVisualElement.focusController.focusedElement as Button;
-            int current = menuButtons.IndexOf(focused);
-
-            int dir = 0;
-
-            if (ev.keyCode == KeyCode.DownArrow) dir = -1;
-            if (ev.keyCode == KeyCode.UpArrow) dir = 1;
-
-            int next;
-            if (current >= 0)
-                next = (current + dir + menuButtons.Count) % menuButtons.Count;
-            else
-                next = dir == 1 ? 0 : menuButtons.Count - 1;
-
-            menuButtons[next]?.Focus();
-            ev.StopPropagation();
+            }
+            
+            if (ev.keyCode == KeyCode.W || ev.keyCode == KeyCode.KeypadEnter)
+            {
+                var focusedButton = _uiDoc.rootVisualElement.panel?.focusController?.focusedElement as Button;
+                if (focusedButton != null)
+                {
+                    ev.StopPropagation();
+                }
+            }
         }
     }
 }
