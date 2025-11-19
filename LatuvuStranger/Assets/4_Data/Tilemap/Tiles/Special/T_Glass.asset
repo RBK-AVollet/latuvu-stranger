@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa17527fa0a1473aa4ec9e4989720b46, type: 3}
   m_Name: T_Glass
   m_EditorClassIdentifier: Assembly-CSharp::Latuvu.GlassTile
-  m_Sprite: {fileID: -6252555655840965627, guid: d994dea1462dd2648b69ae9e38bc5c2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d994dea1462dd2648b69ae9e38bc5c2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
