@@ -488,8 +488,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81fe5213242cfa429f81bae7346d096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Latuvu.PlayerController
+  _debugMode: 1
   _playerInput: {fileID: 1590608281}
+  _rb: {fileID: 1590608282}
   _speed: 5
+  _gridMoveTime: 0.08
 --- !u!1 &1623479438
 GameObject:
   m_ObjectHideFlags: 0

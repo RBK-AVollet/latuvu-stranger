@@ -4,6 +4,8 @@
     {
         protected readonly PlayerController _player;
 
+        protected bool _debugMode = false;
+
 		protected BaseState(PlayerController player)
         {
             _player = player;
