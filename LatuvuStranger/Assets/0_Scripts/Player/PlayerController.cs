@@ -14,6 +14,8 @@ namespace Latuvu
         [SerializeField] private float _speed = 5f;
         [SerializeField] private float _gridMoveTime = 0.08f;
         
+        [SerializeField] private Animator _animator;
+        
         private InputAction _moveAction;
         
         private StateMachine _stateMachine;
@@ -40,9 +42,9 @@ namespace Latuvu
             _stateMachine = new StateMachine();
             
             // Declare States
-            var freeLocomotionState = new FreeLocomotionState(this);
-            var gridLocomotionState = new GridLocomotionState(this);
-            var deathState = new DeathState(this);
+            var freeLocomotionState = new FreeLocomotionState(this, _animator);
+            var gridLocomotionState = new GridLocomotionState(this,_animator);
+            var deathState = new DeathState(this, _animator);
             
             // Define Transitions
             At(freeLocomotionState, gridLocomotionState, new FuncPredicate(() => _useGridMovement)); // Placeholder condition, modifier pour que lorsqu'on récupère le baton on passe en mode grille
@@ -50,7 +52,7 @@ namespace Latuvu
             
             Any(deathState, new FuncPredicate(() => !_isAlive));
             
-            _stateMachine.SetState(gridLocomotionState);
+            _stateMachine.SetState(freeLocomotionState);
         }
         
         void At(IState from, IState to, IPredicate condition) => _stateMachine.AddTransition(from, to, condition);

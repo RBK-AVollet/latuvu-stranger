@@ -1,4 +1,6 @@
-﻿namespace Latuvu
+﻿using System;
+
+namespace Latuvu
 {
     public class Transition : ITransition
     {

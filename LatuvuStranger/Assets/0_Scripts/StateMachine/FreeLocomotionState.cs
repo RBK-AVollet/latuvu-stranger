@@ -4,7 +4,7 @@ namespace Latuvu
 {
     public class FreeLocomotionState : BaseState
     {
-        public FreeLocomotionState(PlayerController player) : base(player)
+        public FreeLocomotionState(PlayerController player, Animator animator) : base(player, animator)
         { }
 
         public override void OnEnter()
@@ -13,6 +13,8 @@ namespace Latuvu
             { 
                 Debug.Log("OnEnter FreeLocomotionState");
             }
+            
+            _animator.CrossFade(FreeLocomotionHash, _crossFadeDuration);
             
             _player.ResetVelocity();
         }

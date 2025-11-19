@@ -4,7 +4,7 @@ namespace Latuvu
 {
     public class GridLocomotionState : BaseState
     {
-        public GridLocomotionState(PlayerController player) : base(player)
+        public GridLocomotionState(PlayerController player, Animator animator) : base(player, animator)
         { }
 
         public override void OnEnter()
@@ -13,6 +13,8 @@ namespace Latuvu
             { 
                 Debug.Log("OnEnter GridLocomotionState");
             }
+            _animator.CrossFade(GridLocomotionHash, _crossFadeDuration);
+            
             
             _player.ResetVelocity();
         }
