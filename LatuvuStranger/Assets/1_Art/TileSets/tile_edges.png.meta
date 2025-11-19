@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,10 +103,10 @@ TextureImporter:
       name: tile_edges_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 120
-        width: 20
-        height: 20
+        x: 2
+        y: 122
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,10 +125,10 @@ TextureImporter:
       name: tile_edges_1
       rect:
         serializedVersion: 2
-        x: 20
-        y: 120
-        width: 20
-        height: 20
+        x: 22
+        y: 122
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: tile_edges_2
       rect:
         serializedVersion: 2
-        x: 40
-        y: 120
-        width: 20
-        height: 20
+        x: 42
+        y: 122
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: tile_edges_3
       rect:
         serializedVersion: 2
-        x: 60
-        y: 120
-        width: 20
-        height: 20
+        x: 62
+        y: 122
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: tile_edges_4
       rect:
         serializedVersion: 2
-        x: 80
-        y: 120
-        width: 20
-        height: 20
+        x: 82
+        y: 122
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: tile_edges_5
       rect:
         serializedVersion: 2
-        x: 100
-        y: 120
-        width: 20
-        height: 20
+        x: 102
+        y: 122
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +235,10 @@ TextureImporter:
       name: tile_edges_6
       rect:
         serializedVersion: 2
-        x: 120
-        y: 120
-        width: 20
-        height: 20
+        x: 122
+        y: 122
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: tile_edges_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 100
-        width: 20
-        height: 20
+        x: 2
+        y: 102
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +279,10 @@ TextureImporter:
       name: tile_edges_8
       rect:
         serializedVersion: 2
-        x: 20
-        y: 100
-        width: 20
-        height: 20
+        x: 22
+        y: 102
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: tile_edges_9
       rect:
         serializedVersion: 2
-        x: 40
-        y: 100
-        width: 20
-        height: 20
+        x: 42
+        y: 102
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +323,10 @@ TextureImporter:
       name: tile_edges_10
       rect:
         serializedVersion: 2
-        x: 60
-        y: 100
-        width: 20
-        height: 20
+        x: 62
+        y: 102
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,10 +345,10 @@ TextureImporter:
       name: tile_edges_11
       rect:
         serializedVersion: 2
-        x: 80
-        y: 100
-        width: 20
-        height: 20
+        x: 82
+        y: 102
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,10 +367,10 @@ TextureImporter:
       name: tile_edges_12
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 20
-        height: 20
+        x: 102
+        y: 102
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,10 +389,10 @@ TextureImporter:
       name: tile_edges_13
       rect:
         serializedVersion: 2
-        x: 120
-        y: 100
-        width: 20
-        height: 20
+        x: 122
+        y: 102
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,10 +411,10 @@ TextureImporter:
       name: tile_edges_14
       rect:
         serializedVersion: 2
-        x: 0
-        y: 80
-        width: 20
-        height: 20
+        x: 2
+        y: 82
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +433,10 @@ TextureImporter:
       name: tile_edges_15
       rect:
         serializedVersion: 2
-        x: 20
-        y: 80
-        width: 20
-        height: 20
+        x: 22
+        y: 82
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,10 +455,10 @@ TextureImporter:
       name: tile_edges_16
       rect:
         serializedVersion: 2
-        x: 40
-        y: 80
-        width: 20
-        height: 20
+        x: 42
+        y: 82
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,10 +477,10 @@ TextureImporter:
       name: tile_edges_17
       rect:
         serializedVersion: 2
-        x: 60
-        y: 80
-        width: 20
-        height: 20
+        x: 62
+        y: 82
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,10 +499,10 @@ TextureImporter:
       name: tile_edges_18
       rect:
         serializedVersion: 2
-        x: 80
-        y: 80
-        width: 20
-        height: 20
+        x: 82
+        y: 82
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,10 +521,10 @@ TextureImporter:
       name: tile_edges_19
       rect:
         serializedVersion: 2
-        x: 100
-        y: 80
-        width: 20
-        height: 20
+        x: 102
+        y: 82
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,10 +543,10 @@ TextureImporter:
       name: tile_edges_20
       rect:
         serializedVersion: 2
-        x: 120
-        y: 80
-        width: 20
-        height: 20
+        x: 122
+        y: 82
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,10 +565,10 @@ TextureImporter:
       name: tile_edges_21
       rect:
         serializedVersion: 2
-        x: 0
-        y: 60
-        width: 20
-        height: 20
+        x: 2
+        y: 62
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -587,10 +587,10 @@ TextureImporter:
       name: tile_edges_22
       rect:
         serializedVersion: 2
-        x: 20
-        y: 60
-        width: 20
-        height: 20
+        x: 22
+        y: 62
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: tile_edges_23
       rect:
         serializedVersion: 2
-        x: 40
-        y: 60
-        width: 20
-        height: 20
+        x: 42
+        y: 62
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,10 +631,10 @@ TextureImporter:
       name: tile_edges_24
       rect:
         serializedVersion: 2
-        x: 60
-        y: 60
-        width: 20
-        height: 20
+        x: 62
+        y: 62
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -653,10 +653,10 @@ TextureImporter:
       name: tile_edges_25
       rect:
         serializedVersion: 2
-        x: 80
-        y: 60
-        width: 20
-        height: 20
+        x: 82
+        y: 62
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,10 +675,10 @@ TextureImporter:
       name: tile_edges_26
       rect:
         serializedVersion: 2
-        x: 100
-        y: 60
-        width: 20
-        height: 20
+        x: 102
+        y: 62
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -697,10 +697,10 @@ TextureImporter:
       name: tile_edges_27
       rect:
         serializedVersion: 2
-        x: 120
-        y: 60
-        width: 20
-        height: 20
+        x: 122
+        y: 62
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,10 +719,10 @@ TextureImporter:
       name: tile_edges_28
       rect:
         serializedVersion: 2
-        x: 0
-        y: 40
-        width: 20
-        height: 20
+        x: 2
+        y: 42
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -741,10 +741,10 @@ TextureImporter:
       name: tile_edges_29
       rect:
         serializedVersion: 2
-        x: 20
-        y: 40
-        width: 20
-        height: 20
+        x: 22
+        y: 42
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -763,10 +763,10 @@ TextureImporter:
       name: tile_edges_30
       rect:
         serializedVersion: 2
-        x: 40
-        y: 40
-        width: 20
-        height: 20
+        x: 42
+        y: 42
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -785,10 +785,10 @@ TextureImporter:
       name: tile_edges_31
       rect:
         serializedVersion: 2
-        x: 60
-        y: 40
-        width: 20
-        height: 20
+        x: 62
+        y: 42
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -807,10 +807,10 @@ TextureImporter:
       name: tile_edges_32
       rect:
         serializedVersion: 2
-        x: 80
-        y: 40
-        width: 20
-        height: 20
+        x: 82
+        y: 42
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -829,10 +829,10 @@ TextureImporter:
       name: tile_edges_33
       rect:
         serializedVersion: 2
-        x: 100
-        y: 40
-        width: 20
-        height: 20
+        x: 102
+        y: 42
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -851,10 +851,10 @@ TextureImporter:
       name: tile_edges_34
       rect:
         serializedVersion: 2
-        x: 120
-        y: 40
-        width: 20
-        height: 20
+        x: 122
+        y: 42
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -873,10 +873,10 @@ TextureImporter:
       name: tile_edges_35
       rect:
         serializedVersion: 2
-        x: 0
-        y: 20
-        width: 20
-        height: 20
+        x: 2
+        y: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -895,10 +895,10 @@ TextureImporter:
       name: tile_edges_36
       rect:
         serializedVersion: 2
-        x: 20
-        y: 20
-        width: 20
-        height: 20
+        x: 22
+        y: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -917,10 +917,10 @@ TextureImporter:
       name: tile_edges_37
       rect:
         serializedVersion: 2
-        x: 40
-        y: 20
-        width: 20
-        height: 20
+        x: 42
+        y: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -939,10 +939,10 @@ TextureImporter:
       name: tile_edges_38
       rect:
         serializedVersion: 2
-        x: 60
-        y: 20
-        width: 20
-        height: 20
+        x: 62
+        y: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -961,10 +961,10 @@ TextureImporter:
       name: tile_edges_39
       rect:
         serializedVersion: 2
-        x: 80
-        y: 20
-        width: 20
-        height: 20
+        x: 82
+        y: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -983,10 +983,10 @@ TextureImporter:
       name: tile_edges_40
       rect:
         serializedVersion: 2
-        x: 100
-        y: 20
-        width: 20
-        height: 20
+        x: 102
+        y: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1005,10 +1005,10 @@ TextureImporter:
       name: tile_edges_41
       rect:
         serializedVersion: 2
-        x: 120
-        y: 20
-        width: 20
-        height: 20
+        x: 122
+        y: 22
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1027,10 +1027,10 @@ TextureImporter:
       name: tile_edges_42
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 20
-        height: 20
+        x: 2
+        y: 2
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1049,10 +1049,10 @@ TextureImporter:
       name: tile_edges_43
       rect:
         serializedVersion: 2
-        x: 20
-        y: 0
-        width: 20
-        height: 20
+        x: 22
+        y: 2
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1071,10 +1071,10 @@ TextureImporter:
       name: tile_edges_44
       rect:
         serializedVersion: 2
-        x: 40
-        y: 0
-        width: 20
-        height: 20
+        x: 42
+        y: 2
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1093,10 +1093,10 @@ TextureImporter:
       name: tile_edges_45
       rect:
         serializedVersion: 2
-        x: 60
-        y: 0
-        width: 20
-        height: 20
+        x: 62
+        y: 2
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1115,10 +1115,10 @@ TextureImporter:
       name: tile_edges_46
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 20
-        height: 20
+        x: 82
+        y: 2
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1137,10 +1137,10 @@ TextureImporter:
       name: tile_edges_47
       rect:
         serializedVersion: 2
-        x: 100
-        y: 0
-        width: 20
-        height: 20
+        x: 102
+        y: 2
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1169,7 +1169,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":7.0},"gridSpriteSize":{"x":20.0,"y":20.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":2.0,"y":2.0},"gridSpritePadding":{"x":4.0,"y":4.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       tile_edges_0: 1175909688509216889
       tile_edges_1: -1762973818
