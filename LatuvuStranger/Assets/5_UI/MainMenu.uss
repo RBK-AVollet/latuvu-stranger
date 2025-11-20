@@ -34,3 +34,7 @@
 .hidden {
     display: none;
 }
+
+#root > #dialogue > #root > #dialogue-box > #dialogue {
+    -unity-text-align: upper-left;
+}
