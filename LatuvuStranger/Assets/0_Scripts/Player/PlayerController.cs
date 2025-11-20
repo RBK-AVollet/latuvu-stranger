@@ -167,17 +167,11 @@ namespace Latuvu
 
             if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
             {
-                if (direction.x > 0)
-                    _animator.SetTrigger("Right");
-                else
-                    _animator.SetTrigger("Left");
+                _animator.SetTrigger(direction.x > 0 ? "Right" : "Left");
             }
             else
             {
-                if (direction.y > 0)
-                    _animator.SetTrigger("Top");
-                else
-                    _animator.SetTrigger("Down");
+                _animator.SetTrigger(direction.y > 0 ? "Top" : "Down");
             }
         }
     }
