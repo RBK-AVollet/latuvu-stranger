@@ -135,14 +135,31 @@ namespace Latuvu
                 0
             );
             
-            var currentTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
-            var targetTile = _floorService.Tilemap.GetTile<GameTile>(targetCellPos);
+            GameTile currentTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
+            GameTile targetTile = _floorService.Tilemap.GetTile<GameTile>(targetCellPos);
             
-            if (!_currentTilemap.HasTile(targetCellPos) || !targetTile.IsWalkable)
+            if (!targetTile)
             {
                 Debug.Log("[PlayerController]: no tile at " + targetCellPos);
                 return;
             }
+            
+            if (!targetTile.IsWalkable)
+            {
+                Debug.Log("[PlayerController]: tile not walkable at " + targetCellPos);
+                GameService.Instance.Tick();
+                return;
+            }
+
+            if (_floorService.TryGetEntityAtPos(targetCellPos, out TileEntity entity))
+            {
+                Debug.Log("[PlayerController]: trying to move entity at " + targetCellPos);
+                entity.TryMove(GridHelper.GetRelativePosition(Position, entity.Position), _currentTilemap);
+                GameService.Instance.Tick();
+                return;
+            }
+            
+            Position = targetCellPos;
             
             currentTile.OnExit(_floorService.Tilemap, _currentCell);
             

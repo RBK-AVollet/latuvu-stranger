@@ -58,7 +58,7 @@ namespace Latuvu
         
         public bool TryGetEntityAtPos(Vector3Int pos, out TileEntity entity)
         {
-            entity = _entities.FirstOrDefault(e => e.Position == (Vector2Int)pos);
+            entity = _entities.FirstOrDefault(e => e.Position == pos);
             return entity != null;
         }
 
@@ -70,7 +70,7 @@ namespace Latuvu
         protected override void Awake()
         {
             base.Awake();
-            LoadFloor("B00");
+            LoadFloor("BTest");
         }
     }
 }

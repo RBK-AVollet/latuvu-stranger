@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace Latuvu
 {
@@ -18,6 +19,7 @@ namespace Latuvu
         
         public void Tick()
         {
+            Debug.Log("[GameService]: Ticking the game");
             TickAction.Invoke();
         }
     }
