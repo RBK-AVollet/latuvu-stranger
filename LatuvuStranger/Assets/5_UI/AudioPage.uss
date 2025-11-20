@@ -1,0 +1,24 @@
+:root {
+}
+
+#root > #Container > #master > .unity-slider-int__input > #unity-drag-container {
+    width: 50%;
+    color: rgb(164, 164, 164);
+}
+
+#root > #Container > #master > .unity-slider-int__label {
+    -unity-font-definition: url("project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&guid=90aecb5949e6d7a47a8d89b5c0e257bd&type=3#Alkhemikal");
+    color: rgb(164, 164, 164);
+    width: 50%;
+}
+
+#master:focus Label {
+    color: rgb(255, 255, 255);
+}
+
+.unity-label {
+    color: rgb(164, 164, 164);
+    font-size: 100px;
+    -unity-font-definition: url("project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&guid=90aecb5949e6d7a47a8d89b5c0e257bd&type=3#Alkhemikal");
+    -unity-text-align: middle-right;
+}

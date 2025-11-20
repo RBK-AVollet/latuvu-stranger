@@ -13,7 +13,9 @@ namespace Latuvu._0_Scripts.UI
         private VisualElement _mainMenu, _image;
         private Settings _settings;
         private VisualElement _root;
+        
         [SerializeField] private List<Sprite> _menuImages;
+        [SerializeField] private List<Sprite> _settingsImages;
 
         void OnEnable()
         {
@@ -40,8 +42,8 @@ namespace Latuvu._0_Scripts.UI
             _menuButtons[0].Focus();
             
             _image.style.backgroundImage = new StyleBackground(_menuImages[0]);
-            
-            _settings.BackButton.clicked += () => BackMenu();
+            _settings.SetupFocus(_settingsImages);
+            _settings.Buttons[4].clicked += () => BackMenu();
             
             _menuButtons[0].clicked += StartGame;
             _menuButtons[1].clicked += OpenSettings;
