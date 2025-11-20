@@ -10,7 +10,7 @@ namespace Latuvu
         
         [SerializeField] private Rigidbody2D _rb;
         
-        [SerializeField] private float _tileStep = 1f;
+        [SerializeField] private int _tileStep = 1;
         
         [SerializeField] private Animator _animator;
         
@@ -25,6 +25,9 @@ namespace Latuvu
 
         private void Awake()
         {
+            // Accessible can spawned by the floor service itself
+            _floorService = FloorService.Instance;
+            
             if (!_rb && _debugMode)
             {
                 Debug.Log("[Rigidbody2D] not assigned in PlayerController, trying to get it from GameObject.");
@@ -37,10 +40,6 @@ namespace Latuvu
         private void Start()
         {
             _inputService = InputService.Instance;
-            _floorService = FloorService.Instance;
-            
-            transform.position = _floorService.CurrentFloor.GetPlayerSpawnWorld();
-            _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
             
             // Input Actions
             _inputService.RegisterMoveAction(GridMoveStep);
@@ -71,7 +70,7 @@ namespace Latuvu
             if (dir == Vector3Int.zero)
                 return;
 
-            Vector3Int targetCell = currentCell + dir;
+            Vector3Int targetCell = currentCell + dir * _tileStep;
 
             GameTile tileInFront = tilemap.GetTile<GameTile>(targetCell);
 
@@ -184,18 +183,18 @@ namespace Latuvu
 
             if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
             {
-                if (direction.x > 0)
-                    _animator.SetTrigger("Right");
-                else
-                    _animator.SetTrigger("Left");
+                _animator.SetTrigger(direction.x > 0 ? "Right" : "Left");
             }
             else
             {
-                if (direction.y > 0)
-                    _animator.SetTrigger("Top");
-                else
-                    _animator.SetTrigger("Down");
+                _animator.SetTrigger(direction.y > 0 ? "Top" : "Down");
             }
+        }
+
+        public void Respawn()
+        {
+            transform.position = _floorService.CurrentFloor.GetPlayerSpawnWorld();
+            _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
         }
     }
 }

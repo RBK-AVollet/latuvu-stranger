@@ -33,7 +33,7 @@ MonoBehaviour:
     e33: 1
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
-  m_ColliderType: 1
+  m_ColliderType: 0
   IsWalkable: 1
   IsPickable: 1
-  BrokenGlassTile: {fileID: 11400000, guid: 5053080fe19ac344fbf377de780c0b81, type: 2}
+  BreakingGlassPrefab: {fileID: 4251391067563473011, guid: db3a56d246f25e5489acf064b6a9675b, type: 3}
