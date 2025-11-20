@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Latuvu
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : LivingTileEntity
     {
         [SerializeField] private bool _debugMode;
         
@@ -16,16 +16,16 @@ namespace Latuvu
         
         [SerializeField] private Animator _animator;
         
-        private InputAction _moveAction;
-        private InputAction _wandInteractionAction;
-        
         private StateMachine _stateMachine;
         
         private PlayerInventory _playerInventory;
         
+        private InputService _inputService;
+        
         private bool _isMovingGrid = false; 
         
         private bool _isAlive = true;
+        public Vector2 MoveDirection { get; private set; }
 
         private void Awake()
         {
@@ -64,15 +64,14 @@ namespace Latuvu
 
         private void Start()
         {
+            _inputService = InputService.Instance;
             // Input Actions
-            _moveAction = _playerInput.actions.FindAction("Move");
-            _wandInteractionAction = _playerInput.actions.FindAction("WandInteraction");
+
+            _inputService.RegisterMoveAction(GridMoveStep);
+            _inputService.UnregisterMoveAction(GridMoveStep);
             
-            _wandInteractionAction.started += Interact;
-            _wandInteractionAction.canceled -= Interact;
-            
-            _moveAction.started += GridMoveStep;
-            _wandInteractionAction.canceled -= GridMoveStep;
+            _inputService.RegisterWandInteraction(Interact);
+            _inputService.UnregisterWandInteraction(Interact);
         }
 
         public void FixedUpdate()
@@ -82,30 +81,21 @@ namespace Latuvu
 
         public void HandleFreeMovement()
         {
-            var moveInput = _moveAction.ReadValue<Vector2>();
+          /*  var moveInput = _moveAction.ReadValue<Vector2>();
             PlayDirectionAnimation(moveInput);
             
-            _rb.linearVelocity = moveInput * _speed;
+            _rb.linearVelocity = moveInput * _speed;*/
         }
         
         private void Interact(InputAction.CallbackContext context)
         {
             if (!_playerInventory.HasWand) return; 
             
-            RaycastHit2D hit = Physics2D.Raycast(_rb.position, transform.forward);
-
-            if (hit.collider.TryGetComponent(out LivingTileEntity tileEntity))
-            {
-                return;
-            }
             
-            if(hit.collider.TryGetComponent(out StaticTileEntity staticTileEntity) && !_playerInventory.HasCube)
-            {
-                _playerInventory.ObtainCube();
-                return;
-            } 
             
             _playerInventory.RemoveCube();
+            
+            GameService.Instance.Tick();
             // Placer une tile
         }
         
@@ -113,12 +103,12 @@ namespace Latuvu
         {
             ResetVelocity();
 
-            var moveDirection = context.ReadValue<Vector2>();
+            MoveDirection = context.ReadValue<Vector2>();
             
             Vector2 start = transform.position;
-            Vector2 end = start + _tileStep * moveDirection;
+            Vector2 end = start + _tileStep * MoveDirection;
             
-            PlayDirectionAnimation(moveDirection);
+            PlayDirectionAnimation(MoveDirection);
             transform.position = end;
         }
         

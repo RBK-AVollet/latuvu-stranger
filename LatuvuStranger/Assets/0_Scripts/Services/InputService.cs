@@ -1,6 +1,6 @@
 using UnityEngine.InputSystem;
-using System;
 using UnityEngine;
+using System;
 
 namespace Latuvu
 {
@@ -9,17 +9,14 @@ namespace Latuvu
         [SerializeField] private PlayerInput _playerInput;
 
         private InputAction _moveAction;
-        private InputAction _wandInteractionAction;
+        private InputAction _interactionAction;
 
         protected override void Awake()
         {
+            base.Awake();
+            
             _moveAction = _playerInput.actions.FindAction("Move");
-            _wandInteractionAction = _playerInput.actions.FindAction("WandInteraction");
-            
-            Debug.Log(_moveAction.enabled);
-            Debug.Log(_wandInteractionAction.enabled);
-            
-            Debug.Log("Initializing InputService");
+            _interactionAction = _playerInput.actions.FindAction("Interact");
         }
 
         public void RegisterMoveAction(Action<InputAction.CallbackContext> callback)
@@ -36,12 +33,12 @@ namespace Latuvu
         
         public void RegisterWandInteraction(Action<InputAction.CallbackContext> callback)
         {
-            _wandInteractionAction.started += callback;
+            _interactionAction.started += callback;
         }
         
         public void UnregisterWandInteraction(Action<InputAction.CallbackContext> callback)
         {
-            _wandInteractionAction.canceled -= callback;
+            _interactionAction.canceled -= callback;
         }
     }
 }
