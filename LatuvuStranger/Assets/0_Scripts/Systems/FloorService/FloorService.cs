@@ -100,7 +100,7 @@ namespace Latuvu
             var playerGo = Instantiate(_playerPrefab);
             Player = playerGo.GetComponent<PlayerController>();
             
-            LoadFloor("B00");
+            LoadFloor("B001");
             
             WriteOnCell(new Vector3Int(1, 0, 0), "VO");
             WriteOnCell(new Vector3Int(2, 0, 0), "ID");

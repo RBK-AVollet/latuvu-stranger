@@ -11,14 +11,14 @@ PrefabInstance:
     - target: {fileID: 1298989093789791706, guid: c246c5545dbbf5d41818bebe59d7ffb4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 11d5ab450e9a75942995081594dac2c2, type: 3}
+      objectReference: {fileID: 21300000, guid: bb9e5c5ef77899c46a183c5a346d51b5, type: 3}
     - target: {fileID: 1298989093789791706, guid: c246c5545dbbf5d41818bebe59d7ffb4, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2371612180892942652, guid: c246c5545dbbf5d41818bebe59d7ffb4, type: 3}
       propertyPath: m_Name
-      value: PFV_VoidRodSprite
+      value: PFV_CricketsSprite
       objectReference: {fileID: 0}
     - target: {fileID: 4865393267283766467, guid: c246c5545dbbf5d41818bebe59d7ffb4, type: 3}
       propertyPath: m_LocalPosition.x
