@@ -1,28 +1,23 @@
+using System;
 using UnityEngine.InputSystem;
-using System.Collections;
 using UnityEngine;
 
 namespace Latuvu
 {
-    public class PlayerController : LivingTileEntity
+    public class PlayerController : MonoBehaviour
     {
         [SerializeField] private bool _debugMode;
         
-        [SerializeField] private PlayerInput _playerInput;
         [SerializeField] private Rigidbody2D _rb;
         
-        [SerializeField] private float _speed = 5f;
         [SerializeField] private float _tileStep = 1f;
         
         [SerializeField] private Animator _animator;
         
-        private StateMachine _stateMachine;
-        
         private PlayerInventory _playerInventory;
         
         private InputService _inputService;
-        
-        private bool _isMovingGrid = false; 
+        private FloorService _floorService;
         
         private bool _isAlive = true;
         public Vector2 MoveDirection { get; private set; }
@@ -34,70 +29,55 @@ namespace Latuvu
                 Debug.Log("[Rigidbody2D] not assigned in PlayerController, trying to get it from GameObject.");
                 _rb = GetComponent<Rigidbody2D>();
             }
-            if (!_playerInput && _debugMode)
-            {
-                Debug.Log("[PlayerInput] not assigned in PlayerController, trying to get it from GameObject.");
-                _playerInput = GetComponent<PlayerInput>();
-            }
             
             _playerInventory = new PlayerInventory();
-            
-            // State Machine
-            _stateMachine = new StateMachine();
-            
-            // Declare States
-            var freeLocomotionState = new FreeLocomotionState(this, _animator);
-            var gridLocomotionState = new GridLocomotionState(this,_animator);
-            var deathState = new DeathState(this, _animator);
-            
-            // Define Transitions
-            At(freeLocomotionState, gridLocomotionState, new FuncPredicate(() => _playerInventory.HasWand)); // Placeholder condition, modifier pour que lorsqu'on récupère le baton on passe en mode grille
-            At(gridLocomotionState, freeLocomotionState, new FuncPredicate(() => _playerInventory.HasWand)); 
-            
-            Any(deathState, new FuncPredicate(() => !_isAlive));
-            
-            _stateMachine.SetState(gridLocomotionState);
         }
         
-        void At(IState from, IState to, IPredicate condition) => _stateMachine.AddTransition(from, to, condition);
-        void Any(IState to, IPredicate condition) => _stateMachine.AddAnyTransition(to, condition);
-
         private void Start()
         {
             _inputService = InputService.Instance;
+            _floorService = FloorService.Instance;
+            
             // Input Actions
 
             _inputService.RegisterMoveAction(GridMoveStep);
-            _inputService.UnregisterMoveAction(GridMoveStep);
             
             _inputService.RegisterWandInteraction(Interact);
+        }
+
+        private void OnDestroy()
+        {
+            _inputService.UnregisterMoveAction(GridMoveStep);
             _inputService.UnregisterWandInteraction(Interact);
         }
 
-        public void FixedUpdate()
-        {
-            _stateMachine.FixedUpdate();
-        }
-
-        public void HandleFreeMovement()
-        {
-          /*  var moveInput = _moveAction.ReadValue<Vector2>();
-            PlayDirectionAnimation(moveInput);
-            
-            _rb.linearVelocity = moveInput * _speed;*/
-        }
-        
         private void Interact(InputAction.CallbackContext context)
         {
-            if (!_playerInventory.HasWand) return; 
-            
-            
-            
-            _playerInventory.RemoveCube();
-            
-            GameService.Instance.Tick();
-            // Placer une tile
+            if (!_playerInventory.HasWand) 
+                return;
+
+            var tilemap = _floorService.Tilemap;
+
+            Vector3Int currentCell = tilemap.WorldToCell(transform.position);
+
+            Vector3Int dir = new Vector3Int(
+                Mathf.RoundToInt(_tileStep * MoveDirection.x),
+                Mathf.RoundToInt(_tileStep * MoveDirection.y),
+                0
+            );
+
+            Vector3Int targetCell = currentCell + dir;
+
+            Debug.Log($"Interact: checking cell {targetCell}");
+
+            if (_floorService.TryGetEntityAtPos(targetCell, out TileEntity tileEntity))
+            {
+             //   _playerInventory.RemoveCube();
+            }
+
+          //  GameService.Instance.Tick();
         }
+
         
         private void GridMoveStep(InputAction.CallbackContext context)
         {
