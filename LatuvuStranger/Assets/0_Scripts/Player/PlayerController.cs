@@ -25,6 +25,9 @@ namespace Latuvu
 
         private void Awake()
         {
+            // Accessible can spawned by the floor service itself
+            _floorService = FloorService.Instance;
+            
             if (!_rb && _debugMode)
             {
                 Debug.Log("[Rigidbody2D] not assigned in PlayerController, trying to get it from GameObject.");
@@ -37,10 +40,6 @@ namespace Latuvu
         private void Start()
         {
             _inputService = InputService.Instance;
-            _floorService = FloorService.Instance;
-            
-            transform.position = _floorService.CurrentFloor.GetPlayerSpawnWorld();
-            _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
             
             // Input Actions
             _inputService.RegisterMoveAction(GridMoveStep);
@@ -179,6 +178,12 @@ namespace Latuvu
                 else
                     _animator.SetTrigger("Down");
             }
+        }
+
+        public void Respawn()
+        {
+            transform.position = _floorService.CurrentFloor.GetPlayerSpawnWorld();
+            _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
         }
     }
 }

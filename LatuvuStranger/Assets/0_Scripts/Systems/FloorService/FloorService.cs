@@ -9,6 +9,7 @@ namespace Latuvu
     {
         [SerializeField] private FloorPrefab[] _floors;
         [SerializeField] private TileBase[] _hud;
+        [SerializeField] private GameObject _playerPrefab;
         
         private List<TileEntity> _entities = new ();
         
@@ -17,6 +18,14 @@ namespace Latuvu
         public Tilemap Tilemap => _currentFloor.Tilemap;
         
         public FloorPrefab CurrentFloor => _currentFloor;
+        
+        public PlayerController Player { get; private set; }
+        
+        public bool TryGetEntityAtPos(Vector3Int pos, out TileEntity entity)
+        {
+            entity = _entities.FirstOrDefault(e => e.Position == (Vector2Int)pos);
+            return entity != null;
+        }
         
         public void LoadFloor(string floorId)
         {
@@ -29,19 +38,36 @@ namespace Latuvu
 
             if (_currentFloor)
             {
+                for (int i = 0; i < _hud.Length; i++)
+                {
+                    _hud[i] = Tilemap.GetTile(new Vector3Int(i, 0, 0));
+                }
+                
                 Destroy(_currentFloor);
             }
 
             _currentFloor = Instantiate(floor, transform);
             ApplyHUD();
+            
+            WriteOnCell(new Vector3Int(12, 0, 0), _currentFloor.FloorId.Substring(0, 2));
+            WriteOnCell(new Vector3Int(13, 0, 0), _currentFloor.FloorId.Substring(2, 2));
+            
             SpawnEntities();
+            
+            Player.Respawn();
+        }
+
+        public FloorPrefab GetFloorById(string floorId)
+        {
+            return _floors.FirstOrDefault(f => f.FloorId == floorId);
         }
         
         private void ApplyHUD()
         {
             for (int i = 0; i < _hud.Length; i++)
             {
-                Tilemap.SetTile(new Vector3Int(i, 0, 0), _hud[i]);
+                var position = new Vector3Int(i, 0, 0);
+                Tilemap.SetTile(position, _hud[i]);
             }
         }
         
@@ -56,21 +82,29 @@ namespace Latuvu
             }
         }
         
-        public bool TryGetEntityAtPos(Vector3Int pos, out TileEntity entity)
+        private void WriteOnCell(Vector3Int pos, string content)
         {
-            entity = _entities.FirstOrDefault(e => e.Position == (Vector2Int)pos);
-            return entity != null;
-        }
+            var go = Tilemap.GetInstantiatedObject(pos);
+            if (!go) return;
 
-        public FloorPrefab GetFloorById(string floorId)
-        {
-            return _floors.FirstOrDefault(f => f.FloorId == floorId);
+            var comp = go.GetComponent<WritableTileText>();
+            if (!comp) return;
+            
+            comp.Write(content);
         }
 
         protected override void Awake()
         {
             base.Awake();
+            
+            var playerGo = Instantiate(_playerPrefab);
+            Player = playerGo.GetComponent<PlayerController>();
+            
             LoadFloor("B00");
+            
+            WriteOnCell(new Vector3Int(1, 0, 0), "VO");
+            WriteOnCell(new Vector3Int(2, 0, 0), "ID");
+            WriteOnCell(new Vector3Int(5, 0, 0), "00");
         }
     }
 }
