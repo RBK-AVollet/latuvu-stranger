@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace Latuvu
 {
     public class PlayerInventory
@@ -9,8 +7,12 @@ namespace Latuvu
         public bool HasCube { get; private set; }
         public bool HasSword { get; private set; }
         
+        public GameTile Tile { get; private set; }
+        public bool HasTile => Tile != null;
+        
         public void ObtainWand() { HasWand = true; }
         public void ObtainCube() { HasCube = true; }
+        public void RemoveCube() { HasCube = false; }
         public void ObtainSword() { HasSword = true; }
         
         // Collectibles
@@ -21,6 +23,23 @@ namespace Latuvu
         {
             Crickets -= amount;
             if (!canNegative && Crickets < 0) Crickets = 0;
+        }
+
+        public PlayerInventory()
+        {
+            HasWand = true;
+            HasCube = false;
+            HasSword = false;
+        }
+        
+        public void StoreTile(GameTile tile)
+        {
+            Tile = tile;
+        }
+
+        public void ClearTile()
+        {
+            Tile = null;
         }
     }
 }

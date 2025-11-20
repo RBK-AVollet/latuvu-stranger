@@ -5,11 +5,12 @@ namespace Latuvu
     [CreateAssetMenu(menuName = "Latuvu/Tiles/Glass Tile")]
     public class GlassTile : GameTile
     {
-        public BrokenGlassTile BrokenGlassTile;
+        public GameObject BreakingGlassPrefab;
         
-        public override void OnEnter(Tilemap tilemap, Vector3Int pos)
+        public override void OnExit(Tilemap tilemap, Vector3Int pos)
         {
-            tilemap.SetTile(pos, BrokenGlassTile);
+            tilemap.SetTile(pos, null);
+            Instantiate(BreakingGlassPrefab, tilemap.GetCellCenterWorld(pos), Quaternion.identity);
         }
     }
 }
