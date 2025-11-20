@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Latuvu
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : LivingTileEntity
     {
         [SerializeField] private bool _debugMode;
         
@@ -38,10 +38,12 @@ namespace Latuvu
             _inputService = InputService.Instance;
             _floorService = FloorService.Instance;
             
-            // Input Actions
-
-            _inputService.RegisterMoveAction(GridMoveStep);
+            transform.position = _floorService.Tilemap.GetCellCenterWorld(
+                _floorService.Tilemap.WorldToCell(transform.position)
+            );
             
+            // Input Actions
+            _inputService.RegisterMoveAction(GridMoveStep);
             _inputService.RegisterWandInteraction(Interact);
         }
 
@@ -72,24 +74,47 @@ namespace Latuvu
 
             if (_floorService.TryGetEntityAtPos(targetCell, out TileEntity tileEntity))
             {
-             //   _playerInventory.RemoveCube();
+                // Noop
             }
 
-          //  GameService.Instance.Tick();
+            //  GameService.Instance.Tick();
         }
 
         
         private void GridMoveStep(InputAction.CallbackContext context)
         {
-            ResetVelocity();
-
             MoveDirection = context.ReadValue<Vector2>();
-            
-            Vector2 start = transform.position;
-            Vector2 end = start + _tileStep * MoveDirection;
-            
+
+            MoveDirection = new Vector2(
+                Mathf.Round(MoveDirection.x),
+                Mathf.Round(MoveDirection.y)
+            );
+
+            if (MoveDirection == Vector2.zero)
+                return;
+
             PlayDirectionAnimation(MoveDirection);
-            transform.position = end;
+
+            var tilemap = _floorService.Tilemap;
+
+            Vector3Int currentCell = tilemap.WorldToCell(transform.position);
+
+            Vector3Int targetCell = currentCell + new Vector3Int(
+                (int)MoveDirection.x,
+                (int)MoveDirection.y,
+                0
+            );
+
+            if (!tilemap.HasTile(targetCell))
+            {
+                Debug.Log("[PlayerController]: no tile at " + targetCell);
+                return;
+            }
+
+            Vector3 worldPos = tilemap.GetCellCenterWorld(targetCell);
+            transform.position = worldPos;
+
+            ResetVelocity();
         }
         
         public void ResetVelocity()
