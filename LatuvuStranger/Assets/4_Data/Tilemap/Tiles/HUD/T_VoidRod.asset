@@ -33,6 +33,6 @@ MonoBehaviour:
     e33: 1
   m_InstancedGameObject: {fileID: 4266289782540050214, guid: 43d9be7be6692f647966214ce788c97c, type: 3}
   m_Flags: 1
-  m_ColliderType: 1
+  m_ColliderType: 0
   IsWalkable: 1
   IsPickable: 1
