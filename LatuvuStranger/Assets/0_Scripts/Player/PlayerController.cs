@@ -10,7 +10,7 @@ namespace Latuvu
         
         [SerializeField] private Rigidbody2D _rb;
         
-        [SerializeField] private float _tileStep = 1f;
+        [SerializeField] private int _tileStep = 1;
         
         [SerializeField] private Animator _animator;
         
@@ -70,7 +70,7 @@ namespace Latuvu
             if (dir == Vector3Int.zero)
                 return;
 
-            Vector3Int targetCell = currentCell + dir;
+            Vector3Int targetCell = currentCell + dir * _tileStep;
 
             GameTile tileInFront = tilemap.GetTile<GameTile>(targetCell);
 

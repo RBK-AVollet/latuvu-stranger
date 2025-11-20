@@ -29,9 +29,9 @@ namespace Latuvu
 
         public void LoadNextFloor()
         {
-            int nextId = int.Parse(_currentFloor.FloorId.Substring(2, 2));
-            string floorId = "B0" + nextId;
-            if (nextId < 10) floorId += "0";
+            int currId = int.Parse(_currentFloor.FloorId.Substring(2, 2));
+            int nextId = currId + 1;
+            string floorId = "B0" + (nextId < 10 ? "0" : "") + nextId;
 
             if (GetFloorById(floorId) == null)
             {
@@ -53,17 +53,15 @@ namespace Latuvu
 
             if (_currentFloor)
             {
-                for (int i = 0; i < _hud.Length; i++)
-                {
-                    _hud[i] = Tilemap.GetTile(new Vector3Int(i, 0, 0));
-                }
-                
-                Destroy(_currentFloor);
+                Destroy(_currentFloor.gameObject);
             }
 
             _currentFloor = Instantiate(floor, transform);
-            ApplyHUD();
             
+            ApplyHUD();
+            WriteOnCell(new Vector3Int(1, 0, 0), "VO");
+            WriteOnCell(new Vector3Int(2, 0, 0), "ID");
+            WriteOnCell(new Vector3Int(5, 0, 0), "00");
             WriteOnCell(new Vector3Int(12, 0, 0), _currentFloor.FloorId.Substring(0, 2));
             WriteOnCell(new Vector3Int(13, 0, 0), _currentFloor.FloorId.Substring(2, 2));
             
@@ -116,10 +114,6 @@ namespace Latuvu
             Player = playerGo.GetComponent<PlayerController>();
             
             LoadFloor("B001");
-            
-            WriteOnCell(new Vector3Int(1, 0, 0), "VO");
-            WriteOnCell(new Vector3Int(2, 0, 0), "ID");
-            WriteOnCell(new Vector3Int(5, 0, 0), "00");
         }
     }
 }
