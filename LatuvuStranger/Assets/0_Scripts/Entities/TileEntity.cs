@@ -7,5 +7,10 @@ namespace Latuvu
         [field:SerializeField] public Vector2Int Position { get; private set; }
         [field:SerializeField] public Sprite Skin { get; private set; }
         [field:SerializeField] public Animator AnimationController { get; private set; }
+        
+        public virtual void TryInteract(PlayerController player)
+        {
+            Debug.Log("Interacted with tile entity at position: " + Position);
+        }
     }
 }
