@@ -26,6 +26,21 @@ namespace Latuvu
             entity = _entities.FirstOrDefault(e => e.Position == (Vector2Int)pos);
             return entity != null;
         }
+
+        public void LoadNextFloor()
+        {
+            int nextId = int.Parse(_currentFloor.FloorId.Substring(2, 2));
+            string floorId = "B0" + nextId;
+            if (nextId < 10) floorId += "0";
+
+            if (GetFloorById(floorId) == null)
+            {
+                Debug.Log("Reached final level ! Well done, cannot go further down !");
+                return;
+            }
+            
+            LoadFloor(floorId);
+        }
         
         public void LoadFloor(string floorId)
         {

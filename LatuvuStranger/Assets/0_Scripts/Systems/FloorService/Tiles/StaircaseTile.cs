@@ -7,7 +7,7 @@ namespace Latuvu
     {
         public override void OnEnter(Tilemap tilemap, Vector3Int pos)
         {
-            Debug.Log("Implement go to next floor !");
+            FloorService.Instance.LoadNextFloor();
         }
     }
 }
