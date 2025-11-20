@@ -1,6 +1,6 @@
 using UnityEngine.InputSystem;
-using System.Collections;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Latuvu
 {
@@ -8,23 +8,19 @@ namespace Latuvu
     {
         [SerializeField] private bool _debugMode;
         
-        [SerializeField] private PlayerInput _playerInput;
         [SerializeField] private Rigidbody2D _rb;
         
-        [SerializeField] private float _speed = 5f;
         [SerializeField] private float _tileStep = 1f;
         
         [SerializeField] private Animator _animator;
         
-        private StateMachine _stateMachine;
-        
         private PlayerInventory _playerInventory;
         
         private InputService _inputService;
+        private FloorService _floorService;
         
-        private bool _isMovingGrid = false; 
-        
-        private bool _isAlive = true;
+        private Tilemap _currentTilemap;
+        private Vector3Int _currentCell;
         public Vector2 MoveDirection { get; private set; }
 
         private void Awake()
@@ -34,82 +30,130 @@ namespace Latuvu
                 Debug.Log("[Rigidbody2D] not assigned in PlayerController, trying to get it from GameObject.");
                 _rb = GetComponent<Rigidbody2D>();
             }
-            if (!_playerInput && _debugMode)
-            {
-                Debug.Log("[PlayerInput] not assigned in PlayerController, trying to get it from GameObject.");
-                _playerInput = GetComponent<PlayerInput>();
-            }
             
             _playerInventory = new PlayerInventory();
-            
-            // State Machine
-            _stateMachine = new StateMachine();
-            
-            // Declare States
-            var freeLocomotionState = new FreeLocomotionState(this, _animator);
-            var gridLocomotionState = new GridLocomotionState(this,_animator);
-            var deathState = new DeathState(this, _animator);
-            
-            // Define Transitions
-            At(freeLocomotionState, gridLocomotionState, new FuncPredicate(() => _playerInventory.HasWand)); // Placeholder condition, modifier pour que lorsqu'on récupère le baton on passe en mode grille
-            At(gridLocomotionState, freeLocomotionState, new FuncPredicate(() => _playerInventory.HasWand)); 
-            
-            Any(deathState, new FuncPredicate(() => !_isAlive));
-            
-            _stateMachine.SetState(gridLocomotionState);
         }
         
-        void At(IState from, IState to, IPredicate condition) => _stateMachine.AddTransition(from, to, condition);
-        void Any(IState to, IPredicate condition) => _stateMachine.AddAnyTransition(to, condition);
-
         private void Start()
         {
             _inputService = InputService.Instance;
-            // Input Actions
-
-            _inputService.RegisterMoveAction(GridMoveStep);
-            _inputService.UnregisterMoveAction(GridMoveStep);
+            _floorService = FloorService.Instance;
             
+            transform.position = _floorService.CurrentFloor.GetPlayerSpawnWorld();
+            _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
+            
+            // Input Actions
+            _inputService.RegisterMoveAction(GridMoveStep);
             _inputService.RegisterWandInteraction(Interact);
+        }
+
+        private void OnDestroy()
+        {
+            _inputService.UnregisterMoveAction(GridMoveStep);
             _inputService.UnregisterWandInteraction(Interact);
         }
 
-        public void FixedUpdate()
-        {
-            _stateMachine.FixedUpdate();
-        }
-
-        public void HandleFreeMovement()
-        {
-          /*  var moveInput = _moveAction.ReadValue<Vector2>();
-            PlayDirectionAnimation(moveInput);
-            
-            _rb.linearVelocity = moveInput * _speed;*/
-        }
-        
         private void Interact(InputAction.CallbackContext context)
         {
-            if (!_playerInventory.HasWand) return; 
-            
-            
-            
-            _playerInventory.RemoveCube();
-            
-            GameService.Instance.Tick();
-            // Placer une tile
+            if (!_playerInventory.HasWand) 
+                return;
+
+            var tilemap = _floorService.Tilemap;
+
+            Vector3Int currentCell = tilemap.WorldToCell(transform.position);
+
+            Vector3Int dir = new Vector3Int(
+                Mathf.RoundToInt(MoveDirection.x),
+                Mathf.RoundToInt(MoveDirection.y),
+                0
+            );
+
+            if (dir == Vector3Int.zero)
+                return;
+
+            Vector3Int targetCell = currentCell + dir;
+
+            GameTile tileInFront = tilemap.GetTile<GameTile>(targetCell);
+
+            if (!_playerInventory.HasTile)
+            {
+                if (tileInFront != null && tileInFront.IsPickable)
+                {
+                    _playerInventory.StoreTile(tileInFront);
+
+                    tileInFront.OnPickup(tilemap, targetCell);
+                    
+                    tilemap.SetTile(targetCell, null);
+
+                    Debug.Log("Player picked up tile " + tileInFront.name);
+                }
+                else
+                {
+                    Debug.Log("No pickable tile in front");
+                }
+
+                return;
+            }
+
+            if (_playerInventory.HasTile)
+            {
+                if (tileInFront != null)
+                {
+                    Debug.Log("Can't place: a tile is already in front.");
+                    return;
+                }
+
+                GameTile tileToPlace = _playerInventory.Tile;
+
+                tilemap.SetTile(targetCell, tileToPlace);
+
+                _playerInventory.ClearTile();
+
+                Debug.Log("Placed tile: " + tileToPlace.name);
+            }
         }
         
         private void GridMoveStep(InputAction.CallbackContext context)
         {
-            ResetVelocity();
-
             MoveDirection = context.ReadValue<Vector2>();
-            
-            Vector2 start = transform.position;
-            Vector2 end = start + _tileStep * MoveDirection;
-            
+
+            MoveDirection = new Vector2(
+                Mathf.Round(MoveDirection.x),
+                Mathf.Round(MoveDirection.y)
+            );
+
+            if (MoveDirection == Vector2.zero)
+                return;
+
             PlayDirectionAnimation(MoveDirection);
-            transform.position = end;
+
+            _currentTilemap = _floorService.Tilemap;
+            
+            Vector3Int targetCellPos = _currentCell + new Vector3Int(
+                (int)MoveDirection.x,
+                (int)MoveDirection.y,
+                0
+            );
+            
+            var currentTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
+            var targetTile = _floorService.Tilemap.GetTile<GameTile>(targetCellPos);
+            
+            if (!_currentTilemap.HasTile(targetCellPos) || !targetTile.IsWalkable)
+            {
+                Debug.Log("[PlayerController]: no tile at " + targetCellPos);
+                return;
+            }
+            
+            currentTile.OnExit(_floorService.Tilemap, _currentCell);
+            
+            Vector3 worldPos = _currentTilemap.GetCellCenterWorld(targetCellPos);
+            transform.position = worldPos;
+            
+            _currentCell = targetCellPos;
+            
+            targetTile.OnEnter(_floorService.Tilemap, _currentCell);
+
+            ResetVelocity();
         }
         
         public void ResetVelocity()

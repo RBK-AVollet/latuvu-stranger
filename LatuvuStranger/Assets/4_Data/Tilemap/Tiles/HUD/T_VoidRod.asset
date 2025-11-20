@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa17527fa0a1473aa4ec9e4989720b46, type: 3}
-  m_Name: T_Glass
-  m_EditorClassIdentifier: Assembly-CSharp::Latuvu.GlassTile
-  m_Sprite: {fileID: 21300000, guid: d994dea1462dd2648b69ae9e38bc5c2c, type: 3}
+  m_Script: {fileID: 11500000, guid: aa7ec2d16f1536b4a8ca328543b2e966, type: 3}
+  m_Name: T_VoidRod
+  m_EditorClassIdentifier: Assembly-CSharp::Latuvu.KeyItemTile
+  m_Sprite: {fileID: 21300000, guid: 73790fddccd1a654692dccd57de51703, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -31,9 +31,8 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  m_InstancedGameObject: {fileID: 0}
+  m_InstancedGameObject: {fileID: 4266289782540050214, guid: 43d9be7be6692f647966214ce788c97c, type: 3}
   m_Flags: 1
   m_ColliderType: 1
   IsWalkable: 1
   IsPickable: 1
-  BrokenGlassTile: {fileID: 11400000, guid: 5053080fe19ac344fbf377de780c0b81, type: 2}
