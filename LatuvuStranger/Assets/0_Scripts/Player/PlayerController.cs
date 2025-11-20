@@ -39,9 +39,8 @@ namespace Latuvu
             _inputService = InputService.Instance;
             _floorService = FloorService.Instance;
             
-            transform.position = _floorService.Tilemap.GetCellCenterWorld(
-                _floorService.Tilemap.WorldToCell(transform.position)
-            );
+            transform.position = _floorService.CurrentFloor.GetPlayerSpawnWorld();
+            _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
             
             // Input Actions
             _inputService.RegisterMoveAction(GridMoveStep);
@@ -69,24 +68,50 @@ namespace Latuvu
                 0
             );
 
+            if (dir == Vector3Int.zero)
+                return;
+
             Vector3Int targetCell = currentCell + dir;
 
-            Debug.Log($"Interact: checking cell {targetCell}");
+            GameTile tileInFront = tilemap.GetTile<GameTile>(targetCell);
 
-            TileBase tileInFront = tilemap.GetTile(targetCell);
-
-            if (tileInFront != null)
-                Debug.Log($"Tile In Front: {tileInFront.name}");
-            else
-                Debug.Log("No tile in front");
-
-            if (_floorService.TryGetEntityAtPos(targetCell, out TileEntity entity))
+            if (!_playerInventory.HasTile)
             {
-                Debug.Log($"Entity in front: {entity.name}");
+                if (tileInFront != null && tileInFront.IsPickable)
+                {
+                    _playerInventory.StoreTile(tileInFront);
+
+                    tileInFront.OnPickup(tilemap, targetCell);
+                    
+                    tilemap.SetTile(targetCell, null);
+
+                    Debug.Log("Player picked up tile " + tileInFront.name);
+                }
+                else
+                {
+                    Debug.Log("No pickable tile in front");
+                }
+
+                return;
+            }
+
+            if (_playerInventory.HasTile)
+            {
+                if (tileInFront != null)
+                {
+                    Debug.Log("Can't place: a tile is already in front.");
+                    return;
+                }
+
+                GameTile tileToPlace = _playerInventory.Tile;
+
+                tilemap.SetTile(targetCell, tileToPlace);
+
+                _playerInventory.ClearTile();
+
+                Debug.Log("Placed tile: " + tileToPlace.name);
             }
         }
-
-
         
         private void GridMoveStep(InputAction.CallbackContext context)
         {
@@ -103,23 +128,30 @@ namespace Latuvu
             PlayDirectionAnimation(MoveDirection);
 
             _currentTilemap = _floorService.Tilemap;
-
-            _currentCell = _currentTilemap.WorldToCell(transform.position);
-
-            Vector3Int targetCell = _currentCell + new Vector3Int(
+            
+            Vector3Int targetCellPos = _currentCell + new Vector3Int(
                 (int)MoveDirection.x,
                 (int)MoveDirection.y,
                 0
             );
-
-            if (!_currentTilemap.HasTile(targetCell))
+            
+            var currentTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
+            var targetTile = _floorService.Tilemap.GetTile<GameTile>(targetCellPos);
+            
+            if (!_currentTilemap.HasTile(targetCellPos) || !targetTile.IsWalkable)
             {
-                Debug.Log("[PlayerController]: no tile at " + targetCell);
+                Debug.Log("[PlayerController]: no tile at " + targetCellPos);
                 return;
             }
-
-            Vector3 worldPos = _currentTilemap.GetCellCenterWorld(targetCell);
+            
+            currentTile.OnExit(_floorService.Tilemap, _currentCell);
+            
+            Vector3 worldPos = _currentTilemap.GetCellCenterWorld(targetCellPos);
             transform.position = worldPos;
+            
+            _currentCell = targetCellPos;
+            
+            targetTile.OnEnter(_floorService.Tilemap, _currentCell);
 
             ResetVelocity();
         }

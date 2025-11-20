@@ -16,6 +16,8 @@ namespace Latuvu
         
         public Tilemap Tilemap => _currentFloor.Tilemap;
         
+        public FloorPrefab CurrentFloor => _currentFloor;
+        
         public void LoadFloor(string floorId)
         {
             var floor = GetFloorById(floorId);

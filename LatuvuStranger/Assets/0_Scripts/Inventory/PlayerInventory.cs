@@ -7,6 +7,9 @@ namespace Latuvu
         public bool HasCube { get; private set; }
         public bool HasSword { get; private set; }
         
+        public GameTile Tile { get; private set; }
+        public bool HasTile => Tile != null;
+        
         public void ObtainWand() { HasWand = true; }
         public void ObtainCube() { HasCube = true; }
         public void RemoveCube() { HasCube = false; }
@@ -27,6 +30,16 @@ namespace Latuvu
             HasWand = true;
             HasCube = false;
             HasSword = false;
+        }
+        
+        public void StoreTile(GameTile tile)
+        {
+            Tile = tile;
+        }
+
+        public void ClearTile()
+        {
+            Tile = null;
         }
     }
 }
