@@ -7,7 +7,7 @@ namespace Latuvu
 {
     public class PauseMenu : UIView
     {
-        public List<Button> Buttons = new List<Button>();
+        public List<Button> Buttons;
         public VisualElement MenuImage;
         
         public PauseMenu(VisualElement root)

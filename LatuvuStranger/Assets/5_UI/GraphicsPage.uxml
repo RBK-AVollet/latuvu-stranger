@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/5_UI/GraphicsPage.uss?fileID=7433441132597879392&amp;guid=c2f3646f885dfb94bbee2b86149ff5d7&amp;type=3#GraphicsPage" />
+    <ui:VisualElement name="root" style="flex-grow: 1;">
+        <ui:VisualElement name="Container" style="flex-grow: 1; justify-content: center; align-self: center; width: 100%;">
+            <ui:DropdownField label="RESOLUTION" name="resolution" />
+            <ui:Toggle label="FULLSCREEN" name="fullscreen" />
+            <ui:Button name="back-button" style="border-bottom-width: 0; border-top-width: 0; border-left-width: 0; border-right-width: 0; padding-left: 0; margin-left: 0; padding-top: 0; margin-top: 0; margin-right: 0; padding-right: 0; padding-bottom: 0; margin-bottom: 0; background-color: rgba(188, 188, 188, 0);">
+                <ui:Label text="BACK" name="title" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 50%; -unity-text-align: middle-right;" />
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

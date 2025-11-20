@@ -20,6 +20,7 @@ namespace Latuvu
         private Memories _memories;
         
         [SerializeField] private List<Sprite> _pauseMenuImages;
+        [SerializeField] private List<Sprite> _settingsImages;
         
         private DialogueUI _dialogueUI;
         float typewriterDelay = 0.05f;
@@ -49,7 +50,7 @@ namespace Latuvu
             _buttons[0]?.Focus();
             
             _buttons[0].clicked += Resume;
-            _buttons[1].clicked += () => OpenPage(_memories);
+            //_buttons[1].clicked += () => OpenPage(_memories);
             _buttons[2].clicked += () => OpenPage(_settings);
             
             for (int i = 0; i < _pauseMenu.Buttons.Count; i++)
@@ -61,14 +62,11 @@ namespace Latuvu
             }
 
             _settings = new Settings(_root.Q<VisualElement>("settings-menu"));
-            _settings.BackButton.clicked += () => BackMenu();
+            _settings.SetupFocus(_settingsImages);
+            _settings.Buttons[4].clicked += () => BackMenu();
             
             _memories = new Memories(_root.Q<VisualElement>("memories-menu"));
             //_memories.BackButton.clicked += () => BackMenu();
-
-            ShowDialogue("This is a Test");
-            
-            OpenPauseMenu();
         }
 
         private void BackMenu()
@@ -83,6 +81,11 @@ namespace Latuvu
             _currentView.Hide();
             view.Show();
             _currentView = view;
+
+            if (_currentView == _settings)
+            {
+                _settings.Buttons[0]?.Focus();
+            }
         }
 
         public void OpenPauseMenu()

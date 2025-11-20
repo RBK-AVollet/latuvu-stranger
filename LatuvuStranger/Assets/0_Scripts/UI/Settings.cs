@@ -12,119 +12,71 @@ namespace Latuvu
             _hideOnAwake = true;
             _isOverlay = true;
             
+            _imageMenu = root.Q<VisualElement>("image-menu");
+            
+            _audioPage = new AudioPage(root.Q<VisualElement>("audio-page"));
+            _graphicsPage = new GraphicsPage(root.Q<VisualElement>("graphics-page"));
+            _settingsMainPage = root.Q<VisualElement>("settings-mainpage");
+            
+            _settingsButtons = new List<Button>()
+            {
+                root.Q<Button>("graphics"),
+                root.Q<Button>("audio"),
+                root.Q<Button>("controls"),
+                root.Q<Button>("language"),
+                root.Q<Button>("back-button")
+            };
+
+            _settingsButtons[0].clicked += () => OpenPage(_graphicsPage);
+            _settingsButtons[1].clicked += () => OpenPage(_audioPage);
+            
+            _audioPage.BackButton.clicked += () => ReturnToSettingsSelection();
+            _graphicsPage.BackButton.clicked += () => ReturnToSettingsSelection();
+            
             Initialize(root);
         }
-        
-        protected override void SetVisualElements()
+
+        public void SetupFocus(List<Sprite> menuImages)
         {
-            _fullScreenToggle = Root.Q<Toggle>("fullscreen-toggle");
-            _volumeSlider = Root.Q<Slider>("volume-slider");
-            BackButton = Root.Q<Button>("back-button");
-            _resolutionDropdown = Root.Q<DropdownField>("resolution-dropdown");
-            
-            if (_fullScreenToggle != null)
+            for (int i = 0; i < _settingsButtons.Count; i++)
             {
-                _fullScreenToggle.value = Screen.fullScreen;
-                _fullScreenToggle.RegisterValueChangedCallback(evt =>
+                _settingsButtons[i].RegisterCallback<FocusInEvent>(ev =>
                 {
-                    Screen.fullScreen = evt.newValue;
+                    _imageMenu.style.backgroundImage = new StyleBackground(menuImages[_settingsButtons.IndexOf(ev.target as Button)]);
                 });
             }
-            
-            if (_volumeSlider != null)
-            {
-                _volumeSlider.value = AudioListener.volume;
-                _volumeSlider.RegisterValueChangedCallback(evt =>
-                {
-                    AudioListener.volume = evt.newValue;
-                });
-            }
-            
-            SetupResolutions();
-            
-            Root.RegisterCallback<KeyDownEvent>(OnKeyDown);
         }
         
-        private void SetupResolutions()
+        private void OpenPage(UIView page)
         {
-            if (_resolutionDropdown == null)
-                return;
-
-            _resolutionDropdown.focusable = true;
-            
-            _availableResolutions = new List<Vector2Int>();
-            _resolutionLabels = new List<string>();
-
-            foreach (var r in Screen.resolutions)
-            {
-                var v = new Vector2Int(r.width, r.height);
-                if (_availableResolutions.Contains(v))
-                    continue;
-                _availableResolutions.Add(v);
-                _resolutionLabels.Add($"{r.width}x{r.height}");
-            }
-
-            if (_availableResolutions.Count == 0)
-                return;
-            
-            _currentResIndex = _availableResolutions.FindIndex(v => v.x == Screen.width && v.y == Screen.height);
-            if (_currentResIndex < 0) _currentResIndex = 0;
-
-            _resolutionDropdown.choices = _resolutionLabels;
-            _resolutionDropdown.value = _resolutionLabels[_currentResIndex];
+            _settingsMainPage.style.display = DisplayStyle.None;
+            page.Show();
         }
-
-        private void OnKeyDown(KeyDownEvent ev)
+        
+        private void ReturnToSettingsSelection()
         {
-            if (_resolutionDropdown == null || _availableResolutions == null || _availableResolutions.Count == 0)
-                return;
-
-            // only handle left/right when the resolution control (or its children) is focused
-            var focused = Root.panel?.focusController?.focusedElement as VisualElement;
-            if (focused == null)
-                return;
-
-            if (!(_resolutionDropdown == focused || _resolutionDropdown.Contains(focused)))
-                return;
-
-            if (ev.keyCode == KeyCode.RightArrow || ev.keyCode == KeyCode.LeftArrow)
-            {
-                int dir = ev.keyCode == KeyCode.RightArrow ? 1 : -1;
-                _currentResIndex = (_currentResIndex + dir + _availableResolutions.Count) % _availableResolutions.Count;
-                ApplyResolution(_currentResIndex);
-                ev.StopPropagation();
-            }
-        }
-
-        private void ApplyResolution(int index)
-        {
-            if (_availableResolutions == null || index < 0 || index >= _availableResolutions.Count)
-                return;
-
-            var res = _availableResolutions[index];
-            Screen.SetResolution(res.x, res.y, Screen.fullScreen);
-
-            if (_resolutionLabels != null && index < _resolutionLabels.Count)
-                _resolutionDropdown.value = _resolutionLabels[index];
+            _settingsMainPage.style.display = DisplayStyle.Flex;
+            _audioPage.Hide();
+            _graphicsPage.Hide();
         }
 
         public override void Dispose()
         {
-            Root.UnregisterCallback<KeyDownEvent>(OnKeyDown);
         }
         
         #region Fields
         // Add fields here as needed
         
-        private Toggle _fullScreenToggle;
-        private Slider _volumeSlider;
-        public Button BackButton;
+        private AudioPage _audioPage;
+        private GraphicsPage _graphicsPage;
         
-        private DropdownField _resolutionDropdown;
-        private List<Vector2Int> _availableResolutions;
-        private List<string> _resolutionLabels;
-        private int _currentResIndex;
+        private List<Button> _settingsButtons;
+
+        private VisualElement _imageMenu;
+        private VisualElement _settingsMainPage;
         
+        public List<Button> Buttons => _settingsButtons;
+
         #endregion
     }
 }

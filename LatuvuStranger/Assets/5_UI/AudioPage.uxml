@@ -1,0 +1,13 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/5_UI/AudioPage.uss?fileID=7433441132597879392&amp;guid=e0b6efedbe6b4854f96232cabd63030f&amp;type=3#AudioPage" />
+    <ui:VisualElement name="root" style="flex-grow: 1;">
+        <ui:VisualElement name="Container" style="flex-grow: 1; flex-direction: column; justify-content: center; align-self: center; width: 70%;">
+            <ui:SliderInt label="MASTER" value="42" high-value="10" name="master" fill="true" style="-unity-text-align: upper-right;">
+                <ui:Label text="Label" name="volume-level" triple-click-selects-line="true" style="-unity-text-align: middle-center; -unity-font-definition: url(&quot;project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&amp;guid=90aecb5949e6d7a47a8d89b5c0e257bd&amp;type=3#Alkhemikal&quot;); color: rgb(255, 255, 255);" />
+            </ui:SliderInt>
+            <ui:Button name="back-button" class="white Button" style="-unity-text-align: upper-right; width: 50%; margin-top: 0; padding-top: 0; padding-right: 0; margin-right: 0; padding-bottom: 0; margin-bottom: 0; padding-left: 0; margin-left: 0; background-color: rgba(188, 188, 188, 0);">
+                <ui:Label text="BACK" name="title" enable-rich-text="true" focusable="false" style="flex-direction: column; -unity-text-align: upper-right; -unity-font-style: normal; width: 100%; margin-top: 0; padding-top: 0; padding-right: 0; margin-right: 0; padding-bottom: 0; margin-bottom: 0; padding-left: 0; margin-left: 0; -unity-font-definition: url(&quot;project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&amp;guid=90aecb5949e6d7a47a8d89b5c0e257bd&amp;type=3#Alkhemikal&quot;); color: rgb(164, 164, 164);" />
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
