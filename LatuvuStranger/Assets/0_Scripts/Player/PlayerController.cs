@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Latuvu
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : LivingTileEntity
     {
         [SerializeField] private bool _debugMode;
         
@@ -12,18 +12,20 @@ namespace Latuvu
         [SerializeField] private Rigidbody2D _rb;
         
         [SerializeField] private float _speed = 5f;
-        [SerializeField] private float _gridMoveTime = 0.2f;
+        [SerializeField] private float _tileStep = 1f;
         
         [SerializeField] private Animator _animator;
         
-        private InputAction _moveAction;
-        
         private StateMachine _stateMachine;
         
+        private PlayerInventory _playerInventory;
+        
+        private InputService _inputService;
+        
         private bool _isMovingGrid = false; 
-        private bool _useGridMovement = true; // TEMP
         
         private bool _isAlive = true;
+        public Vector2 MoveDirection { get; private set; }
 
         private void Awake()
         {
@@ -38,6 +40,8 @@ namespace Latuvu
                 _playerInput = GetComponent<PlayerInput>();
             }
             
+            _playerInventory = new PlayerInventory();
+            
             // State Machine
             _stateMachine = new StateMachine();
             
@@ -47,8 +51,8 @@ namespace Latuvu
             var deathState = new DeathState(this, _animator);
             
             // Define Transitions
-            At(freeLocomotionState, gridLocomotionState, new FuncPredicate(() => _useGridMovement)); // Placeholder condition, modifier pour que lorsqu'on récupère le baton on passe en mode grille
-            At(gridLocomotionState, freeLocomotionState, new FuncPredicate(() => !_useGridMovement)); 
+            At(freeLocomotionState, gridLocomotionState, new FuncPredicate(() => _playerInventory.HasWand)); // Placeholder condition, modifier pour que lorsqu'on récupère le baton on passe en mode grille
+            At(gridLocomotionState, freeLocomotionState, new FuncPredicate(() => _playerInventory.HasWand)); 
             
             Any(deathState, new FuncPredicate(() => !_isAlive));
             
@@ -60,8 +64,14 @@ namespace Latuvu
 
         private void Start()
         {
+            _inputService = InputService.Instance;
             // Input Actions
-            _moveAction = _playerInput.actions.FindAction("Move");
+
+            _inputService.RegisterMoveAction(GridMoveStep);
+            _inputService.UnregisterMoveAction(GridMoveStep);
+            
+            _inputService.RegisterWandInteraction(Interact);
+            _inputService.UnregisterWandInteraction(Interact);
         }
 
         public void FixedUpdate()
@@ -71,50 +81,35 @@ namespace Latuvu
 
         public void HandleFreeMovement()
         {
-            var moveInput = _moveAction.ReadValue<Vector2>();
+          /*  var moveInput = _moveAction.ReadValue<Vector2>();
             PlayDirectionAnimation(moveInput);
             
-            _rb.linearVelocity = moveInput * _speed;
+            _rb.linearVelocity = moveInput * _speed;*/
         }
         
-        public void HandleGridMovement()
+        private void Interact(InputAction.CallbackContext context)
         {
-            var moveInput = _moveAction.ReadValue<Vector2>();
+            if (!_playerInventory.HasWand) return; 
             
-            PlayDirectionAnimation(moveInput);
             
-            if (_isMovingGrid) return;
             
-            if (moveInput.sqrMagnitude < 0.5f) return;
-
-            Vector2 direction = Vector2.zero;
-            if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
-                direction = new Vector2(Mathf.Sign(moveInput.x), 0);
-            else
-                direction = new Vector2(0, Mathf.Sign(moveInput.y));
-
-            StartCoroutine(GridMoveStep(direction));
+            _playerInventory.RemoveCube();
+            
+            GameService.Instance.Tick();
+            // Placer une tile
         }
         
-        private IEnumerator GridMoveStep(Vector2 direction)
+        private void GridMoveStep(InputAction.CallbackContext context)
         {
-            _isMovingGrid = true;
             ResetVelocity();
 
-            Vector3 start = transform.position;
-            Vector3 end = start + (Vector3)direction;
-
-            float elapsed = 0f;
-
-            while (elapsed < _gridMoveTime)
-            {
-                transform.position = Vector3.Lerp(start, end, elapsed / _gridMoveTime);
-                elapsed += Time.deltaTime;
-                yield return null;
-            }
-
+            MoveDirection = context.ReadValue<Vector2>();
+            
+            Vector2 start = transform.position;
+            Vector2 end = start + _tileStep * MoveDirection;
+            
+            PlayDirectionAnimation(MoveDirection);
             transform.position = end;
-            _isMovingGrid = false;
         }
         
         public void ResetVelocity()
