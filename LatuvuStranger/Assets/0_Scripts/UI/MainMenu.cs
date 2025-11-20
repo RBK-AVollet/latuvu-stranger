@@ -10,22 +10,25 @@ namespace Latuvu._0_Scripts.UI
     {
         private List<Button> _menuButtons;
         private UIDocument _uiDoc;
-        private VisualElement _mainMenu;
+        private VisualElement _mainMenu, _image;
         private Settings _settings;
-        [SerializeField] private List<Texture> _menuImages;
+        private VisualElement _root;
+        [SerializeField] private List<Sprite> _menuImages;
 
         void OnEnable()
         {
             _uiDoc = GetComponent<UIDocument>();
-            var root = _uiDoc.rootVisualElement;
+            _root = _uiDoc.rootVisualElement;
             
-            _mainMenu = root.Q<VisualElement>("MainMenu");
+            _mainMenu = _root.Q<VisualElement>("MainMenu");
+            _image = _root.Q<VisualElement>("ImageMenu");
+            _settings = new Settings(_root.Q<VisualElement>("SettingsMenu"));
 
             _menuButtons = new List<Button>
             {
-                root.Q<Button>("StartGame"),
-                root.Q<Button>("Settings"),
-                root.Q<Button>("Quit")
+                _root.Q<Button>("StartGame"),
+                _root.Q<Button>("Settings"),
+                _root.Q<Button>("Quit")
             };
 
             foreach (var b in _menuButtons)
@@ -34,15 +37,23 @@ namespace Latuvu._0_Scripts.UI
                     b.focusable = true;
             }
             
-            _settings = new Settings(root.Q<VisualElement>("SettingsMenu"));
+            _menuButtons[0].Focus();
+            
+            _image.style.backgroundImage = new StyleBackground(_menuImages[0]);
             
             _settings.BackButton.clicked += () => BackMenu();
-            
-            _menuButtons[0]?.Focus();
             
             _menuButtons[0].clicked += StartGame;
             _menuButtons[1].clicked += OpenSettings;
             _menuButtons[2].clicked += QuitGame;
+            
+            for (int i = 0; i < _menuButtons.Count; i++)
+            {
+                _menuButtons[i].RegisterCallback<FocusInEvent> (ev =>
+                {
+                    _image.style.backgroundImage = new StyleBackground(_menuImages[_menuButtons.IndexOf(ev.target as Button)]);
+                });
+            }
         }
 
         void StartGame()
@@ -73,9 +84,12 @@ namespace Latuvu._0_Scripts.UI
 
         void OnDisable()
         {
-            _menuButtons[0].clicked -= StartGame;
-            _menuButtons[1].clicked -= OpenSettings;
-            _menuButtons[2].clicked -= QuitGame;
+            if (_menuButtons != null)
+            {
+                if (_menuButtons.Count > 0) _menuButtons[0].clicked -= StartGame;
+                if (_menuButtons.Count > 1) _menuButtons[1].clicked -= OpenSettings;
+                if (_menuButtons.Count > 2) _menuButtons[2].clicked -= QuitGame;
+            }
         }
     }
 }
