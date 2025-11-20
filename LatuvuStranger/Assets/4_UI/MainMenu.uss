@@ -1,0 +1,36 @@
+:root {
+}
+
+.unity-text-element {
+    -unity-text-align: upper-center;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    -unity-font-definition: url("project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&guid=90aecb5949e6d7a47a8d89b5c0e257bd&type=3#Alkhemikal");
+}
+
+.Button.white:focus Label#title {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#title {
+    color: rgb(164, 164, 164);
+    -unity-font-definition: url("project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&guid=90aecb5949e6d7a47a8d89b5c0e257bd&type=3#Alkhemikal");
+    font-size: 100px;
+}
+
+.unity-button {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+}
+
+.visible {
+}
+
+.hidden {
+    display: none;
+}
