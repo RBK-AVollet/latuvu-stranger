@@ -49,7 +49,7 @@ namespace Latuvu
                 _rb = GetComponent<Rigidbody2D>();
         }
 
-        private void Start()
+        protected override void Start()
         {
             _inputService = InputService.Instance;
             _inputService.RegisterWandInteraction(Interact);

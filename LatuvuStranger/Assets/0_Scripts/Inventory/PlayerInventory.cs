@@ -53,9 +53,6 @@ namespace Latuvu
 
             #if !UNITY_EDITOR
             Crickets = ES3.Load(k_cricketSaveKey, 0);
-
-            #if !UNITY_EDITOR
-            Crickets = ES3.Load(k_cricketSaveKey, 0);
             #endif
         }
 
@@ -66,13 +63,6 @@ namespace Latuvu
             #endif
         }
 
-        ~PlayerInventory()
-        {
-            #if !UNITY_EDITOR
-            ES3.Save(k_cricketSaveKey, Crickets);
-            #endif
-        }
-        
         public void StoreTile(GameTile tile)
         {
             Tile = tile;
