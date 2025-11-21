@@ -6,9 +6,7 @@
                 <ui:Button name="master" class="white Button" style="-unity-text-align: upper-right; width: 50%; margin-top: 0; padding-top: 0; padding-right: 0; margin-right: 0; padding-bottom: 0; margin-bottom: 0; padding-left: 0; margin-left: 0; background-color: rgba(188, 188, 188, 0); flex-direction: row;">
                     <ui:Label text="MASTER" name="title" enable-rich-text="true" focusable="false" style="flex-direction: column; -unity-text-align: upper-right; width: 100%; margin-top: 0; padding-top: 0; padding-right: 0; margin-right: 0; padding-bottom: 0; margin-bottom: 0; padding-left: 0; margin-left: 0; -unity-font-definition: url(&quot;project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&amp;guid=90aecb5949e6d7a47a8d89b5c0e257bd&amp;type=3#Alkhemikal&quot;);" />
                 </ui:Button>
-                <ui:SliderInt value="42" high-value="10" name="master-slider" fill="true" show-input-field="false" style="width: 40%;">
-                    <ui:Label name="volume-level" style="width: 15%; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
-                </ui:SliderInt>
+                <ui:Slider label="0" value="-0.03" high-value="1" fill="true" name="master-slider" style="width: 50%;" />
             </ui:VisualElement>
             <ui:Button name="back-button" class="white Button" style="-unity-text-align: upper-right; width: 50%; margin-top: 0; padding-top: 0; padding-right: 0; margin-right: 0; padding-bottom: 0; margin-bottom: 0; padding-left: 0; margin-left: 0; background-color: rgba(188, 188, 188, 0);">
                 <ui:Label text="BACK" name="title" enable-rich-text="true" focusable="false" style="flex-direction: column; -unity-text-align: upper-right; width: 100%; margin-top: 0; padding-top: 0; padding-right: 0; margin-right: 0; padding-bottom: 0; margin-bottom: 0; padding-left: 0; margin-left: 0; -unity-font-definition: url(&quot;project://database/Assets/1_Art/Fonts/Alkhemikal.ttf?fileID=12800000&amp;guid=90aecb5949e6d7a47a8d89b5c0e257bd&amp;type=3#Alkhemikal&quot;);" />

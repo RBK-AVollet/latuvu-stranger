@@ -25,7 +25,7 @@ namespace Latuvu
         private DialogueUI _dialogueUI;
         float typewriterDelay = 0.05f;
         [SerializeField] private string _debugString;
-        private bool _dialogueOpen = false;
+        private bool _dialogueOpen;
 
         private VisualElement _gravure;
         private InputService _inputService;
@@ -66,6 +66,8 @@ namespace Latuvu
             
             SetupButtons(_settingsImages, _settings.Buttons, _settings.ImageMenu);
             SetupButtons(_pauseMenuImages, _buttons, _pauseMenu.MenuImage);
+            
+            _inputService = InputService.Instance;
         }
 
         private void Start()
@@ -73,7 +75,7 @@ namespace Latuvu
             _inputService = InputService.Instance;
             _inputService.RegisterPauseAction(OpenPauseMenu);
         }
-
+        
         private void BackMenu()
         {
             _currentView.Hide();
@@ -98,14 +100,14 @@ namespace Latuvu
             if (_dialogueOpen)
                 return;
             
-            Time.timeScale = 0;
+            _inputService.DisableInput();
             _root.style.backgroundColor = new StyleColor(new Color(0, 0, 0, 1f));
             _pauseMenu.Show();
         }
 
         private void Resume()
         {
-            Time.timeScale = 1;
+            _inputService.EnableInput();
             _root.style.backgroundColor = new StyleColor(new Color(0, 0, 0, 0f));
             _pauseMenu.Hide();
         }
@@ -114,12 +116,14 @@ namespace Latuvu
         {
             _dialogueOpen = true;
             _dialogueUI.Show();
+            _inputService.DisableInput();
             StartCoroutine(WriteText(text));
         }
         
         public void CloseDialogue()
         {
             _dialogueUI.Hide();
+            _inputService.EnableInput();
             _dialogueOpen = false;
         }
 
@@ -162,7 +166,7 @@ namespace Latuvu
             }
         }
         
-        IEnumerator WriteText(string text)
+        private IEnumerator WriteText(string text)
         {
             for (var i = 0; i < text.Length; i++)
             {

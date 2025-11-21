@@ -44,22 +44,10 @@ namespace Latuvu
                     _masterVolumeLabel.text = $"Master Volume: {(int)(currentVolume * 100)}%";
                 }
             }
-
-            _masterVolumeButton.clicked += () => FocusMasterVolumeSlider();
             
             Initialize(root);
         }
         
-        public override void Show()
-        {
-            base.Show();
-        }
-        
-        public void FocusMasterVolumeSlider()
-        {
-            _masterVolumeSlider?.Focus();
-        }
-
         public override void Dispose()
         {
             if (_masterVolumeSlider != null)

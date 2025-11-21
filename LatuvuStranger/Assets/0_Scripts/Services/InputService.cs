@@ -58,5 +58,15 @@ namespace Latuvu
         {
             _pauseAction.started -= callback;
         }
+        
+        public void EnableInput()
+        {
+            _playerInput.actions.Enable();
+        }
+
+        public void DisableInput()
+        {
+            _playerInput.actions.Disable();
+        }
     }
 }
