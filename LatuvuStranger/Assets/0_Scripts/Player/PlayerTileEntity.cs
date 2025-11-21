@@ -1,7 +1,6 @@
-using System;
 using UnityEngine.InputSystem;
-using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine;
 
 namespace Latuvu
 {
@@ -9,30 +8,28 @@ namespace Latuvu
     {
         [SerializeField] private bool _debugMode;
         [SerializeField] private Rigidbody2D _rb;
-        [SerializeField] private int _tileStep = 1;
         [SerializeField] private Animator _animator;
+        [SerializeField] private int _tileStep = 1;
         [SerializeField] private float _fallTimerDuration = 1f;
         [SerializeField] private float _speed = 5f;
 
         private Vector3Int _currentCell;
         private Tilemap _currentTilemap;
-
-        private float _fallingTimeRemaining = 0f;
-        private Vector3Int _fallOriginCell;
         private FloorService _floorService;
-
-        private bool _hasFallOrigin = false;
-        private bool _isFallTimerRunning;
-        private float _oldAnimNormalizedTime = 0f;
-
-        private int _oldAnimStateHash = 0;
-        private Vector3Int _oldCell;
-        private Vector2 _oldMoveDirection;
-        private Vector3 _oldPosition;
-        private Quaternion _oldRotation;
-
         private InputService _inputService;
         private PlayerInventory _playerInventory;
+
+        private float _fallingTimeRemaining;
+        private bool _isFallTimerRunning;
+        private bool _hasFallOrigin;
+        private Vector3Int _fallOriginCell;
+
+        private Vector3 _oldPosition;
+        private Quaternion _oldRotation;
+        private Vector3Int _oldCell;
+        private Vector2 _oldMoveDirection;
+        private int _oldAnimStateHash;
+        private float _oldAnimNormalizedTime;
 
         private PlayerState _state = PlayerState.Normal;
         private MovementMode _movementMode = MovementMode.Free;
@@ -48,21 +45,20 @@ namespace Latuvu
             _floorService = FloorService.Instance;
             _playerInventory = new PlayerInventory();
 
-            if (!_rb && _debugMode)
+            if (!_rb)
                 _rb = GetComponent<Rigidbody2D>();
         }
 
         private void Start()
         {
             _inputService = InputService.Instance;
-
             _inputService.RegisterWandInteraction(Interact);
             _inputService.RegisterTestAction(_playerInventory.ObtainWand);
         }
 
         private void FixedUpdate()
         {
-            if (_movementMode == MovementMode.Free) 
+            if (_movementMode == MovementMode.Free)
                 HandleFreeMovement();
         }
 
@@ -71,41 +67,19 @@ namespace Latuvu
             if (!_isFallTimerRunning) return;
 
             _fallingTimeRemaining -= Time.deltaTime;
-
-            Vector3Int currentCellNow = _floorService.Tilemap.WorldToCell(transform.position);
+            var currentCellNow = _floorService.Tilemap.WorldToCell(transform.position);
 
             if (_state == PlayerState.Falling && _hasFallOrigin && currentCellNow == _fallOriginCell)
             {
-                transform.position = _oldPosition;
-                transform.rotation = _oldRotation;
-                MoveDirection = _oldMoveDirection;
-
-                _currentCell = _oldCell;
-                Position = _oldCell;
-
-                if (_animator != null)
-                {
-                    _animator.ResetTrigger("Left");
-                    _animator.ResetTrigger("Right");
-                    _animator.ResetTrigger("Top");
-                    _animator.ResetTrigger("Down");
-
-                    _animator.Play(_oldAnimStateHash, 0, _oldAnimNormalizedTime);
-                    _animator.Update(0);
-                }
-
-                ResetFallTimer();
-                _hasFallOrigin = false;
-                _state = PlayerState.Normal;
-
+                RollbackPosition();
                 return;
             }
 
-            if (_fallingTimeRemaining > 0f)
-                return;
-
-            ResetFallTimer();
-            OnFallTimerElapsed();
+            if (_fallingTimeRemaining <= 0f)
+            {
+                ResetFallTimer();
+                OnFallTimerElapsed();
+            }
         }
 
         private void OnDestroy()
@@ -116,23 +90,22 @@ namespace Latuvu
 
         private void Interact(InputAction.CallbackContext context)
         {
-            if (_state == PlayerState.Falling) return;
-            if (!_playerInventory.HasWand) return;
+            if (_state == PlayerState.Falling || !_playerInventory.HasWand)
+                return;
 
             var tilemap = _floorService.Tilemap;
-            Vector3Int currentCell = tilemap.WorldToCell(transform.position);
+            var currentCell = tilemap.WorldToCell(transform.position);
 
-            Vector3Int dir = new Vector3Int(
+            var dir = new Vector3Int(
                 Mathf.RoundToInt(MoveDirection.x),
                 Mathf.RoundToInt(MoveDirection.y),
                 0
             );
 
-            if (dir == Vector3Int.zero)
-                return;
+            if (dir == Vector3Int.zero) return;
 
-            Vector3Int targetCell = currentCell + dir * _tileStep;
-            GameTile tileInFront = tilemap.GetTile<GameTile>(targetCell);
+            var targetCell = currentCell + dir * _tileStep;
+            var tileInFront = tilemap.GetTile<GameTile>(targetCell);
 
             if (!_playerInventory.HasTile)
             {
@@ -142,44 +115,39 @@ namespace Latuvu
                     tileInFront.OnPickup(tilemap, targetCell);
                     tilemap.SetTile(targetCell, null);
                 }
-                return;
             }
-
-            if (_playerInventory.HasTile)
+            else if (_playerInventory.HasTile && tileInFront == null)
             {
-                if (tileInFront != null) return;
-
-                GameTile tileToPlace = _playerInventory.Tile;
-                tilemap.SetTile(targetCell, tileToPlace);
+                tilemap.SetTile(targetCell, _playerInventory.Tile);
                 _playerInventory.ClearTile();
             }
         }
 
         private void HandleFreeMovement()
         {
-            if (_movementMode != MovementMode.Free) return;
-
             var moveInput = InputService.Instance.Player.ReadValue<Vector2>();
             _rb.linearVelocity = moveInput * _speed;
-            
-            var newCurrentCell = _floorService.Tilemap.WorldToCell(transform.position);
-            if (newCurrentCell != _currentCell)
-            {
-                var previousCell = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
-                previousCell?.OnExit(_floorService.Tilemap, _currentCell);
-                
-                _currentCell = newCurrentCell;
-                Position = _currentCell;
-                
-                var currentCellTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
-                
-                if(currentCellTile) 
-                    currentCellTile.OnEnter(_floorService.Tilemap, _currentCell);
-                else 
-                    KillSelf();
-            }
-            
+
+            var newCell = _floorService.Tilemap.WorldToCell(transform.position);
+            if (newCell != _currentCell)
+                UpdateCell(newCell);
+
             PlayDirectionAnimation(moveInput);
+        }
+
+        private void UpdateCell(Vector3Int newCell)
+        {
+            var previousTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
+            previousTile?.OnExit(_floorService.Tilemap, _currentCell);
+
+            _currentCell = newCell;
+            Position = _currentCell;
+
+            var currentTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
+            if (currentTile != null)
+                currentTile.OnEnter(_floorService.Tilemap, _currentCell);
+            else
+                KillSelf();
         }
 
         public void EnableGridMovement()
@@ -187,11 +155,8 @@ namespace Latuvu
             if (_movementMode == MovementMode.Grid) return;
 
             _movementMode = MovementMode.Grid;
-
             _inputService.RegisterMoveAction(GridMoveStep);
-
             ResetVelocity();
-
             _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
         }
 
@@ -199,80 +164,38 @@ namespace Latuvu
         {
             if (_movementMode != MovementMode.Grid) return;
 
-            Vector2 input = context.ReadValue<Vector2>();
-            Vector2 rounded = new Vector2(Mathf.Round(input.x), Mathf.Round(input.y));
-
-            if (rounded == Vector2.zero)
-                return;
+            var input = context.ReadValue<Vector2>();
+            var rounded = new Vector2(Mathf.Round(input.x), Mathf.Round(input.y));
+            if (rounded == Vector2.zero) return;
 
             if (_state == PlayerState.Falling)
             {
-                Vector3Int attemptedTarget = _currentCell + new Vector3Int((int)rounded.x, (int)rounded.y, 0);
-
+                var attemptedTarget = _currentCell + new Vector3Int((int)rounded.x, (int)rounded.y, 0);
                 if (_hasFallOrigin && attemptedTarget == _fallOriginCell)
                 {
-                    transform.position = _oldPosition;
-                    transform.rotation = _oldRotation;
-                    MoveDirection = _oldMoveDirection;
-
-                    _currentCell = _oldCell;
-                    Position = _oldCell;
-
-                    PlayDirectionAnimation(_oldMoveDirection);
-
-                    ResetFallTimer();
-                    _hasFallOrigin = false;
-                    _state = PlayerState.Normal;
-
+                    RollbackPosition();
                     return;
                 }
-                else
-                {
-                    return;
-                }
+                return;
             }
 
-            _oldPosition = transform.position;
-            _oldRotation = transform.rotation;
-            _oldMoveDirection = MoveDirection;
-            _oldCell = _currentCell;
-
-            if (_animator != null)
-            {
-                var info = _animator.GetCurrentAnimatorStateInfo(0);
-                _oldAnimStateHash = info.fullPathHash;
-                _oldAnimNormalizedTime = info.normalizedTime;
-            }
-
+            SaveOldState();
             MoveDirection = rounded;
             PlayDirectionAnimation(MoveDirection);
 
             _currentTilemap = _floorService.Tilemap;
+            var targetCellPos = _currentCell + new Vector3Int((int)MoveDirection.x, (int)MoveDirection.y, 0);
 
-            Vector3Int targetCellPos = _currentCell + new Vector3Int((int)MoveDirection.x, (int)MoveDirection.y, 0);
+            var currentTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
+            var targetTile = _floorService.Tilemap.GetTile<GameTile>(targetCellPos);
 
-            GameTile currentTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
-            GameTile targetTile = _floorService.Tilemap.GetTile<GameTile>(targetCellPos);
-
-            if (!targetTile)
+            if (targetTile == null)
             {
-                _fallOriginCell = _currentCell;
-                _hasFallOrigin = true;
-                _state = PlayerState.Falling;
-
-                StartFallingTimer();
-
-                transform.position = _currentTilemap.GetCellCenterWorld(targetCellPos);
-
-                _currentCell = targetCellPos;
-                Position = targetCellPos;
-
-                ResetVelocity();
-
+                FallToVoid(targetCellPos);
                 return;
             }
 
-            if (targetTile && !targetTile.IsWalkable)
+            if (!targetTile.IsWalkable)
             {
                 GameService.Instance.Tick();
                 return;
@@ -285,17 +208,70 @@ namespace Latuvu
                 return;
             }
 
+            MoveToCell(targetCellPos, currentTile, targetTile);
+        }
+
+        private void SaveOldState()
+        {
+            _oldPosition = transform.position;
+            _oldRotation = transform.rotation;
+            _oldMoveDirection = MoveDirection;
+            _oldCell = _currentCell;
+
+            if (_animator != null)
+            {
+                var info = _animator.GetCurrentAnimatorStateInfo(0);
+                _oldAnimStateHash = info.fullPathHash;
+                _oldAnimNormalizedTime = info.normalizedTime;
+            }
+        }
+
+        private void RollbackPosition()
+        {
+            transform.position = _oldPosition;
+            transform.rotation = _oldRotation;
+            MoveDirection = _oldMoveDirection;
+            _currentCell = _oldCell;
+            Position = _oldCell;
+
+            if (_animator != null)
+            {
+                _animator.ResetTrigger("Left");
+                _animator.ResetTrigger("Right");
+                _animator.ResetTrigger("Top");
+                _animator.ResetTrigger("Down");
+
+                _animator.Play(_oldAnimStateHash, 0, _oldAnimNormalizedTime);
+                _animator.Update(0);
+            }
+
+            ResetFallTimer();
+            _hasFallOrigin = false;
+            _state = PlayerState.Normal;
+        }
+
+        private void FallToVoid(Vector3Int targetCellPos)
+        {
+            _fallOriginCell = _currentCell;
+            _hasFallOrigin = true;
+            _state = PlayerState.Falling;
+
+            StartFallingTimer();
+            transform.position = _currentTilemap.GetCellCenterWorld(targetCellPos);
+            _currentCell = targetCellPos;
+            Position = targetCellPos;
+            ResetVelocity();
+        }
+
+        private void MoveToCell(Vector3Int targetCellPos, GameTile currentTile, GameTile targetTile)
+        {
             Position = targetCellPos;
 
-            if (currentTile != null)
-                currentTile.OnExit(_floorService.Tilemap, _currentCell);
+            currentTile?.OnExit(_floorService.Tilemap, _currentCell);
 
-            Vector3 worldPosition = _currentTilemap.GetCellCenterWorld(targetCellPos);
-            transform.position = worldPosition;
-
+            transform.position = _currentTilemap.GetCellCenterWorld(targetCellPos);
             _currentCell = targetCellPos;
-
-            targetTile.OnEnter(_floorService.Tilemap, _currentCell);
+            targetTile?.OnEnter(_floorService.Tilemap, _currentCell);
 
             ResetVelocity();
 
@@ -310,8 +286,7 @@ namespace Latuvu
 
         public void KillSelf()
         {
-            string floorId = FloorService.Instance.CurrentFloor.FloorId;
-            FloorService.Instance.LoadFloor(floorId);
+            FloorService.Instance.LoadFloor(FloorService.Instance.CurrentFloor.FloorId);
             _playerInventory.ClearTile();
             ResetFallTimer();
             _hasFallOrigin = false;
@@ -326,8 +301,7 @@ namespace Latuvu
 
         private void StartFallingTimer(float duration = -1f)
         {
-            float used = duration > 0f ? duration : _fallTimerDuration;
-            _fallingTimeRemaining = used;
+            _fallingTimeRemaining = duration > 0 ? duration : _fallTimerDuration;
             _isFallTimerRunning = true;
         }
 
@@ -340,15 +314,12 @@ namespace Latuvu
         private void OnFallTimerElapsed()
         {
             Vector3Int topTarget = Position + Vector3Int.up;
-            GameTile topTargetTile = _floorService.Tilemap.GetTile<GameTile>(topTarget);
-
-            if (topTargetTile && _floorService.TryGetStaticEntityAtPos(topTarget, out StaticTileEntity topStaticEntity))
+            if (_floorService.Tilemap.GetTile<GameTile>(topTarget) is GameTile topTile &&
+                _floorService.TryGetStaticEntityAtPos(topTarget, out StaticTileEntity topStatic) &&
+                topStatic is TeleportStatueTileEntity)
             {
-                if (topStaticEntity is TeleportStatueTileEntity)
-                {
-                    _floorService.LoadNextFloor(Inventory.Crickets);
-                    return;
-                }
+                _floorService.LoadNextFloor(Inventory.Crickets);
+                return;
             }
 
             KillSelf();
@@ -358,22 +329,18 @@ namespace Latuvu
         private void PlayDirectionAnimation(Vector2 direction)
         {
             if (direction == Vector2.zero) return;
-
-            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-                _animator.SetTrigger(direction.x > 0 ? "Right" : "Left");
-            else
-                _animator.SetTrigger(direction.y > 0 ? "Top" : "Down");
+            _animator.SetTrigger(Mathf.Abs(direction.x) > Mathf.Abs(direction.y)
+                ? (direction.x > 0 ? "Right" : "Left")
+                : (direction.y > 0 ? "Top" : "Down"));
         }
 
         public void Respawn()
         {
             transform.position = _floorService.CurrentFloor.GetPlayerSpawnWorld();
             _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
-
             ResetFallTimer();
             _hasFallOrigin = false;
             _state = PlayerState.Normal;
-
             _playerInventory.ClearTile();
         }
     }
