@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace Latuvu._0_Scripts.UI
@@ -26,6 +25,7 @@ namespace Latuvu._0_Scripts.UI
             _mainMenu = _root.Q<VisualElement>("MainMenu");
             _image = _root.Q<VisualElement>("ImageMenu");
             _settings = new Settings(_root.Q<VisualElement>("SettingsMenu"));
+            _settings.LoadSaveData();
 
             _menuButtons = new List<Button>
             {
