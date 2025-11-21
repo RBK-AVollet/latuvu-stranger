@@ -53,7 +53,6 @@ namespace Latuvu
         {
             _inputService = InputService.Instance;
             _inputService.RegisterWandInteraction(Interact);
-            _inputService.RegisterTestAction(_playerInventory.ObtainWand);
         }
 
         private void FixedUpdate()
@@ -104,8 +103,16 @@ namespace Latuvu
 
             if (dir == Vector3Int.zero) return;
 
-            var targetCell = currentCell + dir * _tileStep;
-            var tileInFront = tilemap.GetTile<GameTile>(targetCell);
+            Vector3Int targetCell = currentCell + dir * _tileStep;
+            
+            GameTile tileInFront = tilemap.GetTile<GameTile>(targetCell);
+            
+            if (tileInFront && _floorService.TryGetEntityAtPos(targetCell, out TileEntity entityInFront))
+            {
+                entityInFront.TryInteract(GridHelper.GetRelativePosition(Position, entityInFront.Position), _currentTilemap, this);
+                GameService.Instance.Tick();
+                return;
+            }
 
             if (!_playerInventory.HasTile)
             {
@@ -114,12 +121,14 @@ namespace Latuvu
                     _playerInventory.StoreTile(tileInFront);
                     tileInFront.OnPickup(tilemap, targetCell);
                     tilemap.SetTile(targetCell, null);
+                    GameService.Instance.Tick();
                 }
             }
             else if (_playerInventory.HasTile && tileInFront == null)
             {
                 tilemap.SetTile(targetCell, _playerInventory.Tile);
                 _playerInventory.ClearTile();
+                Debug.Log("Placed tile: " + tileToPlace.name);
             }
         }
 

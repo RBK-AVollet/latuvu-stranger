@@ -24,7 +24,7 @@ namespace Latuvu
             _floorService = FloorService.Instance;
         }
 
-        public void ObtainWand(InputAction.CallbackContext callback)
+        public void ObtainWand()
         {
             HasWand = true;
             FloorService.Instance.Player.EnableGridMovement();

@@ -1623,5 +1623,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Latuvu.FloorPrefab
   FloorId: B002
   Tilemap: {fileID: 1979004756198803632}
-  Entities: []
+  Entities:
+  - EntityPrefab: {fileID: 601152193552628659, guid: 55d499b41cf13c943b7ebe958abb8e2d, type: 3}
+    Position: {x: 7, y: 4, z: 0}
+    Direction: {x: 0, y: 0, z: 0}
   _playerSpawn: {x: 11, y: 3, z: 0}
