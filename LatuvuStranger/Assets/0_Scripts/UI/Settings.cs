@@ -8,6 +8,10 @@ namespace Latuvu
 {
     public class Settings : UIView
     {
+        private const string k_volumeSaveKey = "Volume";
+        private const string k_fullscreenSaveKey = "Fullscreen";
+        private const string k_resolutionSaveKey = "Resolution";
+        
         public Settings(VisualElement root) 
         {
             _hideOnAwake = true;
@@ -49,6 +53,15 @@ namespace Latuvu
             _settingsButtons[0].Focus();
             _audioPage.Hide();
             _graphicsPage.Hide();
+        }
+
+        public void LoadSaveData()
+        {
+            Vector2Int res = ES3.Load(k_resolutionSaveKey, new Vector2Int(1920, 1080));
+            bool fullscreen = ES3.Load<bool>(k_fullscreenSaveKey, true);
+            Screen.SetResolution(res.x, res.y, fullscreen);
+            
+            AudioListener.volume = ES3.Load<float>(k_volumeSaveKey, 1f);
         }
 
         public override void Show()

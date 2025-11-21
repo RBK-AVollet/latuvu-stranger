@@ -49,6 +49,25 @@ namespace Latuvu
         }
 
         public PlayerInventory()
+        {
+            HasWand = true;
+            HasCube = false;
+            HasSword = false;
+
+            _floorService = FloorService.Instance;
+
+            #if !UNITY_EDITOR
+            Crickets = ES3.Load(k_cricketSaveKey, 0);
+            #endif
+        }
+
+        ~PlayerInventory()
+        {
+            #if !UNITY_EDITOR
+            ES3.Save(k_cricketSaveKey, Crickets);
+            #endif
+        }
+        
         public void StoreTile(GameTile tile)
         {
             Tile = tile;

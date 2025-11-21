@@ -110,8 +110,10 @@ namespace Latuvu
             
             Player.Respawn();
             
+            #if !UNITY_EDITOR
             ES3.Save(k_floorSaveKey, floorId);
             Debug.Log($"Saved floor {floorId} !");
+            #endif
         }
         
         public void UpdateCrickets(int cricketCount)
@@ -182,8 +184,12 @@ namespace Latuvu
             var playerGo = Instantiate(_playerPrefab);
             Player = playerGo.GetComponent<PlayerTileEntity>();
 
+            #if !UNITY_EDITOR
             string floorId = ES3.Load(k_floorSaveKey, defaultValue: _defaultFloor);
             LoadFloor(floorId);
+            #else
+            LoadFloor(_defaultFloor);
+            #endif
         }
     }
 }
