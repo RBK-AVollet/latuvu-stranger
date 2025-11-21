@@ -1,8 +1,11 @@
+using UnityEngine;
 namespace Latuvu
 {
     public class PlayerInventory
     {
         private FloorService _floorService;
+        
+        const string k_cricketSaveKey = "CricketCount";
         
         // Key Items
         public bool HasWand { get; private set; }
@@ -19,7 +22,7 @@ namespace Latuvu
         
         // Collectibles
         public int Crickets { get; private set; } = 5;
-
+        
         public void ObtainCrickets(int amount)
         {
             Crickets += amount;
@@ -41,6 +44,14 @@ namespace Latuvu
             HasSword = false;
 
             _floorService = FloorService.Instance;
+
+            Crickets = ES3.Load(k_cricketSaveKey, 0);
+        }
+
+        ~PlayerInventory()
+        {
+            ES3.Save(k_cricketSaveKey, Crickets);
+            Debug.Log($"Saved cricket count {Crickets} !");
         }
         
         public void StoreTile(GameTile tile)
