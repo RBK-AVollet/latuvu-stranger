@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Latuvu
 {
@@ -18,17 +17,6 @@ namespace Latuvu
         public GameTile Tile { get; private set; }
         public bool HasTile => Tile != null;
 
-        public int Crickets { get; private set; } = 5;
-
-        public PlayerInventory()
-        {
-            HasWand = false;
-            HasCube = false;
-            HasSword = false;
-
-            _floorService = FloorService.Instance;
-        }
-
         public void ObtainWand()
         {
             HasWand = true;
@@ -41,7 +29,6 @@ namespace Latuvu
         
         // Collectibles
         public int Crickets { get; private set; } = 5;
-        
 
         public void ObtainCrickets(int amount)
         {
@@ -67,9 +54,6 @@ namespace Latuvu
 
             #if !UNITY_EDITOR
             Crickets = ES3.Load(k_cricketSaveKey, 0);
-
-            #if !UNITY_EDITOR
-            Crickets = ES3.Load(k_cricketSaveKey, 0);
             #endif
         }
 
@@ -80,13 +64,6 @@ namespace Latuvu
             #endif
         }
 
-        ~PlayerInventory()
-        {
-            #if !UNITY_EDITOR
-            ES3.Save(k_cricketSaveKey, Crickets);
-            #endif
-        }
-        
         public void StoreTile(GameTile tile)
         {
             Tile = tile;

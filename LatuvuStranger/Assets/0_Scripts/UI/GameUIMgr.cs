@@ -30,8 +30,10 @@ namespace Latuvu
         private VisualElement _gravure;
         private InputService _inputService;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+            
             _uiDoc = GetComponent<UIDocument>();
             _root = _uiDoc.rootVisualElement;
             _pauseMenu = new PauseMenu(_root.Q<VisualElement>("pause-menu"));

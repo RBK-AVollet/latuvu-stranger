@@ -49,7 +49,7 @@ namespace Latuvu
                 _rb = GetComponent<Rigidbody2D>();
         }
 
-        private void Start()
+        protected override void Start()
         {
             _inputService = InputService.Instance;
             _inputService.RegisterWandInteraction(Interact);
@@ -128,7 +128,6 @@ namespace Latuvu
             {
                 tilemap.SetTile(targetCell, _playerInventory.Tile);
                 _playerInventory.ClearTile();
-                Debug.Log("Placed tile: " + tileToPlace.name);
             }
         }
 
