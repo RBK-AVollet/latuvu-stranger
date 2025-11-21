@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace Latuvu
 {
@@ -22,6 +24,16 @@ namespace Latuvu
         {
             //Debug.Log("[GameService]: Ticking the game");
             TickAction.Invoke();
+        }
+
+        // HOTFIX
+        private void Update()
+        {
+            if (Keyboard.current.f5Key.wasPressedThisFrame)
+            {
+                ES3.DeleteFile();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 }

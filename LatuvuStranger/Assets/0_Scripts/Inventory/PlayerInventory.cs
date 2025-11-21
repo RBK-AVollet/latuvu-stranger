@@ -33,6 +33,10 @@ namespace Latuvu
         {
             Crickets += amount;
             _floorService.UpdateCrickets(Crickets);
+            
+            #if !UNITY_EDITOR
+            ES3.Save(k_cricketSaveKey, Crickets);
+            #endif
         }
 
         public void RemoveCrickets(int amount, bool canNegative)
@@ -41,6 +45,10 @@ namespace Latuvu
             if (!canNegative && Crickets < 0) Crickets = 0;
 
             _floorService.UpdateCrickets(Crickets);
+            
+            #if !UNITY_EDITOR
+            ES3.Save(k_cricketSaveKey, Crickets);
+            #endif
         }
 
         public PlayerInventory()
@@ -55,13 +63,6 @@ namespace Latuvu
 
             #if !UNITY_EDITOR
             Crickets = ES3.Load(k_cricketSaveKey, 0);
-            #endif
-        }
-
-        ~PlayerInventory()
-        {
-            #if !UNITY_EDITOR
-            ES3.Save(k_cricketSaveKey, Crickets);
             #endif
         }
 
