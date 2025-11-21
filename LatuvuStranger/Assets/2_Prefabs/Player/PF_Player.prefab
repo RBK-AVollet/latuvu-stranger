@@ -60,10 +60,24 @@ MonoBehaviour:
     FromDown: 0
   _debugMode: 1
   _rb: {fileID: 8770273996270034895}
-  _tileStep: 1
   _animator: {fileID: 6899171958418484918}
+  _tileStep: 1
   _fallTimerDuration: 1
   _speed: 5
+  _placeSfx:
+    clip: {fileID: 8300000, guid: 4e9ba1b423a85db4295980aadebb41ca, type: 3}
+    mixerGroup: {fileID: 0}
+    volume: 0.3
+    loop: 0
+    playOnAwake: 0
+    frequentSound: 1
+  _storeSfx:
+    clip: {fileID: 8300000, guid: f818b5c0dfcfccc4ea8e1fdbd4f21aa0, type: 3}
+    mixerGroup: {fileID: 0}
+    volume: 0.3
+    loop: 0
+    playOnAwake: 0
+    frequentSound: 1
 --- !u!50 &8770273996270034895
 Rigidbody2D:
   serializedVersion: 5

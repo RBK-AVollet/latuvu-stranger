@@ -1,3 +1,4 @@
+using Padrox.Acelab.Modules.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -13,6 +14,9 @@ namespace Latuvu
         [SerializeField] private float _fallTimerDuration = 1f;
         [SerializeField] private float _speed = 5f;
 
+        [SerializeField] private SoundData _placeSfx;
+        [SerializeField] private SoundData _storeSfx;
+        
         private Vector3Int _currentCell;
         private Tilemap _currentTilemap;
         private FloorService _floorService;
@@ -127,12 +131,20 @@ namespace Latuvu
                     tileInFront.OnPickup(tilemap, targetCell);
                     tilemap.SetTile(targetCell, null);
                     GameService.Instance.Tick();
+
+                    SoundController.Instance.CreateSound()
+                        .WithSoundData(_storeSfx)
+                        .Play();
                 }
             }
             else if (_playerInventory.HasTile && tileInFront == null)
             {
                 tilemap.SetTile(targetCell, _playerInventory.Tile);
                 _playerInventory.ClearTile();
+
+                SoundController.Instance.CreateSound()
+                    .WithSoundData(_placeSfx)
+                    .Play();
             }
         }
 

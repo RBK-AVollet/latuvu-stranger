@@ -36,3 +36,10 @@ MonoBehaviour:
   m_ColliderType: 0
   IsWalkable: 1
   IsPickable: 1
+  _sfx:
+    clip: {fileID: 8300000, guid: 174c9e1616cb9224b8ac68255aa17926, type: 3}
+    mixerGroup: {fileID: 0}
+    volume: 0.5
+    loop: 0
+    playOnAwake: 0
+    frequentSound: 0

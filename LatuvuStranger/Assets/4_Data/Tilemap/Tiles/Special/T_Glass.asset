@@ -37,3 +37,17 @@ MonoBehaviour:
   IsWalkable: 1
   IsPickable: 1
   BreakingGlassPrefab: {fileID: 4251391067563473011, guid: db3a56d246f25e5489acf064b6a9675b, type: 3}
+  _breakSFX:
+    clip: {fileID: 8300000, guid: 96c1b61829568ca4d8681200636b9165, type: 3}
+    mixerGroup: {fileID: 0}
+    volume: 0.4
+    loop: 0
+    playOnAwake: 0
+    frequentSound: 1
+  _stepSFX:
+    clip: {fileID: 8300000, guid: 1270c2fb45a63c948815bc2004369a57, type: 3}
+    mixerGroup: {fileID: 0}
+    volume: 0.4
+    loop: 0
+    playOnAwake: 0
+    frequentSound: 1
