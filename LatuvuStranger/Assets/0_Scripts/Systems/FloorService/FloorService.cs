@@ -64,6 +64,21 @@ namespace Latuvu
             
             LoadFloor(floorId);
         }
+
+        public void LoadNextFloor(int incrementAmount)
+        {
+            int currId = int.Parse(_currentFloor.FloorId.Substring(2, 2));
+            int nextId = currId + incrementAmount;
+            string floorId = "B0" + (nextId < 10 ? "0" : "") + nextId;
+
+            if (GetFloorById(floorId) == null)
+            {
+                Debug.Log("Reached final level ! Well done, cannot go further down !");
+                return;
+            }
+            
+            LoadFloor(floorId);
+        }
         
         public void LoadFloor(string floorId)
         {

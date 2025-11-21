@@ -141,6 +141,17 @@ namespace Latuvu
             
             if (!targetTile)
             {
+                Vector3Int topTarget = targetCellPos + Vector3Int.up;
+                GameTile topTargetTile = _floorService.Tilemap.GetTile<GameTile>(targetCellPos);
+                
+                if (topTargetTile && _floorService.TryGetStaticEntityAtPos(targetCellPos, out StaticTileEntity topStaticEntity))
+                {
+                    if (topStaticEntity is TeleportStatueTileEntity)
+                    {
+                        Debug.Log("[PlayerController]: Fell in front of teleport statue at " + targetCellPos);
+                    }
+                }
+                
                 Debug.Log("[PlayerController]: no tile at " + targetCellPos);
                 KillSelf();
                 return;
@@ -188,6 +199,11 @@ namespace Latuvu
         {
             string floorId = FloorService.Instance.CurrentFloor.FloorId;
             FloorService.Instance.LoadFloor(floorId);
+        }
+
+        public void TeleportToFloor(int floorNumber)
+        {
+            
         }
         
         public void ResetVelocity()
