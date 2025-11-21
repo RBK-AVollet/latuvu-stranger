@@ -29,7 +29,7 @@ namespace Latuvu
         
         // Collectibles
         public int Crickets { get; private set; } = 5;
-
+        
         public void ObtainCrickets(int amount)
         {
             Crickets += amount;
