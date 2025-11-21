@@ -100,7 +100,7 @@ namespace Latuvu
             {
                 if (entityInFront is WandChestTileEntity)
                 {
-                    _playerInventory.ObtainWand();
+                    entityInFront.TryInteract(Vector3Int.up, _currentTilemap, this);
                     EnableGridMovement();
                     GameService.Instance.Tick();
                     return;

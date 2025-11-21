@@ -112,10 +112,10 @@ MonoBehaviour:
     FromUp: 0
     FromDown: 0
   <InteractDirections>k__BackingField:
-    FromRight: 0
-    FromLeft: 0
-    FromUp: 0
-    FromDown: 0
+    FromRight: 1
+    FromLeft: 1
+    FromUp: 1
+    FromDown: 1
   _closedSprite: {fileID: 21300000, guid: 9fc912218c4f6ce4d8dccd1b1e8cb536, type: 3}
   _openedSprite: {fileID: 21300000, guid: a620ad75021b73840b1a5ccd6beced75, type: 3}
   _itemRenderer: {fileID: 1332431945270492984}
