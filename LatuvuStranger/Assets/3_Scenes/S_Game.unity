@@ -247,6 +247,7 @@ Transform:
   m_Children:
   - {fileID: 85128807}
   - {fileID: 383593889}
+  - {fileID: 1820440445}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &383593887
@@ -610,6 +611,111 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8a8aa464c611534eb8d745cc923cff3, type: 3}
+--- !u!1 &1820440444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1820440445}
+  - component: {fileID: 1820440446}
+  - component: {fileID: 1820440448}
+  - component: {fileID: 1820440449}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1820440445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820440444}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 348216446}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1820440446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820440444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ee63fb32291d14c9c0c309d5688490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Latuvu.SoundController
+  _soundEmitterPrefab: {fileID: 3644899408926387072, guid: 885f1c12927bc3c4a84fcd351f10054c, type: 3}
+  _collectionCheck: 1
+  _defaultCapacity: 10
+  _maxPoolSize: 100
+  _maxSoundInstances: 30
+--- !u!114 &1820440448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820440444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886c7a569306afe4d81fb34c402ab1c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Latuvu.MusicController
+  _playerMode: 1
+  _volume: 0.1
+  Crossfade: 1
+  CrossfadeSettings:
+    Duration: 4
+    EasingStyle: 5
+  _musicMixerGroup: {fileID: 0}
+  _bypassListenerEffects: 1
+  _playOnAwake: 1
+--- !u!114 &1820440449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820440444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95990d56d0924824e9bc293c4266882f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Padrox.Acelab.Modules.Audio.PlaylistPlayer
+  _useFadeTimestampAsProgress: 1
+  _initialPlaylist:
+  - {fileID: 8300000, guid: b35652a18e72e16499a8c3723b8f4794, type: 3}
+  - {fileID: 8300000, guid: b5698a56f0796bf4690425985494faec, type: 3}
+  - {fileID: 8300000, guid: e6efe67190061a44b9f6b884b37a73f0, type: 3}
+  - {fileID: 8300000, guid: aea6383e7075308429a99e51cfcd614d, type: 3}
+  - {fileID: 8300000, guid: a6d75bfe3c5ae5f4e8a78cb0f81ab0b7, type: 3}
+  - {fileID: 8300000, guid: 7107df228ce9e7941bd2f826b6b39e1a, type: 3}
+  - {fileID: 8300000, guid: 6f4106d3df4df09448414b4518855526, type: 3}
+  - {fileID: 8300000, guid: a59ae65b95e014644a56166ae683a281, type: 3}
+  - {fileID: 8300000, guid: b45c4da66d287dc4588480f9a24930f6, type: 3}
+  - {fileID: 8300000, guid: 99185ba96411a9b4b89bd25dbdb9d0ea, type: 3}
+  - {fileID: 8300000, guid: bf42bd8064ba5a9428f88dfd3eb7cec9, type: 3}
+  - {fileID: 8300000, guid: 3e87ba543f2f97748801a247ccd83e0f, type: 3}
+  - {fileID: 8300000, guid: 9942ca6015d9ace40a30166b5ee5fa62, type: 3}
+  - {fileID: 8300000, guid: c2495bcd97860964c834e811d07cc014, type: 3}
+  - {fileID: 8300000, guid: 551837844afc5af4cab24d4297d27c27, type: 3}
+  _loop: 1
+  _playNextTrackStopsIfEmptyPlaylist: 0
+  _shuffle: 1
+  _checkTrackLength: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
