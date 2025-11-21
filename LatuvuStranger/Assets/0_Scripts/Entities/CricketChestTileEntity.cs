@@ -8,6 +8,7 @@ namespace Latuvu
         {
             base.OpenChest(player);
             
+            GameUIMgr.Instance.ShowDialogue("You got 1 cricket!");
             player.Inventory.ObtainCrickets(1);
         }
     }

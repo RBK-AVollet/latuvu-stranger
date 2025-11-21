@@ -8,6 +8,7 @@ namespace Latuvu
         {
             base.OpenChest(player);
 
+            GameUIMgr.Instance.ShowDialogue("You got THE WAND!");
             player.Inventory.ObtainWand();
         }
     }

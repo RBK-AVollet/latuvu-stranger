@@ -27,7 +27,7 @@ namespace Latuvu
         public void ObtainSword() { HasSword = true; }
         
         // Collectibles
-        public int Crickets { get; private set; } = 5;
+        public int Crickets { get; private set; }
         
         public void ObtainCrickets(int amount)
         {
@@ -48,6 +48,8 @@ namespace Latuvu
             HasWand = false;
             HasCube = false;
             HasSword = false;
+
+            Crickets = 2;
 
             _floorService = FloorService.Instance;
 

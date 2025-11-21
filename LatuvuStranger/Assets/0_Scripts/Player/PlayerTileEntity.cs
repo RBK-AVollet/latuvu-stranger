@@ -345,6 +345,7 @@ namespace Latuvu
                 topStatic is TeleportStatueTileEntity)
             {
                 _floorService.LoadNextFloor(Inventory.Crickets);
+                Inventory.RemoveCrickets(Inventory.Crickets, false);
                 return;
             }
 

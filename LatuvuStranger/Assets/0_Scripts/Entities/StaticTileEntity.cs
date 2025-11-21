@@ -24,7 +24,8 @@ namespace Latuvu
 
             if (!targetTile)
             {
-                // TODO : Delete the entity and remove it from the floor service
+                FloorService.Instance.RemoveEntity(this);
+                Destroy(gameObject);
                 return true;
             }
 
@@ -34,10 +35,13 @@ namespace Latuvu
             {
                 if (entity.TryGetComponent<LivingTileEntity>(out LivingTileEntity livingTileEntity))
                 {   
-                    // TODO : Stomp the living entity
+                    FloorService.Instance.RemoveEntity(livingTileEntity);
+                    Destroy(livingTileEntity.gameObject);
+                }
+                else
+                {
                     return false;
                 }
-                return false;
             }
             
             Position = targetCellPos;
