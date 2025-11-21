@@ -4,7 +4,7 @@ namespace Latuvu
 {
     public class DeathState : BaseState
     {
-        public DeathState(PlayerController player, Animator animator) : base(player, animator)
+        public DeathState(PlayerTileEntity player, Animator animator) : base(player, animator)
         { }
 
         public override void OnEnter()

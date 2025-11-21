@@ -4,7 +4,7 @@ namespace Latuvu
 {
     public class FreeLocomotionState : BaseState
     {
-        public FreeLocomotionState(PlayerController player, Animator animator) : base(player, animator)
+        public FreeLocomotionState(PlayerTileEntity player, Animator animator) : base(player, animator)
         { }
 
         public override void OnEnter()

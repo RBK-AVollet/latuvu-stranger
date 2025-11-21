@@ -10,6 +10,7 @@ namespace Latuvu
         [SerializeField] private FloorPrefab[] _floors;
         [SerializeField] private TileBase[] _hud;
         [SerializeField] private GameObject _playerPrefab;
+        [SerializeField] private Transform _entitiesContainer;
         
         private List<TileEntity> _entities = new ();
         
@@ -19,19 +20,56 @@ namespace Latuvu
         
         public FloorPrefab CurrentFloor => _currentFloor;
         
-        public PlayerController Player { get; private set; }
+        public PlayerTileEntity Player { get; private set; }
         
         public bool TryGetEntityAtPos(Vector3Int pos, out TileEntity entity)
         {
-            entity = _entities.FirstOrDefault(e => e.Position == (Vector2Int)pos);
+            entity = _entities.FirstOrDefault(e => e.Position == pos);
             return entity != null;
+        }
+        
+        public bool TryGetLivingEntityAtPos(Vector3Int pos, out LivingTileEntity livingEntity)
+        {
+            livingEntity = null;
+            TileEntity e = _entities.FirstOrDefault(e => e.Position == pos);
+            
+            if (e is not LivingTileEntity entity) return false;
+            
+            livingEntity = entity;
+            return true;
+        }
+        
+        public bool TryGetStaticEntityAtPos(Vector3Int pos, out StaticTileEntity staticEntity)
+        {
+            staticEntity = null;
+            TileEntity e = _entities.FirstOrDefault(e => e.Position == pos);
+            
+            if (e is not StaticTileEntity entity) return false;
+            
+            staticEntity = entity;
+            return true;
         }
 
         public void LoadNextFloor()
         {
-            int nextId = int.Parse(_currentFloor.FloorId.Substring(2, 2));
-            string floorId = "B0" + nextId;
-            if (nextId < 10) floorId += "0";
+            int currId = int.Parse(_currentFloor.FloorId.Substring(2, 2));
+            int nextId = currId + 1;
+            string floorId = "B0" + (nextId < 10 ? "0" : "") + nextId;
+
+            if (GetFloorById(floorId) == null)
+            {
+                Debug.Log("Reached final level ! Well done, cannot go further down !");
+                return;
+            }
+            
+            LoadFloor(floorId);
+        }
+
+        public void LoadNextFloor(int incrementAmount)
+        {
+            int currId = int.Parse(_currentFloor.FloorId.Substring(2, 2));
+            int nextId = currId + incrementAmount;
+            string floorId = "B0" + (nextId < 10 ? "0" : "") + nextId;
 
             if (GetFloorById(floorId) == null)
             {
@@ -53,23 +91,38 @@ namespace Latuvu
 
             if (_currentFloor)
             {
-                for (int i = 0; i < _hud.Length; i++)
-                {
-                    _hud[i] = Tilemap.GetTile(new Vector3Int(i, 0, 0));
-                }
-                
-                Destroy(_currentFloor);
+                Destroy(_currentFloor.gameObject);
             }
 
             _currentFloor = Instantiate(floor, transform);
-            ApplyHUD();
             
+            ApplyHUD();
+            WriteOnCell(new Vector3Int(1, 0, 0), "VO");
+            WriteOnCell(new Vector3Int(2, 0, 0), "ID");
             WriteOnCell(new Vector3Int(12, 0, 0), _currentFloor.FloorId.Substring(0, 2));
             WriteOnCell(new Vector3Int(13, 0, 0), _currentFloor.FloorId.Substring(2, 2));
+            UpdateCrickets(Player.Inventory.Crickets);
             
             SpawnEntities();
             
             Player.Respawn();
+        }
+        
+        public void UpdateCrickets(int cricketCount)
+        {
+            string cricketText = (cricketCount < 10 ? "0" : "") + cricketCount;
+            WriteOnCell(new Vector3Int(5, 0, 0), cricketText);
+        }
+
+        public void UpdateVoidRodTile(bool hasTile)
+        {
+            var go = Tilemap.GetInstantiatedObject(new Vector3Int(6, 0, 0));
+            if (!go) return;
+
+            var comp = go.GetComponent<VoidRodHUDIcon>();
+            if (!comp) return;
+            
+            comp.UpdateIcon(hasTile);
         }
 
         public FloorPrefab GetFloorById(string floorId)
@@ -89,11 +142,19 @@ namespace Latuvu
         private void SpawnEntities()
         {
             _entities.Clear();
+
+            foreach (Transform child in _entitiesContainer)
+            {
+                Destroy(child.gameObject);
+            }
             
             foreach (var entity in _currentFloor.Entities)
             {
                 var pos = Tilemap.GetCellCenterWorld(entity.Position);
-                _entities.Add(Instantiate(entity.EntityPrefab, pos, Quaternion.identity, transform));
+                TileEntity e = Instantiate(entity.EntityPrefab, pos, Quaternion.identity, _entitiesContainer);
+                e.Position = entity.Position;
+                e.Direction = entity.Direction;
+                _entities.Add(e);
             }
         }
         
@@ -113,13 +174,9 @@ namespace Latuvu
             base.Awake();
             
             var playerGo = Instantiate(_playerPrefab);
-            Player = playerGo.GetComponent<PlayerController>();
+            Player = playerGo.GetComponent<PlayerTileEntity>();
             
-            LoadFloor("B001");
-            
-            WriteOnCell(new Vector3Int(1, 0, 0), "VO");
-            WriteOnCell(new Vector3Int(2, 0, 0), "ID");
-            WriteOnCell(new Vector3Int(5, 0, 0), "00");
+            LoadFloor("B000");
         }
     }
 }

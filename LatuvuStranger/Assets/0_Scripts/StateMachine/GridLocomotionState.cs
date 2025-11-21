@@ -4,7 +4,7 @@ namespace Latuvu
 {
     public class GridLocomotionState : BaseState
     {
-        public GridLocomotionState(PlayerController player, Animator animator) : base(player, animator)
+        public GridLocomotionState(PlayerTileEntity player, Animator animator) : base(player, animator)
         { }
 
         public override void OnEnter()

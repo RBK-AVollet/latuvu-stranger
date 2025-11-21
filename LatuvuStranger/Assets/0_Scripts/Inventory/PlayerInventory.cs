@@ -2,6 +2,8 @@ namespace Latuvu
 {
     public class PlayerInventory
     {
+        private FloorService _floorService;
+        
         // Key Items
         public bool HasWand { get; private set; }
         public bool HasCube { get; private set; }
@@ -16,13 +18,20 @@ namespace Latuvu
         public void ObtainSword() { HasSword = true; }
         
         // Collectibles
-        public int Crickets { get; private set; }
+        public int Crickets { get; private set; } = 5;
+
+        public void ObtainCrickets(int amount)
+        {
+            Crickets += amount;
+            _floorService.UpdateCrickets(Crickets);
+        }
         
-        public void ObtainCrickets(int amount) { Crickets += amount; }
         public void RemoveCrickets(int amount, bool canNegative)
         {
             Crickets -= amount;
             if (!canNegative && Crickets < 0) Crickets = 0;
+            
+            _floorService.UpdateCrickets(Crickets);
         }
 
         public PlayerInventory()
@@ -30,16 +39,20 @@ namespace Latuvu
             HasWand = true;
             HasCube = false;
             HasSword = false;
+
+            _floorService = FloorService.Instance;
         }
         
         public void StoreTile(GameTile tile)
         {
             Tile = tile;
+            _floorService.UpdateVoidRodTile(true);
         }
 
         public void ClearTile()
         {
             Tile = null;
+            _floorService.UpdateVoidRodTile(false);
         }
     }
 }

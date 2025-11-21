@@ -63,5 +63,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2371612180892942652, guid: c246c5545dbbf5d41818bebe59d7ffb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8887373785499035468}
   m_SourcePrefab: {fileID: 100100000, guid: c246c5545dbbf5d41818bebe59d7ffb4, type: 3}
+--- !u!212 &710338320105925568 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1298989093789791706, guid: c246c5545dbbf5d41818bebe59d7ffb4, type: 3}
+  m_PrefabInstance: {fileID: 2007848156014878234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4266289782540050214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2371612180892942652, guid: c246c5545dbbf5d41818bebe59d7ffb4, type: 3}
+  m_PrefabInstance: {fileID: 2007848156014878234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8887373785499035468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4266289782540050214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd6227c84288ac47b05e2db7a6959e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Latuvu.VoidRodHUDIcon
+  _voidRod: {fileID: 21300000, guid: 11d5ab450e9a75942995081594dac2c2, type: 3}
+  _voidRodHasTile: {fileID: 21300000, guid: afef4e77fc4ed1d4daeebd6b2718cb62, type: 3}
+  _renderer: {fileID: 710338320105925568}
