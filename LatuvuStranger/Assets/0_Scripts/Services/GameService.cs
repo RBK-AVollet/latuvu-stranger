@@ -25,7 +25,7 @@ namespace Latuvu
 
         private void  Start()
         {
-            Debug.Log("Baise ta grand mere ENwo ");
+            
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Latuvu
             
             _moveAction = _playerInput.actions.FindAction("Move");
             _interactionAction = _playerInput.actions.FindAction("Interact");
-            //_pauseAction = _playerInput.actions.FindAction("Pause");
+            _pauseAction = _playerInput.actions.FindAction("Pause");
             
             _playerInput.actions.Enable();
         }
