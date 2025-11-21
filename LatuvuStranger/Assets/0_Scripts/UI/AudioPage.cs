@@ -31,6 +31,12 @@ namespace Latuvu
                 {
                     float volume = evt.newValue;
                     AudioListener.volume = volume;
+                    
+                    #if !UNITY_EDITOR
+                    const string k_volumeSaveKey = "Volume";
+                    ES3.Save(k_volumeSaveKey, volume);
+                    #endif
+                    
                     if (_masterVolumeLabel != null)
                     {
                         _masterVolumeLabel.text = $"Master Volume: {(int)(volume * 100)}%";
