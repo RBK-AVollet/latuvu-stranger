@@ -46,13 +46,13 @@ namespace Latuvu
         public void StoreTile(GameTile tile)
         {
             Tile = tile;
-            _floorService.UpdateVoidRodTile(true);
+            _floorService.UpdateVoidRodTile(tile);
         }
 
         public void ClearTile()
         {
             Tile = null;
-            _floorService.UpdateVoidRodTile(false);
+            _floorService.UpdateVoidRodTile(null);
         }
     }
 }

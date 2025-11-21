@@ -114,7 +114,7 @@ namespace Latuvu
             WriteOnCell(new Vector3Int(5, 0, 0), cricketText);
         }
 
-        public void UpdateVoidRodTile(bool hasTile)
+        public void UpdateVoidRodTile(GameTile tile)
         {
             var go = Tilemap.GetInstantiatedObject(new Vector3Int(6, 0, 0));
             if (!go) return;
@@ -122,7 +122,7 @@ namespace Latuvu
             var comp = go.GetComponent<VoidRodHUDIcon>();
             if (!comp) return;
             
-            comp.UpdateIcon(hasTile);
+            comp.UpdateIcon(tile);
         }
 
         public FloorPrefab GetFloorById(string floorId)
