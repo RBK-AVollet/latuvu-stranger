@@ -89,6 +89,8 @@ namespace Latuvu
 
         private void Interact(InputAction.CallbackContext context)
         {
+            if (_isFallTimerRunning) return;
+            
             var tilemap = _floorService.Tilemap;
             var currentCell = tilemap.WorldToCell(transform.position);
             var dir = new Vector3Int(Mathf.RoundToInt(MoveDirection.x), Mathf.RoundToInt(MoveDirection.y), 0);
