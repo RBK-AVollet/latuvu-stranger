@@ -55,6 +55,15 @@ namespace Latuvu
             _graphicsPage.Hide();
         }
 
+        public void LoadSaveData()
+        {
+            Vector2Int res = ES3.Load(k_resolutionSaveKey, new Vector2Int(1920, 1080));
+            bool fullscreen = ES3.Load<bool>(k_fullscreenSaveKey, true);
+            Screen.SetResolution(res.x, res.y, fullscreen);
+            
+            AudioListener.volume = ES3.Load<float>(k_volumeSaveKey, 1f);
+        }
+
         public override void Show()
         {
             base.Show();
