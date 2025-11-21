@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 
 namespace Latuvu
 {
-    public class PlayerController : LivingTileEntity
+    public class PlayerTileEntity : TileEntity
     {
         [SerializeField] private bool _debugMode;
         
@@ -136,14 +136,32 @@ namespace Latuvu
                 0
             );
             
-            var currentTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
-            var targetTile = _floorService.Tilemap.GetTile<GameTile>(targetCellPos);
+            GameTile currentTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
+            GameTile targetTile = _floorService.Tilemap.GetTile<GameTile>(targetCellPos);
             
-            if (!_currentTilemap.HasTile(targetCellPos) || !targetTile.IsWalkable)
+            if (!targetTile)
             {
                 Debug.Log("[PlayerController]: no tile at " + targetCellPos);
+                KillSelf();
                 return;
             }
+            
+            if (!targetTile.IsWalkable)
+            {
+                Debug.Log("[PlayerController]: tile not walkable at " + targetCellPos);
+                GameService.Instance.Tick();
+                return;
+            }
+
+            if (_floorService.TryGetStaticEntityAtPos(targetCellPos, out StaticTileEntity staticEntity))
+            {
+                Debug.Log("[PlayerController]: trying to move static entity at " + targetCellPos);
+                staticEntity.TryMove(GridHelper.GetRelativePosition(Position, staticEntity.Position), _currentTilemap);
+                GameService.Instance.Tick();
+                return;
+            }
+            
+            Position = targetCellPos;
             
             currentTile.OnExit(_floorService.Tilemap, _currentCell);
             
@@ -155,6 +173,21 @@ namespace Latuvu
             targetTile.OnEnter(_floorService.Tilemap, _currentCell);
 
             ResetVelocity();
+            
+            if (_floorService.TryGetLivingEntityAtPos(targetCellPos, out LivingTileEntity livingEntity))
+            {
+                Debug.Log("[PlayerController]: moved onto living entity at " + targetCellPos);
+                livingEntity.HandlePlayerOverlap(this);
+                return;
+            }
+            
+            GameService.Instance.Tick();
+        }
+
+        public void KillSelf()
+        {
+            string floorId = FloorService.Instance.CurrentFloor.FloorId;
+            FloorService.Instance.LoadFloor(floorId);
         }
         
         public void ResetVelocity()
@@ -184,4 +217,3 @@ namespace Latuvu
         }
     }
 }
-

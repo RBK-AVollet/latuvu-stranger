@@ -8,5 +8,6 @@ namespace Latuvu
     {
         public TileEntity EntityPrefab;
         public Vector3Int Position;
+        public Vector3Int Direction;
     }
 }

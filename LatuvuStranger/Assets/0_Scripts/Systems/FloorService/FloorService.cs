@@ -10,6 +10,7 @@ namespace Latuvu
         [SerializeField] private FloorPrefab[] _floors;
         [SerializeField] private TileBase[] _hud;
         [SerializeField] private GameObject _playerPrefab;
+        [SerializeField] private Transform _entitiesContainer;
         
         private List<TileEntity> _entities = new ();
         
@@ -19,12 +20,34 @@ namespace Latuvu
         
         public FloorPrefab CurrentFloor => _currentFloor;
         
-        public PlayerController Player { get; private set; }
+        public PlayerTileEntity Player { get; private set; }
         
         public bool TryGetEntityAtPos(Vector3Int pos, out TileEntity entity)
         {
-            entity = _entities.FirstOrDefault(e => e.Position == (Vector2Int)pos);
+            entity = _entities.FirstOrDefault(e => e.Position == pos);
             return entity != null;
+        }
+        
+        public bool TryGetLivingEntityAtPos(Vector3Int pos, out LivingTileEntity livingEntity)
+        {
+            livingEntity = null;
+            TileEntity e = _entities.FirstOrDefault(e => e.Position == pos);
+            
+            if (e is not LivingTileEntity entity) return false;
+            
+            livingEntity = entity;
+            return true;
+        }
+        
+        public bool TryGetStaticEntityAtPos(Vector3Int pos, out StaticTileEntity staticEntity)
+        {
+            staticEntity = null;
+            TileEntity e = _entities.FirstOrDefault(e => e.Position == pos);
+            
+            if (e is not StaticTileEntity entity) return false;
+            
+            staticEntity = entity;
+            return true;
         }
 
         public void LoadNextFloor()
@@ -104,11 +127,19 @@ namespace Latuvu
         private void SpawnEntities()
         {
             _entities.Clear();
+
+            foreach (Transform child in _entitiesContainer)
+            {
+                Destroy(child.gameObject);
+            }
             
             foreach (var entity in _currentFloor.Entities)
             {
                 var pos = Tilemap.GetCellCenterWorld(entity.Position);
-                _entities.Add(Instantiate(entity.EntityPrefab, pos, Quaternion.identity, transform));
+                TileEntity e = Instantiate(entity.EntityPrefab, pos, Quaternion.identity, _entitiesContainer);
+                e.Position = entity.Position;
+                e.Direction = entity.Direction;
+                _entities.Add(e);
             }
         }
         
@@ -128,9 +159,9 @@ namespace Latuvu
             base.Awake();
             
             var playerGo = Instantiate(_playerPrefab);
-            Player = playerGo.GetComponent<PlayerController>();
+            Player = playerGo.GetComponent<PlayerTileEntity>();
             
-            LoadFloor("B001");
+            LoadFloor("BTest");
         }
     }
 }
