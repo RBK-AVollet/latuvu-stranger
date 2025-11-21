@@ -295,6 +295,7 @@ namespace Latuvu
 
         public void KillSelf()
         {
+            _animator.SetTrigger("Down");
             FloorService.Instance.LoadFloor(FloorService.Instance.CurrentFloor.FloorId);
             _playerInventory.ClearTile();
             ResetFallTimer();
@@ -350,6 +351,7 @@ namespace Latuvu
             ResetFallTimer();
             _hasFallOrigin = false;
             _state = PlayerState.Normal;
+            _animator.SetTrigger("Down");
             _playerInventory.ClearTile();
         }
     }
