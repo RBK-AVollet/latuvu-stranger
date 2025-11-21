@@ -3,7 +3,7 @@ using UnityEngine.Tilemaps;
 
 namespace Latuvu
 {
-    public class SnakeTileEntity : LivingTileEntity
+    public class LarvaeTileEntity : LivingTileEntity
     {
         protected override void Tick()
         {
