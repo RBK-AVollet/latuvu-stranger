@@ -51,10 +51,15 @@ namespace Latuvu
                 return;
             }
             
-            if (floor.TryGetEntityAtPos(target, out TileEntity staticEntity))
+            if (floor.TryGetEntityAtPos(target, out TileEntity entity))
             {
                 FlipDirection();
                 return;
+            }
+            
+            if (FloorService.Instance.Player.Position == target)
+            {
+                FloorService.Instance.Player.KillSelf();
             }
             
             currentTile.OnExit(floor.Tilemap, Position);

@@ -5,6 +5,7 @@ namespace Latuvu
 {
     public class GameService : Singleton<GameService>
     {
+        
         private event Action TickAction = delegate { };
 
         public void RegisterTickAction(Action callback)

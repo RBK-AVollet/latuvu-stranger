@@ -32,6 +32,7 @@ namespace Latuvu
             if (_displayTimer <= 0f)
             {
                 _itemRenderer.enabled = false;
+                GameUIMgr.Instance.CloseDialogue();
             }
         }
 

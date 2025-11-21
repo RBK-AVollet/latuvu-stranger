@@ -14,7 +14,7 @@ namespace Latuvu
         [SerializeField] private string _defaultFloor = "B000";
         
         private List<TileEntity> _entities = new ();
-        
+
         private FloorPrefab _currentFloor;
 
         private const string k_floorSaveKey = "FloorId";
@@ -190,6 +190,12 @@ namespace Latuvu
             #else
             LoadFloor(_defaultFloor);
             #endif
+        }
+
+        public void RemoveEntity(TileEntity entity)
+        {
+            if (entity == null) return;
+            _entities.Remove(entity);
         }
     }
 }
