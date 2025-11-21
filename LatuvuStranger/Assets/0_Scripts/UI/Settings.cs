@@ -7,12 +7,25 @@ namespace Latuvu
 {
     public class Settings : UIView
     {
+        private const string k_volumeSaveKey = "Volume";
+        private const string k_fullscreenSaveKey = "Fullscreen";
+        private const string k_resolutionSaveKey = "Resolution";
+        
         public Settings(VisualElement root) 
         {
             _hideOnAwake = true;
             _isOverlay = true;
             
             Initialize(root);
+        }
+        
+        public void LoadSaveData()
+        {
+            Vector2Int res = ES3.Load(k_resolutionSaveKey, new Vector2Int(1920, 1080));
+            bool fullscreen = ES3.Load<bool>(k_fullscreenSaveKey, true);
+            Screen.SetResolution(res.x, res.y, fullscreen);
+            
+            AudioListener.volume = ES3.Load<float>(k_volumeSaveKey, 1f);
         }
         
         protected override void SetVisualElements()
@@ -28,6 +41,7 @@ namespace Latuvu
                 _fullScreenToggle.RegisterValueChangedCallback(evt =>
                 {
                     Screen.fullScreen = evt.newValue;
+                    ES3.Save(k_fullscreenSaveKey, evt.newValue);
                 });
             }
             
@@ -37,6 +51,7 @@ namespace Latuvu
                 _volumeSlider.RegisterValueChangedCallback(evt =>
                 {
                     AudioListener.volume = evt.newValue;
+                    ES3.Save(k_volumeSaveKey, evt.newValue);
                 });
             }
             
@@ -103,6 +118,7 @@ namespace Latuvu
 
             var res = _availableResolutions[index];
             Screen.SetResolution(res.x, res.y, Screen.fullScreen);
+            ES3.Save(k_resolutionSaveKey, res);
 
             if (_resolutionLabels != null && index < _resolutionLabels.Count)
                 _resolutionDropdown.value = _resolutionLabels[index];

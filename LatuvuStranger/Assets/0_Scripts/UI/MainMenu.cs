@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace Latuvu._0_Scripts.UI
@@ -35,6 +34,7 @@ namespace Latuvu._0_Scripts.UI
             }
             
             _settings = new Settings(root.Q<VisualElement>("SettingsMenu"));
+            _settings.LoadSaveData();
             
             _settings.BackButton.clicked += () => BackMenu();
             
