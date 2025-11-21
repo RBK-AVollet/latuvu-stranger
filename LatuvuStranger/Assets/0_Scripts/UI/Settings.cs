@@ -7,8 +7,6 @@ namespace Latuvu
 {
     public class Settings : UIView
     {
-        private const string k_volumeSaveKey = "Volume";
-        
         public Settings(VisualElement root) 
         {
             _hideOnAwake = true;
