@@ -34,8 +34,10 @@ namespace Latuvu._0_Scripts.UI
             }
             
             _settings = new Settings(root.Q<VisualElement>("SettingsMenu"));
+            #if !UNITY_EDITOR
             _settings.LoadSaveData();
-            
+            #endif            
+
             _settings.BackButton.clicked += () => BackMenu();
             
             _menuButtons[0]?.Focus();

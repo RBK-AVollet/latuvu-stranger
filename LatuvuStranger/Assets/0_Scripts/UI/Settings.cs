@@ -19,6 +19,7 @@ namespace Latuvu
             Initialize(root);
         }
         
+        #if !UNITY_EDITOR
         public void LoadSaveData()
         {
             Vector2Int res = ES3.Load(k_resolutionSaveKey, new Vector2Int(1920, 1080));
@@ -27,6 +28,7 @@ namespace Latuvu
             
             AudioListener.volume = ES3.Load<float>(k_volumeSaveKey, 1f);
         }
+        #endif
         
         protected override void SetVisualElements()
         {
@@ -41,7 +43,9 @@ namespace Latuvu
                 _fullScreenToggle.RegisterValueChangedCallback(evt =>
                 {
                     Screen.fullScreen = evt.newValue;
+                    #if !UNITY_EDITOR
                     ES3.Save(k_fullscreenSaveKey, evt.newValue);
+                    #endif
                 });
             }
             
@@ -51,7 +55,9 @@ namespace Latuvu
                 _volumeSlider.RegisterValueChangedCallback(evt =>
                 {
                     AudioListener.volume = evt.newValue;
+                    #if !UNITY_EDITOR
                     ES3.Save(k_volumeSaveKey, evt.newValue);
+                    #endif
                 });
             }
             
@@ -118,7 +124,9 @@ namespace Latuvu
 
             var res = _availableResolutions[index];
             Screen.SetResolution(res.x, res.y, Screen.fullScreen);
+            #if !UNITY_EDITOR
             ES3.Save(k_resolutionSaveKey, res);
+            #endif
 
             if (_resolutionLabels != null && index < _resolutionLabels.Count)
                 _resolutionDropdown.value = _resolutionLabels[index];
