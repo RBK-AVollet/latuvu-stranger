@@ -8,8 +8,6 @@ namespace Latuvu
     public class Settings : UIView
     {
         private const string k_volumeSaveKey = "Volume";
-        private const string k_fullscreenSaveKey = "Fullscreen";
-        private const string k_resolutionSaveKey = "Resolution";
         
         public Settings(VisualElement root) 
         {
