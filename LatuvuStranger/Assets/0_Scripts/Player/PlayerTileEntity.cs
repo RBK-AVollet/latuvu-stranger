@@ -1,6 +1,6 @@
 using UnityEngine.InputSystem;
-using UnityEngine.Tilemaps;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Latuvu
 {
@@ -89,30 +89,33 @@ namespace Latuvu
 
         private void Interact(InputAction.CallbackContext context)
         {
-            if (_state == PlayerState.Falling || !_playerInventory.HasWand)
-                return;
-
             var tilemap = _floorService.Tilemap;
             var currentCell = tilemap.WorldToCell(transform.position);
-
-            var dir = new Vector3Int(
-                Mathf.RoundToInt(MoveDirection.x),
-                Mathf.RoundToInt(MoveDirection.y),
-                0
-            );
-
-            if (dir == Vector3Int.zero) return;
+            var dir = new Vector3Int(Mathf.RoundToInt(MoveDirection.x), Mathf.RoundToInt(MoveDirection.y), 0);
 
             Vector3Int targetCell = currentCell + dir * _tileStep;
-            
             GameTile tileInFront = tilemap.GetTile<GameTile>(targetCell);
             
-            if (tileInFront && _floorService.TryGetEntityAtPos(targetCell, out TileEntity entityInFront))
+            if (_floorService.TryGetEntityAtPos(targetCell, out TileEntity entityInFront))
             {
-                entityInFront.TryInteract(GridHelper.GetRelativePosition(Position, entityInFront.Position), _currentTilemap, this);
-                GameService.Instance.Tick();
+                if (entityInFront is WandChestTileEntity)
+                {
+                    _playerInventory.ObtainWand();
+                    EnableGridMovement();
+                    GameService.Instance.Tick();
+                    return;
+                }
+
+                if (_playerInventory.HasWand)
+                {
+                    entityInFront.TryInteract(GridHelper.GetRelativePosition(Position, entityInFront.Position), _currentTilemap, this);
+                    GameService.Instance.Tick();
+                }
                 return;
             }
+
+            if (!_playerInventory.HasWand)
+                return;
 
             if (!_playerInventory.HasTile)
             {
@@ -128,7 +131,6 @@ namespace Latuvu
             {
                 tilemap.SetTile(targetCell, _playerInventory.Tile);
                 _playerInventory.ClearTile();
-                Debug.Log("Placed tile: " + tileToPlace.name);
             }
         }
 
