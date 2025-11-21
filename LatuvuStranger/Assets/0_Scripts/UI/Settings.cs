@@ -9,8 +9,6 @@ namespace Latuvu
     public class Settings : UIView
     {
         private const string k_volumeSaveKey = "Volume";
-        private const string k_fullscreenSaveKey = "Fullscreen";
-        private const string k_resolutionSaveKey = "Resolution";
         
         public Settings(VisualElement root) 
         {
@@ -55,6 +53,7 @@ namespace Latuvu
             _graphicsPage.Hide();
         }
 
+        #if !UNITY_EDITOR
         public void LoadSaveData()
         {
             Vector2Int res = ES3.Load(k_resolutionSaveKey, new Vector2Int(1920, 1080));
@@ -63,6 +62,7 @@ namespace Latuvu
             
             AudioListener.volume = ES3.Load<float>(k_volumeSaveKey, 1f);
         }
+        #endif
 
         public override void Show()
         {
