@@ -30,6 +30,13 @@ namespace Latuvu
 
             SetupResolutions();
             
+            if (_resolutionDropdown != null)
+            {
+                _resolutionDropdown.focusable = true;
+                _resolutionDropdown.RegisterCallback<KeyDownEvent>(OnResolutionKeyDown);
+                _resolutionDropdown.RegisterValueChangedCallback(OnResolutionDropdownChanged);
+            }
+            
             if (_fullScreenToggle != null)
             {
                 _fullScreenToggle.focusable = true;
@@ -91,10 +98,67 @@ namespace Latuvu
             Screen.fullScreen = fullscreen;
         }
 
+        private void OnResolutionDropdownChanged(ChangeEvent<string> ev)
+        {
+            if (_resolutionLabels == null)
+                return;
+
+            var idx = _resolutionLabels.IndexOf(ev.newValue);
+            if (idx >= 0 && idx != _currentResIndex)
+            {
+                _currentResIndex = idx;
+                ApplyResolution(idx);
+            }
+        }
+        
+        private void OnResolutionKeyDown(KeyDownEvent ev)
+        {
+            if (_availableResolutions == null || _availableResolutions.Count == 0)
+                return;
+
+            if (ev.keyCode == KeyCode.LeftArrow)
+            {
+                SetResolutionIndex(_currentResIndex - 1);
+                ev.StopPropagation();
+            }
+            else if (ev.keyCode == KeyCode.RightArrow)
+            {
+                SetResolutionIndex(_currentResIndex + 1);
+                ev.StopPropagation();
+            }
+            
+            Debug.Log("AHHHHHHHHHHH");
+        }
+        
+        private void SetResolutionIndex(int newIndex)
+        {
+            if (_availableResolutions == null)
+                return;
+
+            newIndex = Mathf.Clamp(newIndex, 0, _availableResolutions.Count - 1);
+            if (newIndex == _currentResIndex)
+                return;
+
+            _currentResIndex = newIndex;
+            ApplyResolution(newIndex);
+        }
+        
+        public override void Show()
+        {
+            base.Show();
+            _resolutionDropdown?.Focus();
+        }
+
         public override void Dispose()
         {
             if (_fullScreenToggle != null)
                 _fullScreenToggle.UnregisterValueChangedCallback(OnFullScreenChanged);
+
+            if (_resolutionDropdown != null)
+            {
+                _resolutionDropdown.UnregisterCallback<KeyDownEvent>(OnResolutionKeyDown);
+                _resolutionDropdown.UnregisterValueChangedCallback(OnResolutionDropdownChanged);
+            }
         }
     }
 }

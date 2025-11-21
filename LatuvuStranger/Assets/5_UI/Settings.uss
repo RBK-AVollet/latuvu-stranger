@@ -81,3 +81,23 @@ Label {
 #root > #Container > #resolution-dropdown > .unity-popup-field__input > .unity-base-popup-field__arrow {
     display: none;
 }
+
+.image-menu {
+    flex-grow: 1;
+    width: 50%;
+    height: 100%;
+    background-size: 80% 80%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    background-image: url("project://database/Assets/1_Art/Sprites/Menu/spr_menu_continue_3.png?fileID=937344724803292199&guid=2dba776c08cb9de4489f7f74c2b8f05d&type=3#spr_menu_continue_3_0");
+}
+
+.image-out {
+    translate: 450px 0;
+    opacity: 0;
+    background-size: 80% 80%;
+    width: 50%;
+    height: 100%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}

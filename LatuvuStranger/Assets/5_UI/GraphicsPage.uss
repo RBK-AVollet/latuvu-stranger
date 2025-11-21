@@ -27,6 +27,10 @@
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
 }
 
 #root > #Container > #resolution > .unity-popup-field__input > .unity-base-popup-field__text {
@@ -48,6 +52,17 @@
     display: none;
 }
 
-#back-button:focus Label#tiltle {
+#root > #Container > #fullscreen > .unity-toggle__input > #unity-checkmark {
+}
+
+#resolution:focus Label {
+    color: rgb(255, 255, 255);
+}
+
+#fullscreen:focus Label {
+    color: rgb(255, 255, 255);
+}
+
+#back-button:focus Label#title {
     color: rgb(255, 255, 255);
 }

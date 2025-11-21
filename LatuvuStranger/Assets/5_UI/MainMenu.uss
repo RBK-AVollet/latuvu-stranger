@@ -38,3 +38,18 @@
 #root > #dialogue > #root > #dialogue-box > #dialogue {
     -unity-text-align: upper-left;
 }
+
+.image-menu {
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    translate: 0 0;
+    width: 50%;
+    background-image: url("project://database/Assets/1_Art/Sprites/Menu/spr_menu_continue_3.png?fileID=937344724803292199&guid=2dba776c08cb9de4489f7f74c2b8f05d&type=3#spr_menu_continue_3_0");
+    background-size: 80% 80%;
+}
+
+.image-out {
+    translate: 450px 0;
+    opacity: 0;
+    background-size: 80% 80%;
+}

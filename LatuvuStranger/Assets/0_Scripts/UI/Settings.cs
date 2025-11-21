@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Latuvu._0_Scripts.UI;
 using UnityEngine;
@@ -26,7 +27,7 @@ namespace Latuvu
                 root.Q<Button>("language"),
                 root.Q<Button>("back-button")
             };
-
+            
             _settingsButtons[0].clicked += () => OpenPage(_graphicsPage);
             _settingsButtons[1].clicked += () => OpenPage(_audioPage);
             
@@ -34,17 +35,6 @@ namespace Latuvu
             _graphicsPage.BackButton.clicked += () => ReturnToSettingsSelection();
             
             Initialize(root);
-        }
-
-        public void SetupFocus(List<Sprite> menuImages)
-        {
-            for (int i = 0; i < _settingsButtons.Count; i++)
-            {
-                _settingsButtons[i].RegisterCallback<FocusInEvent>(ev =>
-                {
-                    _imageMenu.style.backgroundImage = new StyleBackground(menuImages[_settingsButtons.IndexOf(ev.target as Button)]);
-                });
-            }
         }
         
         private void OpenPage(UIView page)
@@ -56,8 +46,15 @@ namespace Latuvu
         private void ReturnToSettingsSelection()
         {
             _settingsMainPage.style.display = DisplayStyle.Flex;
+            _settingsButtons[0].Focus();
             _audioPage.Hide();
             _graphicsPage.Hide();
+        }
+
+        public override void Show()
+        {
+            base.Show();
+            _settingsButtons[0].Focus();
         }
 
         public override void Dispose()
@@ -76,7 +73,8 @@ namespace Latuvu
         private VisualElement _settingsMainPage;
         
         public List<Button> Buttons => _settingsButtons;
-
+        public VisualElement ImageMenu => _imageMenu;
+        
         #endregion
     }
 }

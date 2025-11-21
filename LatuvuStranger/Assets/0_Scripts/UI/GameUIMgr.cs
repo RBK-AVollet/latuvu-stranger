@@ -52,21 +52,15 @@ namespace Latuvu
             _buttons[0].clicked += Resume;
             //_buttons[1].clicked += () => OpenPage(_memories);
             _buttons[2].clicked += () => OpenPage(_settings);
-            
-            for (int i = 0; i < _pauseMenu.Buttons.Count; i++)
-            {
-                _pauseMenu.Buttons[i].RegisterCallback<FocusInEvent> (ev =>
-                {
-                    _pauseMenu.MenuImage.style.backgroundImage = new StyleBackground(_pauseMenuImages[_pauseMenu.Buttons.IndexOf(ev.target as Button)]);
-                });
-            }
 
             _settings = new Settings(_root.Q<VisualElement>("settings-menu"));
-            _settings.SetupFocus(_settingsImages);
             _settings.Buttons[4].clicked += () => BackMenu();
             
             _memories = new Memories(_root.Q<VisualElement>("memories-menu"));
             //_memories.BackButton.clicked += () => BackMenu();
+            
+            SetupButtons(_settingsImages, _settings.Buttons, _settings.ImageMenu);
+            SetupButtons(_pauseMenuImages, _buttons, _pauseMenu.MenuImage);
         }
 
         private void BackMenu()
@@ -114,6 +108,35 @@ namespace Latuvu
         public void CloseDialogue()
         {
             _dialogueUI.Hide();
+        }
+        
+        private void ChangeImage(List<Sprite> images, int index, VisualElement image)
+        {
+            AddImageTransition(image);
+            image.style.backgroundImage = new StyleBackground(images[index]);
+            StartCoroutine(RemoveImageTransition(image));
+        }
+        
+        private IEnumerator RemoveImageTransition(VisualElement image)
+        {
+            yield return new WaitForSeconds(0.5f);
+            image.RemoveFromClassList("image-out");
+        }
+
+        private void AddImageTransition(VisualElement image)
+        {
+            image.AddToClassList("image-out");
+        }
+
+        private void SetupButtons(List<Sprite> images, List<Button> buttons, VisualElement image)
+        {
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                buttons[i].RegisterCallback<FocusInEvent> (ev =>
+                {
+                    ChangeImage(images, buttons.IndexOf(ev.target as Button), image);
+                });
+            }
         }
         
         IEnumerator WriteText(string text)

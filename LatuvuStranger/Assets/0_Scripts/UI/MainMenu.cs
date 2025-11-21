@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -39,23 +40,17 @@ namespace Latuvu._0_Scripts.UI
                     b.focusable = true;
             }
             
-            _menuButtons[0].Focus();
-            
             _image.style.backgroundImage = new StyleBackground(_menuImages[0]);
-            _settings.SetupFocus(_settingsImages);
             _settings.Buttons[4].clicked += () => BackMenu();
             
             _menuButtons[0].clicked += StartGame;
             _menuButtons[1].clicked += OpenSettings;
             _menuButtons[2].clicked += QuitGame;
             
-            for (int i = 0; i < _menuButtons.Count; i++)
-            {
-                _menuButtons[i].RegisterCallback<FocusInEvent> (ev =>
-                {
-                    _image.style.backgroundImage = new StyleBackground(_menuImages[_menuButtons.IndexOf(ev.target as Button)]);
-                });
-            }
+            SetupButtons(_settingsImages, _settings.Buttons, _settings.ImageMenu);
+            SetupButtons(_menuImages, _menuButtons, _image);
+            
+            _menuButtons[0].Focus();
         }
 
         void StartGame()
@@ -82,6 +77,36 @@ namespace Latuvu._0_Scripts.UI
             _settings.Hide();
             _mainMenu.RemoveFromClassList("hidden");
             _mainMenu.AddToClassList("visible");
+            _menuButtons[0].Focus();
+        }
+
+        private void ChangeImage(List<Sprite> images, int index, VisualElement image)
+        {
+            AddImageTransition(image);
+            image.style.backgroundImage = new StyleBackground(images[index]);
+            StartCoroutine(RemoveImageTransition(image));
+        }
+        
+        private IEnumerator RemoveImageTransition(VisualElement image)
+        {
+            yield return new WaitForSeconds(0.5f);
+            image.RemoveFromClassList("image-out");
+        }
+
+        private void AddImageTransition(VisualElement image)
+        {
+            image.AddToClassList("image-out");
+        }
+
+        private void SetupButtons(List<Sprite> images, List<Button> buttons, VisualElement image)
+        {
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                buttons[i].RegisterCallback<FocusInEvent> (ev =>
+                {
+                    ChangeImage(images, buttons.IndexOf(ev.target as Button), image);
+                });
+            }
         }
 
         void OnDisable()

@@ -8,6 +8,7 @@ namespace Latuvu
     {
         #region Fields
 
+        private Button _masterVolumeButton;
         private Slider _masterVolumeSlider;
         private Label _masterVolumeLabel;
         public Button BackButton;
@@ -18,7 +19,8 @@ namespace Latuvu
             _hideOnAwake = true;
             _isOverlay = true;
 
-            _masterVolumeSlider = root.Q<Slider>("master");
+            _masterVolumeButton = root.Q<Button>("master");
+            _masterVolumeSlider = root.Q<Slider>("master-slider");
             _masterVolumeLabel = root.Q<Label>("volume-level");
             BackButton = root.Q<Button>("back-button");
             
@@ -35,7 +37,6 @@ namespace Latuvu
                     }
                 });
                 
-                // Initialize slider and label with current volume
                 float currentVolume = AudioListener.volume;
                 _masterVolumeSlider.value = currentVolume;
                 if (_masterVolumeLabel != null)
@@ -43,8 +44,20 @@ namespace Latuvu
                     _masterVolumeLabel.text = $"Master Volume: {(int)(currentVolume * 100)}%";
                 }
             }
+
+            _masterVolumeButton.clicked += () => FocusMasterVolumeSlider();
             
             Initialize(root);
+        }
+        
+        public override void Show()
+        {
+            base.Show();
+        }
+        
+        public void FocusMasterVolumeSlider()
+        {
+            _masterVolumeSlider?.Focus();
         }
 
         public override void Dispose()
