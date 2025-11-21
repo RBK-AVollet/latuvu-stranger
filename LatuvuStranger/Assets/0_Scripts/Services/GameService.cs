@@ -22,10 +22,5 @@ namespace Latuvu
             //Debug.Log("[GameService]: Ticking the game");
             TickAction.Invoke();
         }
-
-        private void  Start()
-        {
-            
-        }
     }
 }

@@ -41,21 +41,18 @@ namespace Latuvu
 
             if (!targetTile)
             {
-                Debug.Log("[SnakeTileEntity]: no tile at " + target);
                 FlipDirection();
                 return;
             }
             
             if (!targetTile.IsWalkable)
             {
-                Debug.Log("[SnakeTileEntity]: tile not walkable at " + target);
                 FlipDirection();
                 return;
             }
             
             if (floor.TryGetEntityAtPos(target, out TileEntity staticEntity))
             {
-                Debug.Log("[SnakeTileEntity]: trying to move static entity at " + target);
                 FlipDirection();
                 return;
             }
