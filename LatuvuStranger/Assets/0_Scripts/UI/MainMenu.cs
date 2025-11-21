@@ -25,7 +25,9 @@ namespace Latuvu._0_Scripts.UI
             _mainMenu = _root.Q<VisualElement>("MainMenu");
             _image = _root.Q<VisualElement>("ImageMenu");
             _settings = new Settings(_root.Q<VisualElement>("SettingsMenu"));
+            #if !UNITY_EDITOR
             _settings.LoadSaveData();
+            #endif     
 
             _menuButtons = new List<Button>
             {
@@ -42,7 +44,7 @@ namespace Latuvu._0_Scripts.UI
             
             _image.style.backgroundImage = new StyleBackground(_menuImages[0]);
             _settings.Buttons[4].clicked += () => BackMenu();
-            
+                   
             _menuButtons[0].clicked += StartGame;
             _menuButtons[1].clicked += OpenSettings;
             _menuButtons[2].clicked += QuitGame;
