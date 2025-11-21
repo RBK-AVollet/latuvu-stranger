@@ -342,10 +342,12 @@ namespace Latuvu
         {
             transform.position = _floorService.CurrentFloor.GetPlayerSpawnWorld();
             _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
-
+            
             ResetFallTimer();
             _hasFallOrigin = false;
             _state = PlayerState.Normal;
+
+            _playerInventory.ClearTile();
         }
 
         private enum PlayerState { Normal, Falling }
