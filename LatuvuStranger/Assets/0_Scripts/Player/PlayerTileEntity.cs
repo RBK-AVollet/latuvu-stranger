@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Threading.Tasks;
 using Padrox.Acelab.Modules.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine;
@@ -265,6 +267,7 @@ namespace Latuvu
                 _animator.ResetTrigger("Right");
                 _animator.ResetTrigger("Top");
                 _animator.ResetTrigger("Down");
+                _animator.ResetTrigger("Fall");
 
                 _animator.Play(_oldAnimStateHash, 0, _oldAnimNormalizedTime);
                 _animator.Update(0);
@@ -337,17 +340,27 @@ namespace Latuvu
             _fallingTimeRemaining = 0f;
         }
 
-        private void OnFallTimerElapsed()
+        private async Task OnFallTimerElapsed()
         {
+            _inputService.DisableInput();
+
             Vector3Int topTarget = Position + Vector3Int.up;
             if (_floorService.Tilemap.GetTile<GameTile>(topTarget) is GameTile topTile &&
                 _floorService.TryGetStaticEntityAtPos(topTarget, out StaticTileEntity topStatic) &&
                 topStatic is TeleportStatueTileEntity)
             {
+                _inputService.EnableInput();
                 _floorService.LoadNextFloor(Inventory.Crickets);
                 Inventory.RemoveCrickets(Inventory.Crickets, false);
                 return;
             }
+
+            if (_animator != null)
+                _animator.SetTrigger("Fall");
+
+            await WaitForAnimatorStateEnd(_animator, 0);
+
+            _inputService.EnableInput();
 
             KillSelf();
             ResetFallTimer();
@@ -370,6 +383,61 @@ namespace Latuvu
             _state = PlayerState.Normal;
             _animator.SetTrigger("Down");
             _playerInventory.ClearTile();
+        }
+        
+        private Task WaitForAnimatorStateEnd(Animator animator, int layer = 0)
+        {
+            var tcs = new TaskCompletionSource<bool>();
+            StartCoroutine(WaitCoroutine());
+            return tcs.Task;
+
+            IEnumerator WaitCoroutine()
+            {
+                if (animator == null)
+                {
+                    tcs.SetResult(true);
+                    yield break;
+                }
+
+                var startState = animator.GetCurrentAnimatorStateInfo(layer).fullPathHash;
+
+                var safetyCounter = 0;
+                while (true)
+                {
+                    var info = animator.GetCurrentAnimatorStateInfo(layer);
+                    if (info.fullPathHash != startState || animator.IsInTransition(layer))
+                        break;
+
+                    yield return null;
+
+                    safetyCounter++;
+                    if (safetyCounter > 300) break;
+                }
+
+                safetyCounter = 0;
+                while (true)
+                {
+                    var info = animator.GetCurrentAnimatorStateInfo(layer);
+
+                    if (animator.IsInTransition(layer))
+                    {
+                        yield return null;
+                        safetyCounter++;
+                        if (safetyCounter > 600) break;
+                        continue;
+                    }
+
+                    if (info.normalizedTime >= 1f)
+                        break;
+
+                    yield return null;
+
+                    safetyCounter++;
+                    if (safetyCounter > 600) break;
+                }
+
+                tcs.SetResult(true);
+            }
         }
     }
 }

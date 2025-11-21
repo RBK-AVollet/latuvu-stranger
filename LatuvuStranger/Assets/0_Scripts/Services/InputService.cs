@@ -11,7 +11,6 @@ namespace Latuvu
         private InputAction _moveAction;
         private InputAction _interactionAction;
         private InputAction _pauseAction;
-        private InputAction _testAction;
         
         public InputAction Player => _moveAction;
 
@@ -22,7 +21,6 @@ namespace Latuvu
             _moveAction = _playerInput.actions.FindAction("Move");
             _interactionAction = _playerInput.actions.FindAction("Interact");
             _pauseAction = _playerInput.actions.FindAction("Pause");
-            _testAction = _playerInput.actions.FindAction("Test");
 
             _playerInput.actions.Enable();
         }
@@ -57,24 +55,24 @@ namespace Latuvu
             _pauseAction.started -= callback;
         }
         
-        public void RegisterTestAction(Action<InputAction.CallbackContext> callback)
-        {
-            _testAction.started += callback;
-        }
-
-        public void UnregisterTestAction(Action<InputAction.CallbackContext> callback)
-        {
-            _testAction.started -= callback;
-        }
-        
-        public void EnableInput()
+        public void SwitchUIToPlayerInput()
         {
             _playerInput.SwitchCurrentActionMap("Player");
         }
 
-        public void DisableInput()
+        public void SwitchPlayerToUIInput()
         {
             _playerInput.SwitchCurrentActionMap("UI");
+        }
+        
+        public void EnableInput()
+        {
+            _playerInput.actions.Enable();
+        }
+        
+        public void DisableInput()
+        {
+            _playerInput.actions.Disable();
         }
     }
 }

@@ -102,14 +102,14 @@ namespace Latuvu
             if (_dialogueOpen)
                 return;
             
-            _inputService.DisableInput();
+            _inputService.SwitchPlayerToUIInput();
             _root.style.backgroundColor = new StyleColor(new Color(0, 0, 0, 1f));
             _pauseMenu.Show();
         }
 
         private void Resume()
         {
-            _inputService.EnableInput();
+            _inputService.SwitchUIToPlayerInput();
             _root.style.backgroundColor = new StyleColor(new Color(0, 0, 0, 0f));
             _pauseMenu.Hide();
         }
@@ -118,14 +118,14 @@ namespace Latuvu
         {
             _dialogueOpen = true;
             _dialogueUI.Show();
-            _inputService.DisableInput();
+            _inputService.SwitchPlayerToUIInput();
             StartCoroutine(WriteText(text));
         }
         
         public void CloseDialogue()
         {
             _dialogueUI.Hide();
-            _inputService.EnableInput();
+            _inputService.SwitchUIToPlayerInput();
             _dialogueOpen = false;
         }
 
