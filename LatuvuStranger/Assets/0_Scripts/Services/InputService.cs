@@ -69,12 +69,12 @@ namespace Latuvu
         
         public void EnableInput()
         {
-            _playerInput.actions.Enable();
+            _playerInput.SwitchCurrentActionMap("Player");
         }
 
         public void DisableInput()
         {
-            _playerInput.actions.Disable();
+            _playerInput.SwitchCurrentActionMap("UI");
         }
     }
 }
