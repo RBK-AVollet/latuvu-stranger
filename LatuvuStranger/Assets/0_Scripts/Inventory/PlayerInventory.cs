@@ -45,7 +45,7 @@ namespace Latuvu
 
         public PlayerInventory()
         {
-            HasWand = true;
+            HasWand = false;
             HasCube = false;
             HasSword = false;
 
