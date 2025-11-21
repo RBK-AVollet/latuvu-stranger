@@ -64,7 +64,8 @@ namespace Latuvu {
         }
 
         private void OnDestroyPoolObject(SoundEmitter soundEmitter) {
-            Destroy(soundEmitter.gameObject);
+            if(soundEmitter)
+                Destroy(soundEmitter.gameObject);
         }
 
         private void OnReturnedToPool(SoundEmitter soundEmitter) {
