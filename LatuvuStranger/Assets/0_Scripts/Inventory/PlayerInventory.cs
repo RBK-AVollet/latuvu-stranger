@@ -48,6 +48,7 @@ namespace Latuvu
             _floorService.UpdateCrickets(Crickets);
         }
 
+        public PlayerInventory()
         public void StoreTile(GameTile tile)
         {
             Tile = tile;

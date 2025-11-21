@@ -11,10 +11,13 @@ namespace Latuvu
         [SerializeField] private TileBase[] _hud;
         [SerializeField] private GameObject _playerPrefab;
         [SerializeField] private Transform _entitiesContainer;
+        [SerializeField] private string _defaultFloor = "B000";
         
         private List<TileEntity> _entities = new ();
         
         private FloorPrefab _currentFloor;
+
+        private const string k_floorSaveKey = "FloorId";
         
         public Tilemap Tilemap => _currentFloor.Tilemap;
         
@@ -106,6 +109,9 @@ namespace Latuvu
             SpawnEntities();
             
             Player.Respawn();
+            
+            ES3.Save(k_floorSaveKey, floorId);
+            Debug.Log($"Saved floor {floorId} !");
         }
         
         public void UpdateCrickets(int cricketCount)
@@ -175,8 +181,9 @@ namespace Latuvu
             
             var playerGo = Instantiate(_playerPrefab);
             Player = playerGo.GetComponent<PlayerTileEntity>();
-            
-            LoadFloor("B001");
+
+            string floorId = ES3.Load(k_floorSaveKey, defaultValue: _defaultFloor);
+            LoadFloor(floorId);
         }
     }
 }
