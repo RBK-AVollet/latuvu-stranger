@@ -1,16 +1,33 @@
+using System.Linq;
 using UnityEngine;
 
 namespace Latuvu
 {
     public class VoidRodHUDIcon : MonoBehaviour
     {
-        [SerializeField] private Sprite _voidRod;
-        [SerializeField] private Sprite _voidRodHasTile;
+        [System.Serializable]
+        private class RodIconPerTile
+        {
+            public GameTile Tile;
+            public Sprite Icon;
+        }
+        
+        [SerializeField] private RodIconPerTile[] _spritePerTiles;
+        [SerializeField] private Sprite _rodUnknownIcon;
+        [SerializeField] private Sprite _rodNoTile;
         [SerializeField] private SpriteRenderer _renderer;
 
-        public void UpdateIcon(bool hasTile)
+        public void UpdateIcon(GameTile tile)
         {
-            _renderer.sprite = hasTile ? _voidRodHasTile : _voidRod;
+            if (tile == null)
+            {
+                _renderer.sprite = _rodNoTile;
+            }
+            else
+            {
+                var sprite = _spritePerTiles.FirstOrDefault(t => t.Tile == tile);
+                _renderer.sprite = sprite != null ? sprite.Icon : _rodUnknownIcon;
+            }
         }
     }
 }

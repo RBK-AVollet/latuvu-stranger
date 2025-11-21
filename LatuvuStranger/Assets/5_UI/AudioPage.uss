@@ -12,11 +12,10 @@
     color: rgb(255, 255, 255);
 }
 
-#root > #Container > .unity-slider-int > .unity-slider-int__label {
-    width: 50%;
-    -unity-text-align: middle-right;
-}
-
 .unity-label:focus {
     color: rgb(255, 255, 255);
+}
+
+#root > #Container > #master-volume > .unity-slider > .unity-slider__label {
+    display: none;
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ namespace Latuvu._0_Scripts.UI
     [RequireComponent(typeof(UIDocument))]
     public class MainMenu : MonoBehaviour
     {
+        private InputService _inputService;
+        
         private List<Button> _menuButtons;
         private UIDocument _uiDoc;
         private VisualElement _mainMenu, _image;
