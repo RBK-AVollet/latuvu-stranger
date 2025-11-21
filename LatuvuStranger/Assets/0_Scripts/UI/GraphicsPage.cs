@@ -17,6 +17,9 @@ namespace Latuvu
         private List<string> _resolutionLabels;
         private int _currentResIndex;
 
+        private const string k_fullscreenSaveKey = "Fullscreen";
+        private const string k_resolutionSaveKey = "Resolution";
+        
         #endregion
         
         public GraphicsPage(VisualElement root)
@@ -83,7 +86,10 @@ namespace Latuvu
 
             var res = _availableResolutions[index];
             Screen.SetResolution(res.x, res.y, Screen.fullScreen);
-
+            #if !UNITY_EDITOR
+            ES3.Save<Vector2Int>(k_resolutionSaveKey, res);
+            #endif
+    
             if (_resolutionLabels != null && index < _resolutionLabels.Count)
                 _resolutionDropdown.value = _resolutionLabels[index];
         }
@@ -96,6 +102,9 @@ namespace Latuvu
         private void ApplyFullScreen(bool fullscreen)
         {
             Screen.fullScreen = fullscreen;
+            #if !UNITY_EDITOR
+            ES3.Save<bool>(k_fullscreenSaveKey, fullscreen);
+            #endif
         }
 
         private void OnResolutionDropdownChanged(ChangeEvent<string> ev)

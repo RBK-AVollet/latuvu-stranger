@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using Latuvu._0_Scripts.UI;
 using UnityEngine;
@@ -8,8 +7,6 @@ namespace Latuvu
 {
     public class Settings : UIView
     {
-        private const string k_volumeSaveKey = "Volume";
-        
         public Settings(VisualElement root) 
         {
             _hideOnAwake = true;
@@ -56,6 +53,10 @@ namespace Latuvu
         #if !UNITY_EDITOR
         public void LoadSaveData()
         {
+            const string k_fullscreenSaveKey = "Fullscreen";
+            const string k_resolutionSaveKey = "Resolution";
+            const string k_volumeSaveKey = "Volume";
+
             Vector2Int res = ES3.Load(k_resolutionSaveKey, new Vector2Int(1920, 1080));
             bool fullscreen = ES3.Load<bool>(k_fullscreenSaveKey, true);
             Screen.SetResolution(res.x, res.y, fullscreen);
@@ -72,6 +73,7 @@ namespace Latuvu
 
         public override void Dispose()
         {
+            
         }
         
         #region Fields
