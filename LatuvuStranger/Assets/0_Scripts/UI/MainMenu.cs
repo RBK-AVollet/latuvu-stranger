@@ -55,8 +55,7 @@ namespace Latuvu._0_Scripts.UI
 
         void StartGame()
         {
-            //SceneManager.LoadScene("GameScene");
-            Debug.Log("Starting game");
+            SceneManager.LoadScene("GameScene");
         }
         
         void OpenSettings()

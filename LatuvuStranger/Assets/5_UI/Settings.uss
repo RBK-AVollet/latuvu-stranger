@@ -93,7 +93,7 @@ Label {
 }
 
 .image-out {
-    translate: 450px 0;
+    translate: 1500px 0;
     opacity: 0;
     background-size: 80% 80%;
     width: 50%;
