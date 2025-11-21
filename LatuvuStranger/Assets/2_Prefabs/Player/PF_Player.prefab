@@ -46,10 +46,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81fe5213242cfa429f81bae7346d096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Latuvu.PlayerController
+  <Position>k__BackingField: {x: 0, y: 0, z: 0}
+  <Direction>k__BackingField: {x: 0, y: 0, z: 0}
+  <MoveDirections>k__BackingField:
+    FromRight: 0
+    FromLeft: 0
+    FromUp: 0
+    FromDown: 0
+  <InteractDirections>k__BackingField:
+    FromRight: 0
+    FromLeft: 0
+    FromUp: 0
+    FromDown: 0
   _debugMode: 1
   _rb: {fileID: 8770273996270034895}
   _tileStep: 1
   _animator: {fileID: 6899171958418484918}
+  _fallTimerDuration: 1
+  _speed: 5
 --- !u!50 &8770273996270034895
 Rigidbody2D:
   serializedVersion: 5

@@ -176,7 +176,7 @@ namespace Latuvu
             var playerGo = Instantiate(_playerPrefab);
             Player = playerGo.GetComponent<PlayerTileEntity>();
             
-            LoadFloor("B000");
+            LoadFloor("B001");
         }
     }
 }
