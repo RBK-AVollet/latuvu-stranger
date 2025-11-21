@@ -1,4 +1,5 @@
 using System;
+using Padrox.Acelab.Modules.Audio;
 using UnityEngine;
 
 namespace Latuvu
@@ -12,6 +13,7 @@ namespace Latuvu
         [SerializeField] protected SpriteRenderer _itemRenderer;
         [SerializeField] protected SpriteRenderer _chestRenderer;
         [SerializeField] protected float _itemDisplayTime = 1.5f;
+        [SerializeField] protected SoundData _pickupSound;
         private float _displayTimer = 0f;
 
         protected override void Start()
@@ -54,6 +56,11 @@ namespace Latuvu
             _chestRenderer.sprite = _openedSprite;
             _itemRenderer.enabled = true;
             _displayTimer = _itemDisplayTime;
+            SoundController.Instance.CreateSound()
+                .WithSoundData(_pickupSound)
+                .Play();
+
+            Debug.Log("SOUND");
         }
     }
 }

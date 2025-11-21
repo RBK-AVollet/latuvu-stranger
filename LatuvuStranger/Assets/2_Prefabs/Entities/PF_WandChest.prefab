@@ -121,6 +121,13 @@ MonoBehaviour:
   _itemRenderer: {fileID: 1332431945270492984}
   _chestRenderer: {fileID: 6549998803982227362}
   _itemDisplayTime: 1.5
+  _pickupSound:
+    clip: {fileID: 8300000, guid: 1c2360d49eca0884a90996bae3d47614, type: 3}
+    mixerGroup: {fileID: 0}
+    volume: 0.5
+    loop: 0
+    playOnAwake: 0
+    frequentSound: 0
 --- !u!1 &4612139566815688410
 GameObject:
   m_ObjectHideFlags: 0
