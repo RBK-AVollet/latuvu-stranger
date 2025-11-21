@@ -59,8 +59,6 @@ namespace Latuvu
             SoundController.Instance.CreateSound()
                 .WithSoundData(_pickupSound)
                 .Play();
-
-            Debug.Log("SOUND");
         }
     }
 }

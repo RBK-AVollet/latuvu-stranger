@@ -57,6 +57,13 @@ MonoBehaviour:
     FromLeft: 0
     FromUp: 0
     FromDown: 1
+  _moveSound:
+    clip: {fileID: 8300000, guid: f613abf3ae32a3345a2cece344d95a44, type: 3}
+    mixerGroup: {fileID: 0}
+    volume: 0.5
+    loop: 0
+    playOnAwake: 0
+    frequentSound: 0
 --- !u!212 &5137579634789422472
 SpriteRenderer:
   m_ObjectHideFlags: 0
