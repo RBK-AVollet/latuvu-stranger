@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 
 namespace Latuvu
 {
-    public class PlayerController : LivingTileEntity
+    public class PlayerTileEntity : TileEntity
     {
         [SerializeField] private bool _debugMode;
         
@@ -140,6 +140,7 @@ namespace Latuvu
             if (!targetTile)
             {
                 Debug.Log("[PlayerController]: no tile at " + targetCellPos);
+                KillSelf();
                 return;
             }
             
@@ -150,10 +151,10 @@ namespace Latuvu
                 return;
             }
 
-            if (_floorService.TryGetEntityAtPos(targetCellPos, out TileEntity entity))
+            if (_floorService.TryGetStaticEntityAtPos(targetCellPos, out StaticTileEntity staticEntity))
             {
-                Debug.Log("[PlayerController]: trying to move entity at " + targetCellPos);
-                entity.TryMove(GridHelper.GetRelativePosition(Position, entity.Position), _currentTilemap);
+                Debug.Log("[PlayerController]: trying to move static entity at " + targetCellPos);
+                staticEntity.TryMove(GridHelper.GetRelativePosition(Position, staticEntity.Position), _currentTilemap);
                 GameService.Instance.Tick();
                 return;
             }
@@ -170,6 +171,21 @@ namespace Latuvu
             targetTile.OnEnter(_floorService.Tilemap, _currentCell);
 
             ResetVelocity();
+            
+            if (_floorService.TryGetLivingEntityAtPos(targetCellPos, out LivingTileEntity livingEntity))
+            {
+                Debug.Log("[PlayerController]: moved onto living entity at " + targetCellPos);
+                livingEntity.HandlePlayerOverlap(this);
+                return;
+            }
+            
+            GameService.Instance.Tick();
+        }
+
+        public void KillSelf()
+        {
+            string floorId = FloorService.Instance.CurrentFloor.FloorId;
+            FloorService.Instance.LoadFloor(floorId);
         }
         
         public void ResetVelocity()
@@ -198,4 +214,3 @@ namespace Latuvu
         }
     }
 }
-

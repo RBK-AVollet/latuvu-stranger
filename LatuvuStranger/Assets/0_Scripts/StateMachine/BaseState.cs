@@ -4,12 +4,12 @@ namespace Latuvu
 {
     public abstract class BaseState : IState
     {
-        protected readonly PlayerController _player;
+        protected readonly PlayerTileEntity _player;
         protected readonly Animator _animator;
         
         protected bool _debugMode = false;
 
-		protected BaseState(PlayerController player, Animator animator)
+		protected BaseState(PlayerTileEntity player, Animator animator)
         {
             _player = player;
             _animator = animator;

@@ -7,6 +7,7 @@ namespace Latuvu
     public class TileEntity : MonoBehaviour
     {
         [field:SerializeField] public Vector3Int Position { get; set; }
+        [field:SerializeField] public Vector3Int Direction { get; set; }
         [field:SerializeField] public Sprite Skin { get; private set; }
         [field:SerializeField] public AffectDirection MoveDirections { get; private set; }
         [field:SerializeField] public AffectDirection InteractDirections { get; private set; }
@@ -16,43 +17,65 @@ namespace Latuvu
             GameService.Instance.RegisterTickAction(Tick);
         }
 
-        public virtual bool TryMove(Vector3Int relativePosition, Tilemap tilemap)
+        private void OnDestroy()
         {
-            Vector3Int targetCellPos = Position + relativePosition;
-            
-            GameTile targetTile = tilemap.GetTile<GameTile>(targetCellPos);
-
-            if (!targetTile)
+            if (GameService.Instance != null)
             {
-                // TODO : Delete the entity and remove it from the floor service
-                return true;
+                GameService.Instance.UnregisterTickAction(Tick);
             }
-
-            if (!targetTile.IsWalkable) return false;
-            
-            if (FloorService.Instance.TryGetEntityAtPos(targetCellPos, out TileEntity entity))
-            {
-                if (entity.TryGetComponent<LivingTileEntity>(out LivingTileEntity livingTileEntity))
-                {   
-                    // TODO : Stomp the living entity
-                    return false;
-                }
-                return false;
-            }
-            
-            Position = targetCellPos;
-            return true;
         }
         
-        public virtual void TryInteract(PlayerController player)
+        public virtual void TryInteract(PlayerTileEntity player)
         {
             Debug.Log("Interacted with tile entity at position: " + Position);
         }
 
         protected virtual void Tick()
+        { }
+
+        protected void TryMoveOrFlip()
         {
-            Vector3 pos = FloorService.Instance.Tilemap.GetCellCenterWorld(Position);
-            transform.position = pos;
+            FloorService floor = FloorService.Instance;
+            Tilemap tilemap = floor.Tilemap;
+            Vector3Int target = Position + Direction;
+            
+            GameTile currentTile = floor.Tilemap.GetTile<GameTile>(Position);
+            GameTile targetTile = floor.Tilemap.GetTile<GameTile>(target);
+
+            if (!targetTile)
+            {
+                Debug.Log("[SnakeTileEntity]: no tile at " + target);
+                FlipDirection();
+                return;
+            }
+            
+            if (!targetTile.IsWalkable)
+            {
+                Debug.Log("[SnakeTileEntity]: tile not walkable at " + target);
+                FlipDirection();
+                return;
+            }
+            
+            if (floor.TryGetEntityAtPos(target, out TileEntity staticEntity))
+            {
+                Debug.Log("[SnakeTileEntity]: trying to move static entity at " + target);
+                FlipDirection();
+                return;
+            }
+            
+            currentTile.OnExit(floor.Tilemap, Position);
+            
+            Vector3 worldPos = tilemap.GetCellCenterWorld(target);
+            transform.position = worldPos;
+
+            Position = target;
+            
+            targetTile.OnEnter(tilemap, Position);
+        }
+
+        private void FlipDirection()
+        {
+            Direction = new Vector3Int(-Direction.x, -Direction.y, -Direction.z);
         }
     }
 }
