@@ -1,3 +1,4 @@
+using System;
 using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -11,52 +12,58 @@ namespace Latuvu
         [SerializeField] private int _tileStep = 1;
         [SerializeField] private Animator _animator;
         [SerializeField] private float _fallTimerDuration = 1f;
-        private Vector3Int _currentCell;
+        [SerializeField] private float _speed = 5f;
 
+        private Vector3Int _currentCell;
         private Tilemap _currentTilemap;
 
         private float _fallingTimeRemaining = 0f;
-
         private Vector3Int _fallOriginCell;
         private FloorService _floorService;
-        private bool _hasFallOrigin = false;
 
-        private InputService _inputService;
+        private bool _hasFallOrigin = false;
         private bool _isFallTimerRunning;
         private float _oldAnimNormalizedTime = 0f;
 
         private int _oldAnimStateHash = 0;
         private Vector3Int _oldCell;
         private Vector2 _oldMoveDirection;
-
         private Vector3 _oldPosition;
         private Quaternion _oldRotation;
 
+        private InputService _inputService;
         private PlayerInventory _playerInventory;
-        private PlayerState _state = PlayerState.Normal;
-        public Vector2 MoveDirection { get; private set; }
 
+        private PlayerState _state = PlayerState.Normal;
+        private MovementMode _movementMode = MovementMode.Free;
+
+        public Vector2 MoveDirection { get; private set; }
         public PlayerInventory Inventory => _playerInventory;
-        
+
+        private enum PlayerState { Normal, Falling }
+        private enum MovementMode { Free, Grid }
+
         private void Awake()
         {
             _floorService = FloorService.Instance;
+            _playerInventory = new PlayerInventory();
 
             if (!_rb && _debugMode)
-            {
-                Debug.Log("[Rigidbody2D] not assigned in PlayerController, trying to get it from GameObject.");
                 _rb = GetComponent<Rigidbody2D>();
-            }
-
-            _playerInventory = new PlayerInventory();
         }
 
         private void Start()
         {
             _inputService = InputService.Instance;
 
-            _inputService.RegisterMoveAction(GridMoveStep);
             _inputService.RegisterWandInteraction(Interact);
+            _inputService.RegisterTestAction(_playerInventory.ObtainWand);
+        }
+
+        private void FixedUpdate()
+        {
+            if (_movementMode == MovementMode.Free) 
+                HandleFreeMovement();
         }
 
         private void Update()
@@ -69,8 +76,6 @@ namespace Latuvu
 
             if (_state == PlayerState.Falling && _hasFallOrigin && currentCellNow == _fallOriginCell)
             {
-                if (_debugMode) Debug.Log("[PlayerTileEntity] Returned to origin cell - performing rollback and cancelling fall.");
-
                 transform.position = _oldPosition;
                 transform.rotation = _oldRotation;
                 MoveDirection = _oldMoveDirection;
@@ -95,12 +100,12 @@ namespace Latuvu
 
                 return;
             }
-            
+
             if (_fallingTimeRemaining > 0f)
                 return;
 
             ResetFallTimer();
-            OnQuickTimerElapsed();
+            OnFallTimerElapsed();
         }
 
         private void OnDestroy()
@@ -111,14 +116,8 @@ namespace Latuvu
 
         private void Interact(InputAction.CallbackContext context)
         {
-            if (_state == PlayerState.Falling)
-            {
-                if (_debugMode) Debug.Log("[PlayerTileEntity] Interact blocked while falling.");
-                return;
-            }
-
-            if (!_playerInventory.HasWand)
-                return;
+            if (_state == PlayerState.Falling) return;
+            if (!_playerInventory.HasWand) return;
 
             var tilemap = _floorService.Tilemap;
             Vector3Int currentCell = tilemap.WorldToCell(transform.position);
@@ -142,33 +141,64 @@ namespace Latuvu
                     _playerInventory.StoreTile(tileInFront);
                     tileInFront.OnPickup(tilemap, targetCell);
                     tilemap.SetTile(targetCell, null);
-                    Debug.Log("Player picked up tile " + tileInFront.name);
                 }
-                else
-                {
-                    Debug.Log("No pickable tile in front");
-                }
-
                 return;
             }
 
             if (_playerInventory.HasTile)
             {
-                if (tileInFront != null)
-                {
-                    Debug.Log("Can't place: a tile is already in front.");
-                    return;
-                }
+                if (tileInFront != null) return;
 
                 GameTile tileToPlace = _playerInventory.Tile;
                 tilemap.SetTile(targetCell, tileToPlace);
                 _playerInventory.ClearTile();
-                Debug.Log("Placed tile: " + tileToPlace.name);
             }
+        }
+
+        private void HandleFreeMovement()
+        {
+            if (_movementMode != MovementMode.Free) return;
+
+            var moveInput = InputService.Instance.Player.ReadValue<Vector2>();
+            _rb.linearVelocity = moveInput * _speed;
+            
+            var newCurrentCell = _floorService.Tilemap.WorldToCell(transform.position);
+            if (newCurrentCell != _currentCell)
+            {
+                var previousCell = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
+                previousCell?.OnExit(_floorService.Tilemap, _currentCell);
+                
+                _currentCell = newCurrentCell;
+                Position = _currentCell;
+                
+                var currentCellTile = _floorService.Tilemap.GetTile<GameTile>(_currentCell);
+                
+                if(currentCellTile) 
+                    currentCellTile.OnEnter(_floorService.Tilemap, _currentCell);
+                else 
+                    KillSelf();
+            }
+            
+            PlayDirectionAnimation(moveInput);
+        }
+
+        public void EnableGridMovement()
+        {
+            if (_movementMode == MovementMode.Grid) return;
+
+            _movementMode = MovementMode.Grid;
+
+            _inputService.RegisterMoveAction(GridMoveStep);
+
+            ResetVelocity();
+
+            _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
         }
 
         private void GridMoveStep(InputAction.CallbackContext context)
         {
+            if (_movementMode != MovementMode.Grid) return;
+
             Vector2 input = context.ReadValue<Vector2>();
             Vector2 rounded = new Vector2(Mathf.Round(input.x), Mathf.Round(input.y));
 
@@ -181,8 +211,6 @@ namespace Latuvu
 
                 if (_hasFallOrigin && attemptedTarget == _fallOriginCell)
                 {
-                    if (_debugMode) Debug.Log("[PlayerTileEntity] Player attempts to move back to origin -> rollback.");
-
                     transform.position = _oldPosition;
                     transform.rotation = _oldRotation;
                     MoveDirection = _oldMoveDirection;
@@ -200,7 +228,6 @@ namespace Latuvu
                 }
                 else
                 {
-                    if (_debugMode) Debug.Log("[PlayerTileEntity] Move blocked while falling. Only move allowed is returning to origin cell.");
                     return;
                 }
             }
@@ -212,7 +239,6 @@ namespace Latuvu
 
             if (_animator != null)
             {
-                
                 var info = _animator.GetCurrentAnimatorStateInfo(0);
                 _oldAnimStateHash = info.fullPathHash;
                 _oldAnimNormalizedTime = info.normalizedTime;
@@ -230,8 +256,6 @@ namespace Latuvu
 
             if (!targetTile)
             {
-                if (_debugMode) Debug.Log("[PlayerController]: stepping into void at " + targetCellPos);
-
                 _fallOriginCell = _currentCell;
                 _hasFallOrigin = true;
                 _state = PlayerState.Falling;
@@ -250,14 +274,12 @@ namespace Latuvu
 
             if (targetTile && !targetTile.IsWalkable)
             {
-                Debug.Log("[PlayerController]: tile not walkable at " + targetCellPos);
                 GameService.Instance.Tick();
                 return;
             }
 
             if (_floorService.TryGetStaticEntityAtPos(targetCellPos, out StaticTileEntity staticEntity))
             {
-                Debug.Log("[PlayerController]: trying to move static entity at " + targetCellPos);
                 staticEntity.TryMove(GridHelper.GetRelativePosition(Position, staticEntity.Position), _currentTilemap);
                 GameService.Instance.Tick();
                 return;
@@ -279,7 +301,6 @@ namespace Latuvu
 
             if (_floorService.TryGetLivingEntityAtPos(targetCellPos, out LivingTileEntity livingEntity))
             {
-                Debug.Log("[PlayerController]: moved onto living entity at " + targetCellPos);
                 livingEntity.HandlePlayerOverlap(this);
                 return;
             }
@@ -305,7 +326,6 @@ namespace Latuvu
 
         private void StartFallingTimer(float duration = -1f)
         {
-            if (_debugMode) Debug.Log("[PlayerTileEntity] StartFallingTimer");
             float used = duration > 0f ? duration : _fallTimerDuration;
             _fallingTimeRemaining = used;
             _isFallTimerRunning = true;
@@ -317,22 +337,20 @@ namespace Latuvu
             _fallingTimeRemaining = 0f;
         }
 
-        private void OnQuickTimerElapsed()
+        private void OnFallTimerElapsed()
         {
             Vector3Int topTarget = Position + Vector3Int.up;
             GameTile topTargetTile = _floorService.Tilemap.GetTile<GameTile>(topTarget);
-                
+
             if (topTargetTile && _floorService.TryGetStaticEntityAtPos(topTarget, out StaticTileEntity topStaticEntity))
             {
                 if (topStaticEntity is TeleportStatueTileEntity)
                 {
-                    Debug.Log("[PlayerController]: Fell in front of teleport statue at " + Position);
                     _floorService.LoadNextFloor(Inventory.Crickets);
                     return;
                 }
             }
 
-            if (_debugMode) Debug.Log($"[PlayerTileEntity] Quick timer elapsed");
             KillSelf();
             ResetFallTimer();
         }
@@ -342,27 +360,21 @@ namespace Latuvu
             if (direction == Vector2.zero) return;
 
             if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-            {
                 _animator.SetTrigger(direction.x > 0 ? "Right" : "Left");
-            }
             else
-            {
                 _animator.SetTrigger(direction.y > 0 ? "Top" : "Down");
-            }
         }
 
         public void Respawn()
         {
             transform.position = _floorService.CurrentFloor.GetPlayerSpawnWorld();
             _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
-            
+
             ResetFallTimer();
             _hasFallOrigin = false;
             _state = PlayerState.Normal;
 
             _playerInventory.ClearTile();
         }
-
-        private enum PlayerState { Normal, Falling }
     }
 }

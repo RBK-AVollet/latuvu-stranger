@@ -309,7 +309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Latuvu.GridService
   _floors:
-  - {fileID: 4462183061165988463, guid: 501e8ee8ca4ff654cb0f05ed759d0c1d, type: 3}
   - {fileID: 4462183061165988463, guid: 0bad4438d67380d4cbe9e1b678818bc2, type: 3}
   - {fileID: 4462183061165988463, guid: 13cd6e7a1c61a954c8ebfffba84b9ae5, type: 3}
   - {fileID: 4462183061165988463, guid: 5846ccc7c2654e44d9cabba1454b08a4, type: 3}
