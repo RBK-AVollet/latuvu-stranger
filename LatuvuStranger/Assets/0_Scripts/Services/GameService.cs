@@ -19,8 +19,13 @@ namespace Latuvu
 
         public void Tick()
         {
-            Debug.Log("[GameService]: Ticking the game");
+            //Debug.Log("[GameService]: Ticking the game");
             TickAction.Invoke();
+        }
+
+        private void  Start()
+        {
+            Debug.Log("Baise ta grand mere ENwo ");
         }
     }
 }

@@ -8,11 +8,10 @@ namespace Latuvu
     {
         [field:SerializeField] public Vector3Int Position { get; set; }
         [field:SerializeField] public Vector3Int Direction { get; set; }
-        [field:SerializeField] public Sprite Skin { get; private set; }
         [field:SerializeField] public AffectDirection MoveDirections { get; private set; }
         [field:SerializeField] public AffectDirection InteractDirections { get; private set; }
 
-        private void Start()
+        protected virtual void Start()
         {
             GameService.Instance.RegisterTickAction(Tick);
         }
