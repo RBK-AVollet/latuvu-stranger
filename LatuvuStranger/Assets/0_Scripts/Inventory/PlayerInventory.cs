@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Latuvu
@@ -5,6 +6,10 @@ namespace Latuvu
     public class PlayerInventory
     {
         private FloorService _floorService;
+        
+        const string k_cricketSaveKey = "CricketCount";
+        
+        // Key Items
 
         public bool HasWand { get; private set; }
         public bool HasCube { get; private set; }
@@ -33,6 +38,10 @@ namespace Latuvu
         public void ObtainCube() { HasCube = true; }
         public void RemoveCube() { HasCube = false; }
         public void ObtainSword() { HasSword = true; }
+        
+        // Collectibles
+        public int Crickets { get; private set; } = 5;
+        
 
         public void ObtainCrickets(int amount)
         {
@@ -56,9 +65,17 @@ namespace Latuvu
 
             _floorService = FloorService.Instance;
 
+            Crickets = ES3.Load(k_cricketSaveKey, 0);
+
             #if !UNITY_EDITOR
             Crickets = ES3.Load(k_cricketSaveKey, 0);
             #endif
+        }
+
+        ~PlayerInventory()
+        {
+            ES3.Save(k_cricketSaveKey, Crickets);
+            Debug.Log($"Saved cricket count {Crickets} !");
         }
 
         ~PlayerInventory()
