@@ -10,6 +10,7 @@ namespace Latuvu
 
         private InputAction _moveAction;
         private InputAction _interactionAction;
+        private InputAction _pauseAction;
 
         protected override void Awake()
         {
@@ -17,6 +18,7 @@ namespace Latuvu
             
             _moveAction = _playerInput.actions.FindAction("Move");
             _interactionAction = _playerInput.actions.FindAction("Interact");
+            _pauseAction = _playerInput.actions.FindAction("Pause");
             
             _playerInput.actions.Enable();
         }
@@ -43,6 +45,18 @@ namespace Latuvu
         public void UnregisterWandInteraction(Action<InputAction.CallbackContext> callback)
         {
             _interactionAction.started -= callback;
+        }
+        
+        public void RegisterPauseAction(Action<InputAction.CallbackContext> callback)
+        {
+            Debug.Log($"RegisterWandInteraction {callback.Method.Name}");
+            
+            _pauseAction.started += callback;
+        }
+        
+        public void UnregisterPauseAction(Action<InputAction.CallbackContext> callback)
+        {
+            _pauseAction.started -= callback;
         }
     }
 }

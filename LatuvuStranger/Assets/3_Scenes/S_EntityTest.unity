@@ -591,6 +591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InputService
       objectReference: {fileID: 0}
+    - target: {fileID: 5936956751832048990, guid: b8a8aa464c611534eb8d745cc923cff3, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 2a5aee2ee3ee3f6459b913a173ef9d51, type: 3}
     - target: {fileID: 7181484713270554561, guid: b8a8aa464c611534eb8d745cc923cff3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

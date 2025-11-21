@@ -2,8 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Latuvu._0_Scripts.UI;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 namespace Latuvu
@@ -25,7 +25,10 @@ namespace Latuvu
         private DialogueUI _dialogueUI;
         float typewriterDelay = 0.05f;
         [SerializeField] private string _debugString;
-        private bool _isWriting;
+        private bool _dialogueOpen = false;
+
+        private VisualElement _gravure;
+        private InputService _inputService;
 
         private void Awake()
         {
@@ -40,6 +43,8 @@ namespace Latuvu
             _buttons = _pauseMenu.Buttons;
             
             _dialogueUI = new DialogueUI(_root.Q<VisualElement>("dialogue"));
+            
+            _gravure = _root.Q<VisualElement>("gravure");
 
             foreach (var b in _buttons)
             {
@@ -63,6 +68,12 @@ namespace Latuvu
             SetupButtons(_pauseMenuImages, _buttons, _pauseMenu.MenuImage);
         }
 
+        private void Start()
+        {
+            _inputService = InputService.Instance;
+            _inputService.RegisterPauseAction(OpenPauseMenu);
+        }
+
         private void BackMenu()
         {
             _currentView.Hide();
@@ -82,9 +93,9 @@ namespace Latuvu
             }
         }
 
-        public void OpenPauseMenu()
+        public void OpenPauseMenu(InputAction.CallbackContext context)
         {
-            if (_isWriting)
+            if (_dialogueOpen)
                 return;
             
             Time.timeScale = 0;
@@ -101,6 +112,7 @@ namespace Latuvu
 
         public void ShowDialogue(string text)
         {
+            _dialogueOpen = true;
             _dialogueUI.Show();
             StartCoroutine(WriteText(text));
         }
@@ -108,6 +120,17 @@ namespace Latuvu
         public void CloseDialogue()
         {
             _dialogueUI.Hide();
+            _dialogueOpen = false;
+        }
+
+        private void DisplayGravure()
+        {
+            _gravure.style.display = DisplayStyle.Flex;
+        }
+        
+        private void HideGravure()
+        {
+            _gravure.style.display = DisplayStyle.None;
         }
         
         private void ChangeImage(List<Sprite> images, int index, VisualElement image)
@@ -147,12 +170,9 @@ namespace Latuvu
                 var invisibleText = text[(i + 1)..];
                 _dialogueUI.DialogueText.text = $"{visibleText}<alpha=#00>{invisibleText}";
                 _debugString = _dialogueUI.DialogueText.text;
-                _isWriting = true;
         
                 yield return new WaitForSeconds(typewriterDelay);
             }
-            
-            _isWriting = false;
         }
     }
 }

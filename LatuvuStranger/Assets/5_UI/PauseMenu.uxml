@@ -2,10 +2,10 @@
     <ui:Template name="Settings" src="project://database/Assets/5_UI/Settings.uxml?fileID=9197481963319205126&amp;guid=d0234a0d467c69d49b39801fa49a2dd9&amp;type=3#Settings" />
     <ui:Template name="Memories" src="project://database/Assets/5_UI/Memories.uxml?fileID=9197481963319205126&amp;guid=a508c11ec548b8e45b98268a82b63542&amp;type=3#Memories" />
     <ui:Template name="Dialogue" src="project://database/Assets/5_UI/Dialogue.uxml?fileID=9197481963319205126&amp;guid=164e9c236abe1d044ba73dd552e1cdaf&amp;type=3#Dialogue" />
-    <Style src="project://database/Assets/5_UI/MainMenu.uss?fileID=7433441132597879392&amp;guid=168bfa56a5f9e2c4d9b9c33bafc9894f&amp;type=3" />
+    <Style src="project://database/Assets/5_UI/MainMenu.uss?fileID=7433441132597879392&amp;guid=168bfa56a5f9e2c4d9b9c33bafc9894f&amp;type=3#MainMenu" />
     <Style src="project://database/Assets/5_UI/Settings.uss?fileID=7433441132597879392&amp;guid=d27e797e634035e42af406f498e2e635&amp;type=3#Settings" />
     <ui:VisualElement name="root" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; color: rgba(27, 27, 27, 0);">
-        <ui:VisualElement name="pause-menu" enabled="true" style="flex-grow: 1; flex-direction: row-reverse; width: 100%; visibility: visible; display: none;">
+        <ui:VisualElement name="pause-menu" enabled="true" class="hidden" style="flex-grow: 1; flex-direction: row-reverse; width: 100%; visibility: visible;">
             <ui:VisualElement name="PauseMenuImage" class="image-menu image-out" style="flex-grow: 1; width: 100%; background-image: none; background-size: 80% 80%; background-position-y: center; background-position-x: center;" />
             <ui:VisualElement name="Buttons" style="flex-grow: 1; flex-direction: column; align-items: auto; justify-content: center; width: 100%;">
                 <ui:Button name="resume" class="white Button" style="-unity-text-align: upper-right; width: 100%;">
@@ -25,5 +25,6 @@
         <ui:Instance template="Settings" name="settings-menu" class="hidden" style="width: 100%; background-color: rgba(2, 2, 2, 0);" />
         <ui:Instance template="Memories" name="memories-menu" class="hidden" style="background-color: rgba(0, 0, 0, 0);" />
         <ui:Instance template="Dialogue" name="dialogue" class="hidden" style="width: 100%; background-color: rgba(0, 0, 0, 0);" />
+        <ui:VisualElement name="gravure" style="flex-grow: 1; width: 50%; height: 70%; position: absolute; align-items: stretch; justify-content: center; align-self: center; left: 25%; right: 0%; background-image: url(&quot;project://database/Assets/1_Art/Sprites/spr_mural_add_0.png?fileID=3670402547168454102&amp;guid=a8950fabdafc8c04c8fc057266e8572b&amp;type=3#spr_mural_add_0_0&quot;); display: none;" />
     </ui:VisualElement>
 </ui:UXML>
