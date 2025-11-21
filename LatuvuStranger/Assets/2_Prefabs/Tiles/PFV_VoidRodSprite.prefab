@@ -90,6 +90,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd6227c84288ac47b05e2db7a6959e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Latuvu.VoidRodHUDIcon
-  _voidRod: {fileID: 21300000, guid: 11d5ab450e9a75942995081594dac2c2, type: 3}
-  _voidRodHasTile: {fileID: 21300000, guid: afef4e77fc4ed1d4daeebd6b2718cb62, type: 3}
+  _spritePerTiles:
+  - Tile: {fileID: 11400000, guid: 20c5bf1f3aa71b841b34470f715f924b, type: 2}
+    Icon: {fileID: 21300000, guid: afef4e77fc4ed1d4daeebd6b2718cb62, type: 3}
+  - Tile: {fileID: 11400000, guid: d4b934cdbbc2c654cbd0129d1ab06910, type: 2}
+    Icon: {fileID: 21300000, guid: 548a8ae949803914696fabc924e2aace, type: 3}
+  - Tile: {fileID: 11400000, guid: 7809a4a448546df45a937a7ed591cb1d, type: 2}
+    Icon: {fileID: 21300000, guid: 0289f21bf2033fd4da5dcc5221b2e897, type: 3}
+  - Tile: {fileID: 11400000, guid: 739e2f8ce5bef4741ba9cc3fbdf41b04, type: 2}
+    Icon: {fileID: 21300000, guid: 0289f21bf2033fd4da5dcc5221b2e897, type: 3}
+  - Tile: {fileID: 11400000, guid: ef641cc747bce924fab9360f1cbc991f, type: 2}
+    Icon: {fileID: 21300000, guid: 0289f21bf2033fd4da5dcc5221b2e897, type: 3}
+  - Tile: {fileID: 11400000, guid: 6f2724132ca65624ab6b9b18bc6ad2b7, type: 2}
+    Icon: {fileID: 21300000, guid: 0289f21bf2033fd4da5dcc5221b2e897, type: 3}
+  _rodUnknownIcon: {fileID: 21300000, guid: 9a4c9d6d2f22cfd4ca30ba4792abec3e, type: 3}
+  _rodNoTile: {fileID: 21300000, guid: 11d5ab450e9a75942995081594dac2c2, type: 3}
   _renderer: {fileID: 710338320105925568}
