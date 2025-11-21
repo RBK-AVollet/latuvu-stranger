@@ -61,13 +61,30 @@ namespace Latuvu
             ApplyHUD();
             WriteOnCell(new Vector3Int(1, 0, 0), "VO");
             WriteOnCell(new Vector3Int(2, 0, 0), "ID");
-            WriteOnCell(new Vector3Int(5, 0, 0), "00");
             WriteOnCell(new Vector3Int(12, 0, 0), _currentFloor.FloorId.Substring(0, 2));
             WriteOnCell(new Vector3Int(13, 0, 0), _currentFloor.FloorId.Substring(2, 2));
+            UpdateCrickets(Player.Inventory.Crickets);
             
             SpawnEntities();
             
             Player.Respawn();
+        }
+        
+        public void UpdateCrickets(int cricketCount)
+        {
+            string cricketText = (cricketCount < 10 ? "0" : "") + cricketCount;
+            WriteOnCell(new Vector3Int(5, 0, 0), cricketText);
+        }
+
+        public void UpdateVoidRodTile(bool hasTile)
+        {
+            var go = Tilemap.GetInstantiatedObject(new Vector3Int(6, 0, 0));
+            if (!go) return;
+
+            var comp = go.GetComponent<VoidRodHUDIcon>();
+            if (!comp) return;
+            
+            comp.UpdateIcon(hasTile);
         }
 
         public FloorPrefab GetFloorById(string floorId)

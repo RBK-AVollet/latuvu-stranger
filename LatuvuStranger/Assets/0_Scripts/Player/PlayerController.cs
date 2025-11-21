@@ -23,6 +23,8 @@ namespace Latuvu
         private Vector3Int _currentCell;
         public Vector2 MoveDirection { get; private set; }
 
+        public PlayerInventory Inventory => _playerInventory;
+        
         private void Awake()
         {
             // Accessible can spawned by the floor service itself
@@ -178,6 +180,7 @@ namespace Latuvu
         {
             transform.position = _floorService.CurrentFloor.GetPlayerSpawnWorld();
             _currentCell = _floorService.Tilemap.WorldToCell(transform.position);
+            _playerInventory.ClearTile();
         }
     }
 }
