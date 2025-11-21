@@ -309,7 +309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Latuvu.GridService
   _floors:
-  - {fileID: 4462183061165988463, guid: 501e8ee8ca4ff654cb0f05ed759d0c1d, type: 3}
   - {fileID: 4462183061165988463, guid: 0bad4438d67380d4cbe9e1b678818bc2, type: 3}
   - {fileID: 4462183061165988463, guid: 13cd6e7a1c61a954c8ebfffba84b9ae5, type: 3}
   - {fileID: 4462183061165988463, guid: 5846ccc7c2654e44d9cabba1454b08a4, type: 3}
@@ -334,7 +333,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2aab599459ad4fc47b209f3436eaecb7, type: 2}
   _playerPrefab: {fileID: 2208726561347133100, guid: e418b2cae8ed8564ab303fe2b3ca2b52, type: 3}
   _entitiesContainer: {fileID: 127525774}
-  _defaultFloor: B000
+  _defaultFloor: B001
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
