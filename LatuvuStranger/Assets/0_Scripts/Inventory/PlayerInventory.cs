@@ -51,9 +51,17 @@ namespace Latuvu
 
             _floorService = FloorService.Instance;
 
+            Crickets = ES3.Load(k_cricketSaveKey, 0);
+
             #if !UNITY_EDITOR
             Crickets = ES3.Load(k_cricketSaveKey, 0);
             #endif
+        }
+
+        ~PlayerInventory()
+        {
+            ES3.Save(k_cricketSaveKey, Crickets);
+            Debug.Log($"Saved cricket count {Crickets} !");
         }
 
         ~PlayerInventory()
