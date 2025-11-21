@@ -5,6 +5,26 @@ namespace Latuvu
 {
     public class SnakeTileEntity : LivingTileEntity
     {
+        [field:SerializeField] public Sprite LeftSkin { get; private set; }
+        [field:SerializeField] public Sprite RightSkin { get; private set; }
+        private Sprite _currentSkin;
+        private SpriteRenderer _skinRenderer;
+        
+        protected override void Start()
+        {
+            base.Start();
+
+            _skinRenderer = GetComponent<SpriteRenderer>();
+            UpdateSkin();
+        }
+
+        private void UpdateSkin()
+        {
+            if (Direction == Vector3Int.left) { _currentSkin = LeftSkin; }
+            if (Direction == Vector3Int.right) { _currentSkin = RightSkin; }
+            _skinRenderer.sprite = _currentSkin;
+        }
+
         protected override void Tick()
         {
             TryMoveOrFlip();
@@ -53,6 +73,7 @@ namespace Latuvu
         private void FlipDirection()
         {
             Direction = new Vector3Int(-Direction.x, -Direction.y, -Direction.z);
+            UpdateSkin();
         }
     }
 }

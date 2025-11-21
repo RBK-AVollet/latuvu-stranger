@@ -1336,7 +1336,7 @@ GameObject:
   - component: {fileID: 7375796001944200426}
   - component: {fileID: 4462183061165988463}
   m_Layer: 0
-  m_Name: PF_Floor_BTest
+  m_Name: PF_Floor_B000Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dcb8d4f05f24e57af423b2c67bcfe18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Latuvu.FloorPrefab
-  FloorId: BTest
+  FloorId: B000
   Tilemap: {fileID: 1979004756198803632}
   Entities:
   - EntityPrefab: {fileID: 7358649279416621413, guid: 4f8c10c82253d1d41bbff8e8353cb7e3, type: 3}
@@ -1381,7 +1381,10 @@ MonoBehaviour:
   - EntityPrefab: {fileID: 6561931730060705219, guid: eb1ecc1cfc8b1ef4eb6d3098ca080c38, type: 3}
     Position: {x: 2, y: 3, z: 0}
     Direction: {x: 1, y: 0, z: 0}
-  - EntityPrefab: {fileID: 6561931730060705219, guid: eb1ecc1cfc8b1ef4eb6d3098ca080c38, type: 3}
+  - EntityPrefab: {fileID: 4134473794744026230, guid: 1f125e123bc943c49aa0bbfb0ac9cf84, type: 3}
     Position: {x: 8, y: 3, z: 0}
     Direction: {x: 0, y: 1, z: 0}
+  - EntityPrefab: {fileID: 4725409429503633764, guid: 3b4d0516fce86f24dada8f8b060d6532, type: 3}
+    Position: {x: 5, y: 5, z: 0}
+    Direction: {x: 0, y: 0, z: 0}
   _playerSpawn: {x: 1, y: 3, z: 0}

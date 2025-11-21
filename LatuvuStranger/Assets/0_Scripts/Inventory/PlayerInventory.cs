@@ -18,7 +18,7 @@ namespace Latuvu
         public void ObtainSword() { HasSword = true; }
         
         // Collectibles
-        public int Crickets { get; private set; }
+        public int Crickets { get; private set; } = 5;
 
         public void ObtainCrickets(int amount)
         {

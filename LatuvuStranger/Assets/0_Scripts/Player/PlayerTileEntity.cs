@@ -213,6 +213,7 @@ namespace Latuvu
 
             if (_animator != null)
             {
+                
                 var info = _animator.GetCurrentAnimatorStateInfo(0);
                 _oldAnimStateHash = info.fullPathHash;
                 _oldAnimNormalizedTime = info.normalizedTime;
@@ -319,6 +320,19 @@ namespace Latuvu
 
         private void OnQuickTimerElapsed()
         {
+            Vector3Int topTarget = Position + Vector3Int.up;
+            GameTile topTargetTile = _floorService.Tilemap.GetTile<GameTile>(topTarget);
+                
+            if (topTargetTile && _floorService.TryGetStaticEntityAtPos(topTarget, out StaticTileEntity topStaticEntity))
+            {
+                if (topStaticEntity is TeleportStatueTileEntity)
+                {
+                    Debug.Log("[PlayerController]: Fell in front of teleport statue at " + Position);
+                    _floorService.LoadNextFloor(Inventory.Crickets);
+                    return;
+                }
+            }
+
             if (_debugMode) Debug.Log($"[PlayerTileEntity] Quick timer elapsed");
             KillSelf();
             ResetFallTimer();
